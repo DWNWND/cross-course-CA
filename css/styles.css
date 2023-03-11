@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+.searchbar,
+nav li {
+	display: inline-block;
+}
+.header {
+	position: fixed;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+	width: 100%;
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+#logo-header {
+	filter: drop-shadow(2px 3px 3px rgba(000, 000, 000, 0.3));
+	max-height: 1.5rem;
+}
+.searchbar {
+	width: 10rem;
+	height: 1.47rem;
+	box-shadow: inset 6px 6px 10px 0 rgba(114, 72, 43, 0.25),
+		inset -6px -6px 10px 0 rgba(114, 72, 43, 0.25);
+	border: 0.07rem solid #72482b;
+	margin-left: 2rem;
+}
+#searchbar-icon {
+	height: 1rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 8rem;
+}
+#storelocator {
+	height: 1.5rem;
+	margin-left: 2rem;
+}
+#shopping-bag {
+	height: 1.5rem;
+}
+nav {
+	margin-top: 3.75rem;
+}
+ul {
+	padding: 0px;
+}
+.menu {
+	padding-left: 5rem;
+	padding-top: 0.01rem;
+	padding-bottom: 0.01rem;
+	width: 100%;
+	background-color: rgba(151, 109, 80, 0.2);
+}
+.menu a {
+	color: #72482b;
+}
+nav a {
+	padding: 0px;
+}
+.cta-button {
+	background-color: #9c916c;
+	border: 2px solid #fff;
+	width: 345px;
+	height: 80px;
+	text-align: center;
+	margin: auto;
+	width: 50%;
+}
+.cta-button a {
+	color: #fff;
+}
+.stickyfooter {
+	background-color: rgba(255, 255, 255, 0.566);
+	color: #000;
+	text-transform: uppercase;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-height: 40px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.stickyfooter a {
+	color: #000;
+	margin-right: 40px;
+}
+.stickyfooter a:first-of-type {
+	margin-left: 52%;
+}
+footer,
+footer a {
+	color: #72482b;
+}
+footer {
+	background-image: url(/images/illustrations/footer-background.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 400px;
+}

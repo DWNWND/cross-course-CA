@@ -1,112 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Rainydays - Home</title><!--Det som vises i tabben. Bør ha navnet på hver unike side-->
-        <meta name="description" content="Push your comfortzone with outerwear that keeps you dry no matter the conditions outside. Get your protection from Rainydays."><!--det som kommer opp når du søker på siden i google og må være unik for hver side. Dette er veldig viktig-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--kjempeviktig for at nettisiden din skal kunne brukes på alle størrelser-->
-        <meta name="author" content="Thea Oland" />
-        <link rel="stylesheet" href="css/styles.css" />
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div>
-                    <img src="images/logo-header.png" alt="Rainydays logo - Home">
-                    <img src="images/icons/looking-glass.png" alt="searchbar icon">
-                    <a href="#"><img src="images/icons/location.png" alt="link to store-locator"></a>
-                </div>
-                <div>
-                    <a href="#"><img src="images/icons/shopping-bag.png" alt="link to shopping-bag"></a>
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="list.html">New In</a></li>
-                        <li><a href="list.html">Women</a></li>
-                        <li><a href="list.html">Men</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <a href="list.html" class="cta-button">Shop men</a>
-            <a href="list.html" class="cta-button">Shop women</a>
-            <!--Legg inn roll-tekst og bakgrunnsbilde?-->
-        </header>
-        <main>
-            <section>
-                <div class="product-slider">
-                    <h1>Trending now . . .</h1>
-                    <div class="products">
-                        <div>
-                            <img src="#" alt="product">
-                            <p>Price</p>
-                        </div>
-                        <img src="#" alt="product">
-                        <img src="#" alt="product">
-                        <img src="#" alt="product">
-                        <img src="#" alt="product">
-                        <img src="#" alt="product">
-                        <img src="#" alt="product">
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h1>New in from scott . . .</h1>
-                <h4>Scott 1.4</h2>
-                <a href="product.html">Comfortable green casual rain jacket</a>
-                <!--Legg inn produktbilder med link-->
-            </section>
-            <section>
-                <div class="ambience-carousel">
-                    <div>
-                        <img src="images/ambience-1.jpg">
-                        <img src="images/ambience-2.jpg">
-                        <img src="images/ambience-3.jpg">
-                        <!--LAG DISSE BILDENE MINDRE-->
-                    </div>
-                    <div>
-                        <h3>Follow along to see when we</h3>
-                    </div>
-                    <div>
-                        <h2>Push the comfort zone</h2>
-                    </div>
-                    <div>
-                        <a href="#"><img src="images/icons/instagram.png" alt="link to Rainydays instagram-page"></a>
-                        <a href="#"><img src="images/icons/facebook.png" alt="link to Rainydays facebook-page"></a>
-                    </div>
-                </div>
-            </section>
-            <div>
-                RAINYDAYS 2023 &copy;
-                <a href="#">Shipping & delivery</a>
-                <a href="#">Refunds & returns</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-        </main>
-        <footer>
-            <section>
-                <div>
-                    <h4>Help</h4>
-                    <ul>
-                        <li><a href="#">Refunds & returns</a></li>
-                        <li><a href="#">Shipping & delivery</a></li>
-                        <li><a href="#">Frequently Asked Questions (FAQ)</a></li>
-                        <li><a href="#">Terms of service & Privacy policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>About rainydays</h4>
-                    <ul>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="images/logo-footer.png" alt="Rainydays logo"> <!--LAG LOGOEN MINDRE-->
-                    <a href="#"><img src="images/icons/instagram.png" alt="link to Rainydays instagram-page"></a>
-                    <a href="#"><img src="images/icons/facebook.png" alt="link to Rainydays facebook-page"></a>
-                </div>
-            </section>
-        </footer>
-    </body>
+	<head>
+		<title>Rainydays - Home</title>
+		<!--Det som vises i tabben. Bør ha navnet på hver unike side-->
+		<meta
+			name="description"
+			content="Push your comfortzone with outerwear that keeps you dry no matter the conditions outside. Get your protection from Rainydays."
+		/>
+		<!--det som kommer opp når du søker på siden i google og må være unik for hver side. Dette er veldig viktig-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!--kjempeviktig for at nettisiden din skal kunne brukes på alle størrelser-->
+		<meta name="author" content="Thea Oland" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="header">
+					<a href="#">
+						<img
+							src="images/logo-header-noshadow.png"
+							alt="Rainydays logo - Home"
+							id="logo-header"
+						/>
+					</a>
+					<div class="searchbar">
+						<a href="#">
+							<img
+								src="images/icons/looking-glass.png"
+								alt="searchbar icon"
+								id="searchbar-icon"
+							/>
+						</a>
+					</div>
+					<a href="#">
+						<img
+							src="images/icons/location.png"
+							alt="link to store-locator"
+							id="storelocator"
+						/>
+					</a>
+					<a href="#">
+						<img
+							src="images/icons/shopping-bag.png"
+							alt="link to shopping-bag"
+							id="shopping-bag"
+						/>
+					</a>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="list.html">New In</a></li>
+						<li><a href="list.html">Women</a></li>
+						<li><a href="list.html">Men</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="cta-button"><a href="list.html">Shop men</a></div>
+			<div class="cta-button"><a href="list.html">Shop women</a></div>
+			<!--Legg inn roll-tekst og bakgrunnsbilde?-->
+		</header>
+		<main>
+			<section>
+				<div class="product-slider">
+					<h1>Trending now . . .</h1>
+					<div class="products">
+						<div>
+							<img src="#" alt="product" />
+							<p>Price</p>
+						</div>
+						<img src="#" alt="product" />
+						<img src="#" alt="product" />
+						<img src="#" alt="product" />
+						<img src="#" alt="product" />
+						<img src="#" alt="product" />
+						<img src="#" alt="product" />
+					</div>
+				</div>
+			</section>
+			<section>
+				<h1>New in from scott . . .</h1>
+				<h2>Scott 1.4</h2>
+				<a href="product.html">Comfortable green casual rain jacket</a>
+				<!--Legg inn produktbilder med link-->
+			</section>
+			<section>
+				<div class="ambience-carousel">
+					<div>
+						<img src="images/ambience-1.jpg" />
+						<img src="images/ambience-2.jpg" />
+						<img src="images/ambience-3.jpg" />
+						<!--LAG DISSE BILDENE MINDRE Eller add i css i stedet-->
+					</div>
+					<div>
+						<h3>Follow along to see when we</h3>
+					</div>
+					<div>
+						<h2>Push the comfort zone</h2>
+					</div>
+					<div>
+						<a href="#"
+							><img
+								src="images/icons/instagram.png"
+								alt="link to Rainydays instagram-page"
+						/></a>
+						<a href="#"
+							><img
+								src="images/icons/facebook.png"
+								alt="link to Rainydays facebook-page"
+						/></a>
+					</div>
+				</div>
+			</section>
+			<div class="stickyfooter">
+				RAINYDAYS 2023 &copy;
+				<a href="#">Shipping & delivery</a>
+				<a href="#">Refunds & returns</a>
+				<a href="contact.html">Contact us</a>
+			</div>
+		</main>
+		<footer>
+			<div>
+				<h4>Help</h4>
+				<ul>
+					<li><a href="#">Refunds & returns</a></li>
+					<li><a href="#">Shipping & delivery</a></li>
+					<li><a href="#">Frequently Asked Questions (FAQ)</a></li>
+					<li><a href="#">Terms of service & Privacy policy</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4>About rainydays</h4>
+				<ul>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<img src="images/logo-footer.png" alt="Rainydays logo" />
+				<!--LAG LOGOEN MINDRE-->
+				<a href="#"
+					><img
+						src="images/icons/instagram.png"
+						alt="link to Rainydays instagram-page"
+				/></a>
+				<a href="#"
+					><img
+						src="images/icons/facebook.png"
+						alt="link to Rainydays facebook-page"
+				/></a>
+			</div>
+		</footer>
+	</body>
 </html>
