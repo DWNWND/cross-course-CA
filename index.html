@@ -11,6 +11,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--kjempeviktig for at nettisiden din skal kunne brukes på alle størrelser-->
 		<meta name="author" content="Thea Oland" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="css/styles.css" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -52,24 +58,44 @@
 				</div>
 				<div class="menu">
 					<ul>
-						<li><a href="list.html">New In</a></li>
+						<li><a href="list.html">New in</a></li>
 						<li><a href="list.html">Women</a></li>
 						<li><a href="list.html">Men</a></li>
 					</ul>
 				</div>
 			</nav>
-			<div class="cta-button"><a href="list.html">Shop men</a></div>
-			<div class="cta-button"><a href="list.html">Shop women</a></div>
-			<!--Legg inn roll-tekst og bakgrunnsbilde?-->
+			<div class="cta-button-container">
+				<div class="cta-button"><a href="list.html">Shop men</a></div>
+				<div class="cta-button"><a href="list.html">Shop women</a></div>
+			</div>
+			<span class="bannertext"
+				>20% off selected rain jackets until 01.03.2023</span
+			>
 		</header>
 		<main>
 			<section>
 				<div class="product-slider">
 					<h1>Trending now . . .</h1>
 					<div class="products">
-						<div>
-							<img src="#" alt="product" />
-							<p>Price</p>
+						<div class="product">
+							<div id="shopping-bag-small">
+								<a href="#">
+									<img
+										src="images/icons/shopping-bag.png"
+										alt="link to shopping-bag"
+									/>
+								</a>
+							</div>
+							<img
+								src="/images/assets/RainyDays_Jacket1.png"
+								alt="product"
+								class="jacket"
+							/>
+							<div class="product-text">
+								<p>Scott 1.0</p>
+								<a href="#">Wind and waterproof</a>
+								<p>$80</p>
+							</div>
 						</div>
 						<img src="#" alt="product" />
 						<img src="#" alt="product" />
@@ -77,29 +103,22 @@
 						<img src="#" alt="product" />
 						<img src="#" alt="product" />
 						<img src="#" alt="product" />
+						<!--Legg inn produktbilder-->
 					</div>
 				</div>
 			</section>
-			<section>
+			<section class="ad">
 				<h1>New in from scott . . .</h1>
-				<h2>Scott 1.4</h2>
+				<p>Scott 1.4</p>
 				<a href="product.html">Comfortable green casual rain jacket</a>
+				<img src="#" alt="product" />
+				<img src="#" alt="product" />
 				<!--Legg inn produktbilder med link-->
 			</section>
 			<section>
 				<div class="ambience-carousel">
-					<div>
-						<img src="images/ambience-1.jpg" />
-						<img src="images/ambience-2.jpg" />
-						<img src="images/ambience-3.jpg" />
-						<!--LAG DISSE BILDENE MINDRE Eller add i css i stedet-->
-					</div>
-					<div>
-						<h3>Follow along to see when we</h3>
-					</div>
-					<div>
-						<h2>Push the comfort zone</h2>
-					</div>
+					<div class="slogan-first-part">Follow along to see when we</div>
+					<div class="slogan-second-part">Push the comfort zone</div>
 					<div>
 						<a href="#"
 							><img
@@ -111,6 +130,7 @@
 								src="images/icons/facebook.png"
 								alt="link to Rainydays facebook-page"
 						/></a>
+						<!--Legg inn logo-->
 					</div>
 				</div>
 			</section>

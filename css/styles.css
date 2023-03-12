@@ -8,15 +8,25 @@ a {
 nav li {
 	display: inline-block;
 }
+header {
+	background-image: url(/images/hero-image.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 850px;
+	display: inline-block;
+}
 .header {
+	background-image: url(/images/header-background.png);
+	background-repeat: no-repeat;
+	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: rgba(255, 255, 255, 0.3);
-	width: 100%;
 	padding-left: 5rem;
 	padding-right: 5rem;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+	white-space: nowrap;
 }
 #logo-header {
 	filter: drop-shadow(2px 3px 3px rgba(000, 000, 000, 0.3));
@@ -42,37 +52,148 @@ nav li {
 }
 #shopping-bag {
 	height: 1.5rem;
-}
-nav {
-	margin-top: 3.75rem;
+	display: inline-block;
 }
 ul {
 	padding: 0px;
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	padding-inline-start: 0px;
+	width: 100%;
 }
 .menu {
+	margin-top: 3.75rem;
 	padding-left: 5rem;
-	padding-top: 0.01rem;
-	padding-bottom: 0.01rem;
-	width: 100%;
 	background-color: rgba(151, 109, 80, 0.2);
+	font-family: "Montserrat", sans-serif;
+	font-size: 1rem;
+	white-space: nowrap;
+	font-weight: 600;
 }
 .menu a {
 	color: #72482b;
 }
-nav a {
-	padding: 0px;
+.menu li {
+	padding-right: 2%;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
+}
+.cta-button-container {
+	width: 100%;
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 .cta-button {
 	background-color: #9c916c;
 	border: 2px solid #fff;
-	width: 345px;
-	height: 80px;
-	text-align: center;
-	margin: auto;
-	width: 50%;
+	display: inline-block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 1.2rem;
+	letter-spacing: 0.04rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	width: 15rem;
+	margin: 2rem;
+	filter: drop-shadow(4px 4px 4px rgba(000, 000, 000, 0.3));
 }
 .cta-button a {
 	color: #fff;
+}
+.bannertext {
+	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.25rem;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-top: 23rem;
+	white-space: nowrap;
+	font-size: 2vw;
+}
+h1 {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	color: #73401e;
+	filter: drop-shadow(3px 2px 0px rgba(192, 103, 43, 0.14));
+	margin: 0;
+}
+.product-slider {
+	background-color: rgba(193, 148, 108, 0.26);
+	padding-top: 2rem;
+	margin-top: 1rem;
+	padding-bottom: 3rem;
+	margin-bottom: 1rem;
+}
+.products {
+	margin-top: 1rem;
+}
+#shopping-bag-small {
+	text-align: right;
+	margin-right: 1rem;
+	padding-top: 1rem;
+}
+.product {
+	white-space: nowrap;
+	background-color: #fff9f4;
+	width: 400px;
+	height: 570px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	text-transform: uppercase;
+}
+.products .jacket {
+	height: 28rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.jacket-container {
+	margin: auto;
+}
+.products a,
+.ad a {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #000;
+}
+.product-text {
+	margin-left: 1rem;
+}
+.ambience-carousel {
+	background-image: url(../images/ambience-1.jpg);
+	width: 100%;
+	height: 50rem;
+}
+.slogan-first-part {
+	font-family: "Montserrat", sans-serif;
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	color: #fff9f4;
+	margin: 0;
+}
+.slogan-second-part {
+	font-family: "Montserrat", sans-serif;
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	color: #fff9f4;
+	filter: drop-shadow(3px 2px 0px #72482b);
+	margin: 0;
+	text-transform: uppercase;
 }
 .stickyfooter {
 	background-color: rgba(255, 255, 255, 0.566);
@@ -85,13 +206,18 @@ nav a {
 	display: inline-block;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 0.7rem;
+	letter-spacing: 0.09rem;
 }
 .stickyfooter a {
 	color: #000;
 	margin-right: 40px;
 }
 .stickyfooter a:first-of-type {
-	margin-left: 52%;
+	margin-left: auto;
 }
 footer,
 footer a {
@@ -102,4 +228,19 @@ footer {
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 400px;
+}
+footer li {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-size: 0.7rem;
+	margin: 0;
+	font-weight: 200;
+}
+h4 {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-size: 0.7rem;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
 }
