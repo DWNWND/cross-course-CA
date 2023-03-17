@@ -1,0 +1,229 @@
+/*-----------------------GLOBAL--------------------*/
+* {
+	outline: solid 1px red;
+}
+body {
+	margin: 0;
+	background-color: #fffcfa;
+}
+a {
+	text-decoration: none;
+}
+nav,
+.hamburger-menu_icon {
+	color: #72482b;
+}
+nav,
+#menu-checkbox {
+	display: none;
+}
+#menu-checkbox:checked ~ nav {
+	display: block;
+}
+header {
+	position: relative;
+	padding: 20px;
+	background: rgba(217, 211, 211, 0.3);
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	grid-gap: 10px;
+	max-width: 100%;
+	/*min-height: 30px;*/
+}
+.header-fixed-background {
+	display: none;
+}
+
+/*-----------------------TOP----------------------*/
+.logo-icon_wrapper,
+.shoppingbag-icon_wrapper {
+	display: inline-block;
+}
+.hamburger-menu_wrapper {
+	margin: auto auto auto 0;
+}
+.hamburger-menu_icon {
+	font-size: 1.56rem;
+}
+.logo-icon_wrapper {
+	margin: auto auto;
+}
+.logo_icon {
+	filter: drop-shadow(2px 3px 3px rgba(000, 000, 000, 0.3));
+	max-height: 1.5rem;
+}
+.shoppingbag-icon_wrapper {
+	margin: auto 0 auto auto;
+}
+.shoppingbag_icon {
+	height: 1.5rem;
+}
+/*------------------DROP DOWN MENU------------------*/
+nav {
+	position: absolute;
+	left: 0;
+	background: rgba(217, 211, 211, 0.3);
+	margin-top: 21px;
+}
+nav a {
+	display: block;
+	color: #72482b;
+	padding: 10px 20px;
+	font-family: "Montserrat", sans-serif;
+}
+.dropdown-menu {
+	width: 250px;
+	margin-top: 0rem;
+}
+.dropdown-menu_items a:last-of-type {
+	padding-bottom: 20px;
+}
+.flexbox_wrappers {
+	position: relative;
+	display: flex;
+	min-width: 250px;
+}
+.searchbar {
+	width: 13.7rem;
+	height: 2rem;
+	box-shadow: inset 6px 6px 10px 0 rgba(114, 72, 43, 0.25),
+		inset -6px -6px 10px 0 rgba(114, 72, 43, 0.25);
+	border: 0.07rem solid #72482b;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 10px;
+	font-family: "Montserrat", sans-serif;
+}
+input[type="search" i] {
+	appearance: auto;
+	box-sizing: border-box;
+	padding: 2px 5px;
+}
+::-webkit-input-placeholder {
+	color: rgba (114, 72, 43, 0.7);
+	font-size: 1rem;
+	color: rgba(75, 47, 27, 0.7);
+}
+::-moz-placeholder {
+	color: rgba (114, 72, 43, 0.7);
+	font-size: 1rem;
+	color: rgba(75, 47, 27, 0.7);
+}
+::-ms-placeholder {
+	color: rgba (114, 72, 43, 0.7);
+	font-size: 1rem;
+	color: rgba(75, 47, 27, 0.7);
+}
+::placeholder {
+	color: rgba (114, 72, 43, 0.7);
+	font-size: 1rem;
+	color: rgba(75, 47, 27, 0.7);
+}
+.searchbar_icon {
+	height: 0.8rem;
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+	margin: 0;
+	position: absolute;
+	top: 10px;
+	right: 27px;
+}
+.store-locator_link {
+	width: 220px;
+}
+.store-locator_icon {
+	height: 1rem;
+	position: absolute;
+	top: 10px;
+	right: 28px;
+}
+.dropdown-menu_items {
+	background-color: rgba(151, 109, 80, 0.2);
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+/*--------------- M Q ------------*/
+
+@media (min-width: 600px) {
+	.hamburger-menu_icon {
+		display: none;
+	}
+	header {
+		background: rgba(217, 211, 211, 0.3);
+		display: block;
+		min-height: 30px;
+		padding: 0;
+		width: 100%;
+	}
+	nav {
+		display: inline-block;
+		position: static;
+		margin-top: 0;
+		width: 100%;
+	}
+	.header-fixed-background {
+		position: fixed;
+		top: 0;
+		max-width: 100%;
+		background: rgba(217, 211, 211, 0.3);
+		height: 3.75rem;
+	}
+	.flexbox_wrappers {
+		display: inline-block;
+		position: fixed;
+		top: 1rem;
+		left: 12rem;
+		min-width: 0;
+	}
+	.searchbar {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		height: 1.77rem;
+	}
+	.searchbar_icon {
+		height: 0.8rem;
+		padding-top: 0.48rem;
+		padding-bottom: 0.48rem;
+		margin: 0;
+		position: absolute;
+		top: 0px;
+		right: 6px;
+	}
+	.store-locator_link {
+		position: fixed;
+		width: 125px;
+		padding: 0px 0px;
+		top: 1.3rem;
+		left: 27rem;
+		margin: auto auto;
+	}
+	.store-locator_icon {
+		height: 1rem;
+		top: 1.96px;
+		right: 0rem;
+	}
+	.logo-icon_wrapper {
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
+	}
+	.shoppingbag-icon_wrapper {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+	}
+	.dropdown-menu {
+		width: 100%;
+	}
+	.dropdown-menu_items {
+		margin-top: 60px;
+	}
+	.dropdown-menu_items a {
+		display: inline-block;
+	}
+	.dropdown-menu_items a:last-of-type {
+		padding-bottom: 10px;
+	}
+}

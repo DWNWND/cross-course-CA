@@ -45,32 +45,36 @@ ul {
 	margin-block-end: 0em;
 	padding-inline-start: 0px;
 	width: 100%;
+	list-style-type: none;
 }
-.searchbar,
-nav li {
-	display: inline-block;
-}
-/*DENNE SKAL IKKE MED -START*/
-.header-background {
-	background: 100% no-repeat url(../images/hero-image.jpg);
-	width: 100%;
-	height: 850px;
-	display: inline-block;
-}
-/*DENNE SKAL IKKE MED - SLUTT*/
 
+/*---*/
 .header {
 	background-image: 100% no-repeat url(../images/header-background.png);
 	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: rgba(255, 255, 255, 0.3);
+}
+.searchbar,
+nav li {
+	display: inline-block;
+}
+.menu {
+	padding-top: 3.75rem;
 	padding-left: 5rem;
-	padding-right: 5rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	background-color: rgba(151, 109, 80, 0.2);
+	font-size: 1rem;
 	white-space: nowrap;
-	filter: drop-shadow(2px 3px 3px rgba(000, 000, 000, 0.3));
+	font-weight: 600;
+}
+.menu a {
+	color: #72482b;
+}
+.menu li {
+	padding-right: 2%;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
 }
 #logo-header {
 	filter: drop-shadow(2px 3px 3px rgba(000, 000, 000, 0.3));
@@ -106,15 +110,15 @@ nav li {
 	white-space: nowrap;
 	font-weight: 600;
 }
-.menu a {
-	color: #72482b;
+/*---*/
+
+/*DENNE SKAL IKKE MED -START*/
+.header-background {
+	background: 100% no-repeat url(../images/hero-image.jpg);
+	width: 100%;
+	height: 850px;
+	display: inline-block;
 }
-.menu li {
-	padding-right: 2%;
-	padding-top: 0.4rem;
-	padding-bottom: 0.4rem;
-}
-/*DETTE SKAL INN PÅ ALLE SIDENE - SLUTT*/
 .cta-button-container {
 	width: 100%;
 	text-align: center;
@@ -262,6 +266,19 @@ footer li {
 	font-size: 0.7rem;
 	margin: 0;
 	font-weight: 200;
+}
+.grid {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-gap: 30px;
+	min-height: 100px;
+}
+.footer {
+	margin-top: 50px;
+	display: block;
+}
+.footer:first-of-type {
+	margin-left: 50px;
 }
 /*DETTE SKAL MED PÅ ALLE STIDENE - SLUTT*/
 
