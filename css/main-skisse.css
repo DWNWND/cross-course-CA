@@ -1,0 +1,145 @@
+.header-background {
+	background: 100% no-repeat url(../images/hero-image.jpg);
+	width: 100%;
+	height: 450px;
+	display: inline-block;
+}
+.cta-button-container {
+	width: 100%;
+	text-align: center;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+.cta-button {
+	background-color: #9c916c;
+	border: 2px solid #fff;
+	display: inline-block;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 1.2rem;
+	letter-spacing: 0.04rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	width: 15rem;
+	margin: 2rem;
+	/* filter: drop-shadow(4px 4px 4px rgba(000, 000, 000, 0.3)); */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cta-button a {
+	color: #fff;
+}
+/* .bannertext {
+	color: #fff;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.25rem;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 10px;
+	white-space: nowrap;
+	/* font-size: 2vw; */
+/* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+h1 {
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	color: #73401e;
+	text-shadow: (3px 2px 4px rgba(192, 103, 43, 0.14));
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+h4 {
+	font-style: normal;
+	font-size: 0.7rem;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+}
+h2,
+.ambience-carousel {
+	font-family: "Montserrat", sans-serif;
+}
+.product-slider {
+	background-color: rgba(193, 148, 108, 0.26);
+	padding-top: 2rem;
+	margin-top: 1rem;
+	padding-bottom: 3rem;
+	margin-bottom: 1rem;
+}
+.products {
+	margin-top: 1rem;
+}
+#shopping-bag-small {
+	text-align: right;
+	margin-right: 1rem;
+	padding-top: 1rem;
+}
+.product {
+	white-space: nowrap;
+	background-color: #fff9f4;
+	width: 400px;
+	height: 570px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.product-label {
+	margin: 0;
+	text-transform: uppercase;
+}
+.products .jacket {
+	height: 28rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.products a,
+.ad a {
+	font-weight: bold;
+	color: #000;
+}
+.product-text {
+	margin-left: 1rem;
+}
+.ambience-carousel {
+	background: 100% no-repeat url(../images/ambience-1.jpg);
+	width: 100%;
+	height: 400px;
+}
+.slogan-first-part {
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	color: #fff9f4;
+	margin: 0;
+}
+.slogan-second-part {
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	color: #fff9f4;
+	text-shadow: (3px 2px 0px #72482b);
+	margin: 0;
+	text-transform: uppercase;
+}
+.some {
+	display: inline-flex;
+}
+.some img {
+	width: 2rem;
+	height: 2rem;
+	background-color: rgba(114, 72, 43, 0.9);
+	padding: 1rem;
+	border-radius: 50%;
+	overflow: visible;
+}
+
+@media (min-width: 730px) {
+	main {
+		margin-top: 42px;
+	}
+}

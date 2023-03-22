@@ -66,8 +66,9 @@ nav {
 	position: absolute;
 	/* display: block; */
 	left: 0;
-	background: rgba(217, 211, 211, 0.3);
+	background: rgba(217, 211, 211);
 	top: 70px;
+	padding-top: 5px;
 	width: 100%;
 	/* border:solid rgba(114, 72, 43, 0.5) 2px; */
 }
@@ -158,7 +159,7 @@ input[type="search" i] {
 	right: 28px; */
 }
 .dropdown-menu_items {
-	background-color: rgba(151, 109, 80, 0.2);
+	background-color: rgb(216, 203, 194);
 	font-size: 1rem;
 	font-weight: 600;
 }
@@ -189,6 +190,7 @@ input[type="search" i] {
 		/* width: auto; */
 		/* border-top: solid rgba(114, 72, 43, 0.25) 1px; */
 		top: 64px;
+		padding-top: 0px;
 	}
 	.dropdown-menu {
 		max-width: 100%;
