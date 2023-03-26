@@ -28,7 +28,7 @@ header {
 	max-width: 100%;
 	/*min-height: 30px;*/
 	flex-direction: row;
-	align-items: baseline;
+	align-items: center;
 	justify-content: space-between;
 	flex-wrap: nowrap;
 	/* flex-grow: none; */
