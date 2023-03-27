@@ -11,7 +11,7 @@ p {
 	display: block;
 }
 .product-containers a,
-.ad a {
+.ad-section a {
 	font-weight: bold;
 	color: #000;
 }
@@ -133,7 +133,7 @@ h4 {
 .snaps-inline > * {
 	scroll-snap-align: start;
 }
-.ad h1 {
+.ad-section h1 {
 	padding-left: 1rem;
 }
 .productphoto-ad {
@@ -148,7 +148,7 @@ h4 {
 .inline {
 	padding-bottom: 0.7rem;
 }
-.ad {
+.ad-section {
 	margin-bottom: 3rem;
 	margin-top: 1rem;
 }
@@ -189,6 +189,7 @@ h4 {
 		background-color: #efe1d5;
 		padding: 3rem 0 3rem 5rem;
 		margin: 3rem 0;
+		overflow-y: scroll;
 	}
 	.shopping-bag {
 		padding: 0.5rem;
@@ -206,5 +207,41 @@ h4 {
 	}
 	.header-background {
 		height: 700px;
+	}
+	.bottom-right,
+	.bottom-left {
+		display: none;
+	}
+	.ad1 {
+		display: inline-block;
+	}
+	.ad-section {
+		padding: 0 5rem;
+	}
+	.ad-section h1 {
+		padding-left: 0rem;
+	}
+	/* .productprice {
+		padding-left: 0;
+	}
+	.productname {
+		padding-left: 0;
+	} */
+	.product-text {
+		margin-left: 0rem;
+	}
+	.product-label {
+		padding-left: 0rem;
+	}
+	.ad2 {
+		display: inline-block;
+	}
+	.container {
+		display: flex;
+		gap: 2rem;
+		/* overflow-y:hidden; */
+		justify-content: space-between;
+		max-width: 100%;
+		overflow: hidden;
 	}
 }
