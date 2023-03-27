@@ -117,26 +117,26 @@ nav a {
 input[type="search" i] {
 	appearance: auto;
 	box-sizing: border-box;
-	padding: 2px 5px;
+	padding: 2px 10px;
 }
 ::-webkit-input-placeholder {
 	color: rgba (114, 72, 43, 0.7);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: rgba(75, 47, 27, 0.7);
 }
 ::-moz-placeholder {
 	color: rgba (114, 72, 43, 0.7);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: rgba(75, 47, 27, 0.7);
 }
 ::-ms-placeholder {
 	color: rgba (114, 72, 43, 0.7);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: rgba(75, 47, 27, 0.7);
 }
 ::placeholder {
 	color: rgba (114, 72, 43, 0.7);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: rgba(75, 47, 27, 0.7);
 }
 .searchbar_icon {
@@ -191,6 +191,7 @@ input[type="search" i] {
 		/* border-top: solid rgba(114, 72, 43, 0.25) 1px; */
 		top: 64px;
 		padding-top: 0px;
+		position: static-sticky;
 	}
 	.dropdown-menu {
 		max-width: 100%;
@@ -202,6 +203,7 @@ input[type="search" i] {
 		flex-wrap: nowrap;
 		justify-content: space-around;
 		flex-grow: 1;
+		/* position: fixed; */
 	}
 	.searchbar_field {
 		order: 5;

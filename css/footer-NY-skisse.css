@@ -1,6 +1,6 @@
-* {
+/* * {
 	outline: solid 1px red;
-}
+} */
 body {
 	margin: 0;
 	background-color: #fffcfa;
@@ -101,6 +101,7 @@ footer li {
 		grid-template-areas:
 			"area1 area2 area3"
 			"area1 area2 area4";
+		min-height: 150px;
 	}
 	.area3 {
 		display: block;
@@ -114,5 +115,33 @@ footer li {
 	}
 	.area4 a {
 		margin-top: 0px;
+	}
+	.stickyfooter {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+		background-color: rgba(255, 255, 255, 0.566);
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 0.7rem;
+		letter-spacing: 0.09rem;
+		text-transform: uppercase;
+		width: 100%;
+		/* max-width: 100%; */
+		max-height: 40px;
+		padding: 10px 0;
+		/* white-space: nowrap; */
+		justify-content: space-between;
+	}
+	.copyright_wrapper {
+		padding-left: 1rem;
+	}
+	.stickyfooter-link_wrapper {
+		padding-right: 1rem;
+	}
+	.stickyfooter a {
+		color: #000;
+		margin-left: 10px;
 	}
 }
