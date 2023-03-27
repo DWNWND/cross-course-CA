@@ -1,3 +1,6 @@
+body {
+	overscroll-behavior: none;
+}
 p {
 	margin: 0;
 }
@@ -98,7 +101,7 @@ h4 {
 	grid-auto-columns: 53%;
 	gap: 1.5rem;
 	overflow-x: auto;
-	overscroll-behavior-inline: contain; //Bra
+	overscroll-behavior-inline: contain;
 }
 .product-containers {
 	padding: 0.7rem;
@@ -148,6 +151,29 @@ h4 {
 .ad {
 	margin-bottom: 3rem;
 	margin-top: 1rem;
+}
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.bottom-left {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	color: white;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 0.75rem;
+	display: inline;
+}
+.bottom-right {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	color: white;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 0.75rem;
+	display: inline;
 }
 @media (min-width: 500px) {
 	.product-slider {
