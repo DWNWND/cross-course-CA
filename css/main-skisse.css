@@ -175,6 +175,49 @@ h4 {
 	font-size: 0.75rem;
 	display: inline;
 }
+
+/* ambience-carousel */
+
+.ambience-carousel {
+	background: 100% no-repeat url(../images/ambience-1.jpg);
+	max-height: 30rem;
+	padding: 5rem 2rem;
+	object-fit: contain;
+	object-position: center;
+	text-align: center;
+	margin-bottom: 5rem;
+	background-size: cover;
+}
+.slogan-first-part {
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	color: #fff9f4;
+	margin: 0;
+}
+.slogan-second-part {
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	color: #fff9f4;
+	text-shadow: (3px 2px 0px #72482b);
+	margin: 0;
+	text-transform: uppercase;
+}
+.some {
+	display: inline-flex;
+}
+.some img {
+	width: 2rem;
+	height: 2rem;
+	background-color: rgba(114, 72, 43, 0.9);
+	padding: 1rem;
+	border-radius: 50%;
+	overflow: visible;
+}
+
 @media (min-width: 500px) {
 	.product-slider {
 		grid-auto-columns: 34%;
@@ -238,11 +281,14 @@ h4 {
 	}
 	.container {
 		display: flex;
-		gap: 2rem;
+		gap: 1.5rem;
 		/* overflow-y:hidden; */
 		justify-content: space-between;
 		max-width: 100%;
 		/* white-space: nowrap; */
+	}
+	.inline {
+		padding-bottom: 1.5rem;
 	}
 	.ad1,
 	.ad2 {
@@ -252,7 +298,14 @@ h4 {
 		object-fit: contain;
 		object-position: bottom;
 	}
-
+	.ad1:hover {
+		outline: solid 0.1rem #fff;
+		outline-offset: -10px;
+	}
+	.ad2:hover {
+		outline: solid 0.1rem #fff;
+		outline-offset: -10px;
+	}
 	/* }
 	.ad1, .ad2 {
 		flex-grow: 1;
