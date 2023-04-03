@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Rainydays - Checkout</title>
-		<meta name="description" content="Buy our durable jackets />
+		<meta name="description" content="checkout" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Thea Oland" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="css/header-NY-skisse.css" />
 		<link rel="stylesheet" href="css/footer-NY-skisse.css" />
 		<link rel="stylesheet" href="css/main-skisse.css" />
+		<link rel="stylesheet" href="css/list-skisse.css" />
 		<link rel="stylesheet" href="css/checkout.css" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -58,14 +59,14 @@
 					</div>
 				</nav>
 			</div>
-			<a href="index.html" class="logo">
+			<a href="index-skisse.html" class="logo">
 				<img
 					src="images/logo-header-noshadow.png"
 					alt="Rainydays logo - Home"
 					class="logo_icon"
 				/>
 			</a>
-			<a href="#" class="shoppingbag">
+			<a href="checkout.html" class="shoppingbag">
 				<img
 					src="images/icons/shopping-bag.png"
 					alt="link to shopping-bag"
@@ -74,118 +75,204 @@
 			</a>
 		</header>
 		<main>
-			<section class="checkout">
-				<a href="#" class="back-button">continue shopping </a>
-				<h2 class="h2">summary</h2>
-				<div class="incart-container">
-					<img src="#" class="product-incart" />
-					<div class="product-text">
-						<p class="productname">Scott 1.12</p>
-						<a href="#">Silver</a>
+			<section class="checkout-section">
+				<section class="back-section">
+					<a href="#" class="back-btn">continue shopping</a>
+				</section>
+				<section class="summary-section">
+					<h2 class="h2">summary</h2>
+					<div class="summary-product-container">
+						<img
+							src="images/assets/asset1_silver.png"
+							class="summary-product"
+						/>
+						<div class="summary-product-text summary-font">
+							<p class="productname-summary">Scott 1.12</p>
+							<a href="#">Silver</a>
+						</div>
+						<div class="size-selector summary-font">
+							<label for="size">Size:</label>
+							<select name="size" id="size" class="selector-btns">
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+							</select>
+						</div>
+						<div class="qty-selector summary-font">
+							<label for="qty">Qty</label>
+							<select name="qty" id="qty" class="selector-btns">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+						<p class="summary-product-price summary-font">$50</p>
 					</div>
-					<div class="size-dropdown">
-						<label for="size">Size</label>
-						<select name="size" id="size">
-							<option value="S">S</option>
-							<option value="M">M</option>
-							<option value="L">L</option>
-						</select>
+					<div class="summary-product-container">
+						<img
+							src="images/assets/asset1_moss-green.png"
+							class="summary-product"
+						/>
+						<div class="summary-product-text summary-font">
+							<p class="productname-summary">Scott 1.12</p>
+							<a href="#">Moss green</a>
+						</div>
+						<div class="size-selector summary-font">
+							<label for="size">Size:</label>
+							<select name="size" id="size" class="selector-btns">
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+							</select>
+						</div>
+						<div class="qty-selector summary-font">
+							<label for="qty">Qty</label>
+							<select name="qty" id="qty" class="selector-btns">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+						<p class="summary-product-price summary-font">$50</p>
 					</div>
-
-					<div class="qty-dropdown">
-						<label for="qty">Qty</label>
-						<select name="qty" id="qty">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-						</select>
+					<div class="summary-product-container">
+						<img
+							src="images/assets/asset1_ash-gray.png"
+							class="summary-product"
+						/>
+						<div class="summary-product-text summary-font">
+							<p class="productname-summary">Scott 1.12</p>
+							<a href="#">Ash gray</a>
+						</div>
+						<div class="size-selector summary-font">
+							<label for="size">Size:</label>
+							<select name="size" id="size" class="selector-btns">
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+							</select>
+						</div>
+						<div class="qty-selector summary-font">
+							<label for="qty">Qty</label>
+							<select name="qty" id="qty" class="selector-btns">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+						</div>
+						<p class="summary-product-price summary-font">$50</p>
 					</div>
-					<p class="productprice">$50</p>
-				</div>
-				<fieldset>
-					<label for="zipcode">Ship to: Zipcode/City</label>
-					<input type="text" name="zipcode" />
+				</section>
+				<section class="delivery-section">
+					<!-- <label for="zipcode">Ship to: Zipcode/City</label> -->
+					<input
+						type="text"
+						name="zipcode"
+						placeholder="Ship to: Zipcode/City"
+						class="form__input"
+					/>
 					<div class="delivery-method">
-						<label for="delivery">Choose delivery method</label>
-						<select name="delivery" id="delivery">
-							<option value="home-delivery">
-								<span class="align-left">Home delivery</span
-								><span class="align-right">$3</span>
-							</option>
-							<option value="Post-office">
-								<span class="align-left">Post office</span
-								><span class="align-right">$2</span>
-							</option>
-							<option value="instabox">
-								<span class="align-left">Instabox</span
-								><span class="align-right">$3</span>
-							</option>
+						<!-- <label for="delivery">Choose delivery method</label> -->
+						<select name="delivery" id="delivery" class="delivery-selector-btn">
+							<option value="no-selection">Choose delivery method</option>
+							<option value="home-delivery">Home delivery - $3</option>
+							<option value="Post-office">Post office - $2</option>
+							<option value="instabox">Instabox - $3</option>
 						</select>
 					</div>
-				</fieldset>
-				<div class="summary-price">
-					<div class="summary">
-						<p>Shipping</p>
-						<p>$3</p>
-						<p>VAT</p>
-						<p>$18</p>
-						<div class="sum-total">
+				</section>
+				<section class="total-price-section">
+					<div class="total-price-summary">
+						<div class="shipping summary-font">
+							<p class="align-left">Shipping</p>
+							<p class="align-right">$3</p>
+						</div>
+						<div class="vat summary-font">
+							<p>VAT</p>
+							<p>$18</p>
+						</div>
+						<div class="total-price">
 							<p>sum</p>
 							<p>$171</p>
 						</div>
 					</div>
+				</section>
+				<div class="login summary-font">
+					<a href="#" class="link">Log in</a> for faster checkout
 				</div>
-				<div class="login"><a href="#">Log in</a>for faster checkout</div>
-
-				<form action="#" method="POST">
-					<h2 class="h2">ship to</h2>
-					<fieldset>
-						<label for="name">Name</label>
-						<input
-							type="text"
-							name="name"
-							id="name"
-							class="form__input"
-							required
-						/>
-						<label for="address">Address</label>
-						<input
-							type="text"
-							name="address"
-							id="address"
-							class="form__input"
-							required
-						/>
-						<label for="address2">Address line 2</label>
-						<input
-							type="text"
-							name="address2"
-							id="address2"
-							class="form__input"
-						/><label for="phone">Phone number</label>
-						<input type="tel" name="phone" id="phone" class="form__input" />
-						<label for="email">Email address</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							class="form__input"
-							required
-						/>
-						<input type="checkbox" id="terms" />
-						<label for="terms"
-							>I accept the <a href="#">terms of agreement</a></label
-						>
-						<input type="checkbox" id="promotion" />
-						<label for="promotion"
-							>I accept to get promotional stuff via email</label
-						>
-					</fieldset>
-					<input type="submit" value="next" />
-				</form>
+				<section class="shipping-info-section">
+					<form action="#" method="POST" class="form-delivery">
+						<h2 class="h2 h2-form">ship to</h2>
+						<fieldset>
+							<!-- <label for="name">Name</label> -->
+							<input
+								type="text"
+								name="name"
+								id="name"
+								class="form__input"
+								placeholder="Name"
+								required
+							/>
+							<!-- <label for="address">Address</label> -->
+							<input
+								type="text"
+								name="address"
+								id="address"
+								class="form__input"
+								placeholder="Address"
+								required
+							/>
+							<!-- <label for="address2">Address line 2</label> -->
+							<input
+								type="text"
+								name="address2"
+								id="address2"
+								class="form__input"
+								placeholder="Address line 2"
+							/>
+							<!-- <label for="phone">Phone number</label> -->
+							<input
+								type="tel"
+								name="phone"
+								id="phone"
+								class="form__input"
+								placeholder="Phone number"
+							/>
+							<!-- <label for="email">Email address</label> -->
+							<input
+								type="email"
+								name="email"
+								id="email"
+								class="form__input"
+								placeholder="Email address"
+								required
+							/>
+							<div class="checkbox-container">
+								<input type="checkbox" id="terms" />
+								<label for="terms" class="summary-font checkbox-label"
+									>I accept the
+									<a href="#" class="link">terms of agreement</a></label
+								>
+							</div>
+							<div class="checkbox-container">
+								<input type="checkbox" id="promotion" />
+								<label for="promotion" class="summary-font checkbox-label"
+									>I accept to get promotional stuff via email</label
+								>
+							</div>
+						</fieldset>
+						<input type="submit" value="Next" class="next-btn" />
+					</form>
+				</section>
 			</section>
 			<div class="stickyfooter">
 				<div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>

@@ -235,7 +235,10 @@ a.some {
 	border-radius: 50%;
 	margin: 10px 5px;
 }
-
+.product-link {
+	align-self: center;
+	text-align: center;
+}
 /*------------------Media Queries--------------------*/
 @media (min-width: 500px) {
 	.product-slider {

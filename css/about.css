@@ -1,0 +1,17 @@
+.about-section p {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.04rem;
+}
+.about__grid {
+	margin: 5rem 2rem;
+}
+.bold {
+	font-weight: 600;
+}
+.paragraph {
+	margin-bottom: 1.5rem;
+}
+.bold:first-of-type {
+	margin-top: 2rem;
+}
