@@ -1,6 +1,4 @@
-/* * {
-	outline: solid 1px red;
-} */
+/*---------------------GLOBAL----------------------*/
 body {
 	margin: 0;
 	background-color: #fffcfa;
@@ -9,8 +7,6 @@ a {
 	text-decoration: none;
 }
 
-/*-FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER-*/
-/*---------------------GLOBAL----------------------*/
 /*------------------STICKYFOOTER-------------------*/
 .stickyfooter {
 	display: none;
@@ -84,6 +80,7 @@ footer li {
 .area4 img {
 	max-height: auto;
 }
+/*------------------Media Queries--------------------*/
 @media (min-width: 500px) {
 	footer {
 		/* grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); */
@@ -143,5 +140,11 @@ footer li {
 	.stickyfooter a {
 		color: #000;
 		margin-left: 10px;
+	}
+	/*----------:hover-state-------*/
+	footer li:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 0.5px;
+		text-underline-offset: 2px;
 	}
 }

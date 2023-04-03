@@ -2,14 +2,8 @@
 <html lang="en">
 	<head>
 		<title>Rainydays - Checkout</title>
-		<!--Det som vises i tabben. Bør ha navnet på hver unike side-->
-		<meta
-			name="description"
-			content="Order summary and checkout"
-		/>
-		<!--det som kommer opp når du søker på siden i google og må være unik for hver side. Dette er veldig viktig-->
+		<meta name="description" content="Buy our durable jackets />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!--kjempeviktig for at nettisiden din skal kunne brukes på alle størrelser-->
 		<meta name="author" content="Thea Oland" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,67 +11,193 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="css/styles.css" />
+		<script
+			src="https://kit.fontawesome.com/279950e6bf.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="css/header-NY-skisse.css" />
+		<link rel="stylesheet" href="css/footer-NY-skisse.css" />
+		<link rel="stylesheet" href="css/main-skisse.css" />
+		<link rel="stylesheet" href="css/checkout.css" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	</head>
 	<body>
 		<header>
-			<nav>
-				<div class="header">
-					<a href="#">
-						<img
-							src="images/logo-header-noshadow.png"
-							alt="Rainydays logo - Home"
-							id="logo-header"
-						/>
-					</a>
-					<div class="searchbar">
-						<a href="#">
+			<div class="hamburger-menu_wrapper">
+				<input type="checkbox" id="menu-checkbox" />
+				<label for="menu-checkbox" class="hamburger-menu_icon"
+					><i class="fa-solid fa-bars"></i
+				></label>
+				<nav>
+					<div class="dropdown-menu">
+						<div class="searchbar_field">
+							<input
+								type="search"
+								placeholder="Search.."
+								class="searchbar"
+								id="searchbar"
+							/>
 							<img
 								src="images/icons/looking-glass.png"
 								alt="searchbar icon"
-								id="searchbar-icon"
+								class="searchbar_icon"
 							/>
-						</a>
+						</div>
+						<div class="store-locator_field">
+							<a href="#" class="store-locator_link">Store locator </a>
+							<img
+								src="images/icons/location.png"
+								alt="link to store-locator"
+								class="store-locator_icon"
+							/>
+						</div>
+						<a href="list.html" class="dropdown-menu_items new-in">New in</a>
+						<a href="list.html" class="dropdown-menu_items women">Women</a>
+						<a href="list.html" class="dropdown-menu_items men">Men</a>
 					</div>
-					<a href="#">
-						<img
-							src="images/icons/location.png"
-							alt="link to store-locator"
-							id="storelocator"
-						/>
-					</a>
-					<a href="#">
-						<img
-							src="images/icons/shopping-bag.png"
-							alt="link to shopping-bag"
-							id="shopping-bag"
-						/>
-					</a>
-				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="list.html">New in</a></li>
-						<li><a href="list.html">Women</a></li>
-						<li><a href="list.html">Men</a></li>
-					</ul>
-				</div>
-			</nav>
+				</nav>
+			</div>
+			<a href="index.html" class="logo">
+				<img
+					src="images/logo-header-noshadow.png"
+					alt="Rainydays logo - Home"
+					class="logo_icon"
+				/>
+			</a>
+			<a href="#" class="shoppingbag">
+				<img
+					src="images/icons/shopping-bag.png"
+					alt="link to shopping-bag"
+					class="shoppingbag_icon"
+				/>
+			</a>
 		</header>
 		<main>
-			<section>
+			<section class="checkout">
+				<a href="#" class="back-button">continue shopping </a>
+				<h2 class="h2">summary</h2>
+				<div class="incart-container">
+					<img src="#" class="product-incart" />
+					<div class="product-text">
+						<p class="productname">Scott 1.12</p>
+						<a href="#">Silver</a>
+					</div>
+					<div class="size-dropdown">
+						<label for="size">Size</label>
+						<select name="size" id="size">
+							<option value="S">S</option>
+							<option value="M">M</option>
+							<option value="L">L</option>
+						</select>
+					</div>
+
+					<div class="qty-dropdown">
+						<label for="qty">Qty</label>
+						<select name="qty" id="qty">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+						</select>
+					</div>
+					<p class="productprice">$50</p>
+				</div>
+				<fieldset>
+					<label for="zipcode">Ship to: Zipcode/City</label>
+					<input type="text" name="zipcode" />
+					<div class="delivery-method">
+						<label for="delivery">Choose delivery method</label>
+						<select name="delivery" id="delivery">
+							<option value="home-delivery">
+								<span class="align-left">Home delivery</span
+								><span class="align-right">$3</span>
+							</option>
+							<option value="Post-office">
+								<span class="align-left">Post office</span
+								><span class="align-right">$2</span>
+							</option>
+							<option value="instabox">
+								<span class="align-left">Instabox</span
+								><span class="align-right">$3</span>
+							</option>
+						</select>
+					</div>
+				</fieldset>
+				<div class="summary-price">
+					<div class="summary">
+						<p>Shipping</p>
+						<p>$3</p>
+						<p>VAT</p>
+						<p>$18</p>
+						<div class="sum-total">
+							<p>sum</p>
+							<p>$171</p>
+						</div>
+					</div>
+				</div>
+				<div class="login"><a href="#">Log in</a>for faster checkout</div>
+
+				<form action="#" method="POST">
+					<h2 class="h2">ship to</h2>
+					<fieldset>
+						<label for="name">Name</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							class="form__input"
+							required
+						/>
+						<label for="address">Address</label>
+						<input
+							type="text"
+							name="address"
+							id="address"
+							class="form__input"
+							required
+						/>
+						<label for="address2">Address line 2</label>
+						<input
+							type="text"
+							name="address2"
+							id="address2"
+							class="form__input"
+						/><label for="phone">Phone number</label>
+						<input type="tel" name="phone" id="phone" class="form__input" />
+						<label for="email">Email address</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="form__input"
+							required
+						/>
+						<input type="checkbox" id="terms" />
+						<label for="terms"
+							>I accept the <a href="#">terms of agreement</a></label
+						>
+						<input type="checkbox" id="promotion" />
+						<label for="promotion"
+							>I accept to get promotional stuff via email</label
+						>
+					</fieldset>
+					<input type="submit" value="next" />
+				</form>
 			</section>
-			<section>
 			<div class="stickyfooter">
-				RAINYDAYS 2023 &copy;
-				<a href="#">Shipping & delivery</a>
-				<a href="#">Refunds & returns</a>
-				<a href="contact.html">Contact us</a>
+				<div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>
+				<div class="stickyfooter-link_wrapper">
+					<a href="#">Shipping & delivery</a>
+					<a href="#">Refunds & returns</a>
+					<a href="contact.html">Contact us</a>
+				</div>
 			</div>
 		</main>
 		<footer>
-			<div>
+			<div class="area1">
 				<h4>Help</h4>
 				<ul>
 					<li><a href="#">Refunds & returns</a></li>
@@ -86,25 +206,32 @@
 					<li><a href="#">Terms of service & Privacy policy</a></li>
 				</ul>
 			</div>
-			<div>
+			<div class="area2">
 				<h4>About rainydays</h4>
 				<ul>
 					<li><a href="about.html">About us</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</div>
-			<div>
-				<img src="images/logo-footer.png" alt="Rainydays logo" />
-				<!--LAG LOGOEN MINDRE-->
+			<div class="area3">
+				<img
+					src="images/logo-footer.png"
+					alt="Rainydays logo"
+					class="logo_footer"
+				/>
+			</div>
+			<div class="area4">
 				<a href="#"
 					><img
 						src="images/icons/instagram.png"
 						alt="link to Rainydays instagram-page"
+						class="some-icons_footer"
 				/></a>
 				<a href="#"
 					><img
 						src="images/icons/facebook.png"
 						alt="link to Rainydays facebook-page"
+						class="some-icons_footer"
 				/></a>
 			</div>
 		</footer>

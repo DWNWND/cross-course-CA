@@ -1,17 +1,40 @@
+/*------------------GLOBAL------------------*/
 body {
 	overscroll-behavior: none;
 }
 p {
 	margin: 0;
 }
-.header-background {
+.h1 {
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	color: #73401e;
+	text-shadow: 4px 2px 0px #e8d0bd;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+	display: inline-block;
+}
+h4 {
+	font-style: normal;
+	font-size: 0.7rem;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+}
+
+/*---------hero-section---------*/
+.hero-section {
 	background: 100% no-repeat url(../images/hero-image.jpg);
 	max-width: 100%;
-	height: 450px;
+	/* max-height: 100vh; */
 	display: block;
 }
-.product-containers a,
-.ad-section a {
+.product-containers a {
 	font-weight: bold;
 	color: #000;
 }
@@ -32,33 +55,11 @@ p {
 	padding-bottom: 1rem;
 	width: 15rem;
 	margin: 2rem;
-	/* filter: drop-shadow(4px 4px 4px rgba(000, 000, 000, 0.3)); */
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-}
-.cta-button a {
 	color: #fff;
 }
-h1 {
-	font-style: normal;
-	font-weight: bolder;
-	font-size: 1.5rem;
-	letter-spacing: 0.1rem;
-	color: #73401e;
-	text-shadow: 4px 2px 0px #e8d0bd;
-	margin: 0;
-	font-family: "Montserrat", sans-serif;
-	text-transform: uppercase;
-	padding-bottom: 0.5rem;
-}
-h4 {
-	font-style: normal;
-	font-size: 0.7rem;
-	margin: 0;
-	font-weight: 600;
-	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
-}
+/*------------slider-section---------------*/
 .block p {
 	display: block;
 }
@@ -90,7 +91,7 @@ h4 {
 .slider-section {
 	background-color: #efe1d5;
 	padding: 2rem 0 3rem 1rem;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 }
 .slider-section h1 {
 	margin-bottom: 1rem;
@@ -133,6 +134,8 @@ h4 {
 .snaps-inline > * {
 	scroll-snap-align: start;
 }
+
+/*-------------ad-section--------------*/
 .ad-section h1 {
 	padding-left: 1rem;
 }
@@ -176,48 +179,64 @@ h4 {
 	display: inline;
 }
 
-/* ambience-carousel */
-
+/*-----------ambience-section--------------*/
 .ambience-carousel {
 	background: 100% no-repeat url(../images/ambience-1.jpg);
+	background-position: center;
 	max-height: 30rem;
-	padding: 5rem 2rem;
+	padding-top: 5rem;
 	object-fit: contain;
 	object-position: center;
 	text-align: center;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 	background-size: cover;
+}
+.gradient {
+	background-image: linear-gradient(
+		rgba(114, 72, 43, 0.5),
+		rgba(114, 72, 43, 0)
+	);
+	padding: 1rem;
 }
 .slogan-first-part {
 	font-style: italic;
 	font-weight: bolder;
-	font-size: 1.5rem;
+	font-size: 0.7rem;
 	letter-spacing: 0.1rem;
 	color: #fff9f4;
 	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	/* text-align: center; */
 }
 .slogan-second-part {
 	font-style: italic;
-	font-weight: bolder;
-	font-size: 2rem;
+	font-weight: 1000;
+	font-size: 1.1rem;
 	letter-spacing: 0.1rem;
 	color: #fff9f4;
-	text-shadow: (3px 2px 0px #72482b);
 	margin: 0;
 	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	/* text-align: center; */
+	text-shadow: 2px 1px 0px #72482b;
 }
-.some {
-	display: inline-flex;
+.logo-ambience {
+	background: center no-repeat url(../images/logo-footer.png);
+	background-size: 20%;
+	padding-bottom: 1rem;
+	padding-top: 1.5rem;
 }
-.some img {
-	width: 2rem;
-	height: 2rem;
+a.some {
+	padding: 15px;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
 	background-color: rgba(114, 72, 43, 0.9);
-	padding: 1rem;
 	border-radius: 50%;
-	overflow: visible;
+	margin: 10px 5px;
 }
 
+/*------------------Media Queries--------------------*/
 @media (min-width: 500px) {
 	.product-slider {
 		grid-auto-columns: 34%;
@@ -231,7 +250,7 @@ h4 {
 	.slider-section {
 		background-color: #efe1d5;
 		padding: 3rem 0 3rem 5rem;
-		margin: 3rem 0;
+		margin: 0 0 3rem 0;
 		overflow-y: scroll;
 	}
 	.shopping-bag {
@@ -248,8 +267,8 @@ h4 {
 	.cta-button-container {
 		padding: 10rem 0;
 	}
-	.header-background {
-		height: 700px;
+	.hero-section {
+		height: 50rem;
 	}
 	.bottom-right,
 	.bottom-left {
@@ -261,15 +280,6 @@ h4 {
 	.ad-section {
 		padding: 0 5rem;
 	}
-	.ad-section h1 {
-		padding-left: 0rem;
-	}
-	/* .productprice {
-		padding-left: 0;
-	}
-	.productname {
-		padding-left: 0;
-	} */
 	.product-text {
 		margin-left: 0rem;
 	}
@@ -282,19 +292,14 @@ h4 {
 	.container {
 		display: flex;
 		gap: 1.5rem;
-		/* overflow-y:hidden; */
 		justify-content: space-between;
 		max-width: 100%;
-		/* white-space: nowrap; */
 	}
 	.inline {
 		padding-bottom: 1.5rem;
 	}
 	.ad1,
 	.ad2 {
-		/* max-height: 40rem; */
-		/* width: 30%; */
-		/* white-space: nowrap; */
 		object-fit: contain;
 		object-position: bottom;
 	}
@@ -306,14 +311,37 @@ h4 {
 		outline: solid 0.1rem #fff;
 		outline-offset: -10px;
 	}
-	/* }
-	.ad1, .ad2 {
-		flex-grow: 1;
-		object-fit: contain;
-		flex-shrink: 1;
-		flex-basis:  auto;
-		height: auto;
-
-  max-width: 100%;
-	} */
+	.slogan-first-part {
+		font-size: 1.3rem;
+	}
+	.slogan-second-part {
+		font-size: 1.5rem;
+		margin-top: 10px;
+	}
+	.ambience-carousel {
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+	.logo-ambience {
+		background-size: 10%;
+		padding-bottom: 2rem;
+		padding-top: 3rem;
+	}
+	/*-------------:hover-state------------*/
+	.cta-button:hover {
+		background-color: #fff;
+		border: 2px solid #9c916c;
+		color: #9c916c;
+	}
+	.jacket:hover {
+		transform: scale(1.07);
+	}
+	.h1:hover {
+		text-shadow: 4px 2px 0px #e8d0bd, 4px 2px 5px rgba(114, 72, 43, 0.5);
+	}
+	.product-text:hover a {
+		text-decoration: underline;
+		text-decoration-thickness: 0.5px;
+		text-underline-offset: 2px;
+	}
 }

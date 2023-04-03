@@ -230,4 +230,12 @@ input[type="search" i] {
 		margin-left: auto;
 		/* width: 20px; */
 	}
+	.logo_icon:hover {
+		filter: drop-shadow(3px 3px 3px rgba(000, 000, 000, 0.4));
+	}
+	.dropdown-menu_items:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
+	}
 }
