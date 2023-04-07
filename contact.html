@@ -15,6 +15,7 @@
 			src="https://kit.fontawesome.com/279950e6bf.js"
 			crossorigin="anonymous"
 		></script>
+		<link rel="stylesheet" href="css/global.css" />
 		<link rel="stylesheet" href="css/header-NY-skisse.css" />
 		<link rel="stylesheet" href="css/footer-NY-skisse.css" />
 		<link rel="stylesheet" href="css/main-skisse.css" />
@@ -29,7 +30,7 @@
 		<header>
 			<div class="hamburger-menu_wrapper">
 				<input type="checkbox" id="menu-checkbox" />
-				<label for="menu-checkbox" class="hamburger-menu_icon"
+				<label for="menu-checkbox" class="hamburger-menu_icon brown"
 					><i class="fa-solid fa-bars"></i
 				></label>
 				<nav>
@@ -38,7 +39,7 @@
 							<input
 								type="search"
 								placeholder="Search.."
-								class="searchbar"
+								class="searchbar montserrat"
 								id="searchbar"
 							/>
 							<img
@@ -48,16 +49,28 @@
 							/>
 						</div>
 						<div class="store-locator_field">
-							<a href="#" class="store-locator_link">Store locator </a>
+							<a href="#" class="store-locator_link brown montserrat"
+								>Store locator
+							</a>
 							<img
 								src="images/icons/location.png"
 								alt="link to store-locator"
 								class="store-locator_icon"
 							/>
 						</div>
-						<a href="list.html" class="dropdown-menu_items new-in">New in</a>
-						<a href="list.html" class="dropdown-menu_items women">Women</a>
-						<a href="list.html" class="dropdown-menu_items men">Men</a>
+						<a
+							href="list.html"
+							class="dropdown-menu_items new-in brown montserrat"
+							>New in</a
+						>
+						<a
+							href="list.html"
+							class="dropdown-menu_items women brown montserrat"
+							>Women</a
+						>
+						<a href="list.html" class="dropdown-menu_items men brown montserrat"
+							>Men</a
+						>
 					</div>
 				</nav>
 			</div>
@@ -79,28 +92,28 @@
 		<main>
 			<section class="contact-form">
 				<form action="#" method="POST">
-					<h2 class="h2 contact-text">SEND US AN INQUIRY</h2>
+					<h2 class="contact-text">SEND US AN INQUIRY</h2>
 					<fieldset>
 						<!-- <label for="name">Name</label> -->
 						<input
 							type="text"
 							name="name"
 							id="name"
-							class="form__input"
+							class="form__input helvetica"
 							placeholder="Name"
 							required
 						/>
 						<textarea
 							id="message"
 							name="message"
-							class="form__input"
+							class="form__input helvetica"
 						></textarea>
 						<!-- <label for="phone">Phone number</label> -->
 						<input
 							type="tel"
 							name="phone"
 							id="phone"
-							class="form__input"
+							class="form__input helvetica"
 							placeholder="Phone number"
 						/>
 						<!-- <label for="email">Email address</label> -->
@@ -108,29 +121,33 @@
 							type="email"
 							name="email"
 							id="email"
-							class="form__input"
+							class="form__input helvetica"
 							placeholder="Email address"
 							required
 						/>
 					</fieldset>
-					<input type="submit" value="Send inquiry" class="submit-btn" />
+					<input
+						type="submit"
+						value="Send inquiry"
+						class="submit-btn helvetica brown uppercase"
+					/>
 				</form>
 			</section>
-			<section class="contact-form">
-				<h2 class="h2 contact-text">OR CONTACT US AT</h2>
+			<section class="contact-form montserrat">
+				<h2 class="contact-text">OR CONTACT US AT</h2>
 				<p>RAINYDAYS CO</p>
 				<p>Sorgenfri 4</p>
 				<p>1020 Oslo</p>
 				<p>Norway</p>
-				<p class="email link">customersupport@rainydays.com</p>
+				<p class="email underline">customersupport@rainydays.com</p>
 				<p>+47 123 45 678</p>
 			</section>
 			<div class="stickyfooter">
 				<div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>
 				<div class="stickyfooter-link_wrapper">
-					<a href="#">Shipping & delivery</a>
-					<a href="#">Refunds & returns</a>
-					<a href="contact.html">Contact us</a>
+					<a href="#" class="black">Shipping & delivery</a>
+					<a href="#" class="black">Refunds & returns</a>
+					<a href="contact.html" class="black">Contact us</a>
 				</div>
 			</div>
 		</main>
@@ -138,17 +155,21 @@
 			<div class="area1">
 				<h4>Help</h4>
 				<ul>
-					<li><a href="#">Refunds & returns</a></li>
-					<li><a href="#">Shipping & delivery</a></li>
-					<li><a href="#">Frequently Asked Questions (FAQ)</a></li>
-					<li><a href="#">Terms of service & Privacy policy</a></li>
+					<li><a href="#" class="brown">Refunds & returns</a></li>
+					<li><a href="#" class="brown">Shipping & delivery</a></li>
+					<li>
+						<a href="#" class="brown">Frequently Asked Questions (FAQ)</a>
+					</li>
+					<li>
+						<a href="#" class="brown">Terms of service & Privacy policy</a>
+					</li>
 				</ul>
 			</div>
 			<div class="area2">
 				<h4>About rainydays</h4>
 				<ul>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html" class="brown">About us</a></li>
+					<li><a href="contact.html" class="brown">Contact</a></li>
 				</ul>
 			</div>
 			<div class="area3">

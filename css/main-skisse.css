@@ -1,42 +1,8 @@
-/*------------------GLOBAL------------------*/
-body {
-	overscroll-behavior: none;
-}
-p {
-	margin: 0;
-}
-.h1 {
-	font-style: normal;
-	font-weight: bolder;
-	font-size: 1.5rem;
-	letter-spacing: 0.1rem;
-	color: #73401e;
-	text-shadow: 4px 2px 0px #e8d0bd;
-	margin: 0;
-	font-family: "Montserrat", sans-serif;
-	text-transform: uppercase;
-	padding-bottom: 0.5rem;
-	display: inline-block;
-}
-h4 {
-	font-style: normal;
-	font-size: 0.7rem;
-	margin: 0;
-	font-weight: 600;
-	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
-}
-
 /*---------hero-section---------*/
 .hero-section {
 	background: 100% no-repeat url(../images/hero-image.jpg);
 	max-width: 100%;
-	/* max-height: 100vh; */
 	display: block;
-}
-.product-containers a {
-	font-weight: bold;
-	color: #000;
 }
 .cta-button-container {
 	max-width: 100%;
@@ -55,9 +21,7 @@ h4 {
 	padding-bottom: 1rem;
 	width: 15rem;
 	margin: 2rem;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-	color: #fff;
 }
 /*------------slider-section---------------*/
 .block p {
@@ -67,19 +31,14 @@ h4 {
 	display: block;
 }
 .product-text {
-	font-family: helvetica, arial, sans-serif;
 	font-size: 0.75rem;
 	align-self: end;
-}
-.product-text p {
-	text-transform: uppercase;
 }
 .inline p {
 	display: inline;
 }
 .product-text a {
 	font-weight: 800;
-	color: #000;
 	padding: 0.2rem 0;
 }
 .productprice {
@@ -104,7 +63,7 @@ h4 {
 	overflow-x: auto;
 	overscroll-behavior-inline: contain;
 }
-.product-containers {
+.product {
 	padding: 0.7rem;
 	background-color: #fff9f4;
 	display: grid;
@@ -142,9 +101,6 @@ h4 {
 .productphoto-ad {
 	max-width: 100%;
 }
-.ad1 {
-	display: none;
-}
 .product-label {
 	padding-left: 1rem;
 }
@@ -158,14 +114,11 @@ h4 {
 .container {
 	position: relative;
 	text-align: center;
-	color: white;
 }
 .bottom-left {
 	position: absolute;
 	bottom: 1rem;
 	left: 1rem;
-	color: white;
-	font-family: helvetica, arial, sans-serif;
 	font-size: 0.75rem;
 	display: inline;
 }
@@ -173,8 +126,6 @@ h4 {
 	position: absolute;
 	bottom: 1rem;
 	right: 1rem;
-	color: white;
-	font-family: helvetica, arial, sans-serif;
 	font-size: 0.75rem;
 	display: inline;
 }
@@ -203,21 +154,14 @@ h4 {
 	font-weight: bolder;
 	font-size: 0.7rem;
 	letter-spacing: 0.1rem;
-	color: #fff9f4;
 	margin: 0;
-	font-family: "Montserrat", sans-serif;
-	/* text-align: center; */
 }
 .slogan-second-part {
 	font-style: italic;
 	font-weight: 1000;
 	font-size: 1.1rem;
 	letter-spacing: 0.1rem;
-	color: #fff9f4;
 	margin: 0;
-	text-transform: uppercase;
-	font-family: "Montserrat", sans-serif;
-	/* text-align: center; */
 	text-shadow: 2px 1px 0px #72482b;
 }
 .logo-ambience {
@@ -272,10 +216,6 @@ a.some {
 	}
 	.hero-section {
 		height: 50rem;
-	}
-	.bottom-right,
-	.bottom-left {
-		display: none;
 	}
 	.ad1 {
 		display: inline-block;
@@ -341,10 +281,5 @@ a.some {
 	}
 	.h1:hover {
 		text-shadow: 4px 2px 0px #e8d0bd, 4px 2px 5px rgba(114, 72, 43, 0.5);
-	}
-	.product-text:hover a {
-		text-decoration: underline;
-		text-decoration-thickness: 0.5px;
-		text-underline-offset: 2px;
 	}
 }

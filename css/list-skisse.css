@@ -8,21 +8,12 @@
 	row-gap: 25px;
 	padding: 35px 25px;
 }
-.h2 {
-	grid-area: h2;
-	font-weight: 600;
-	font-size: 1.5rem;
-	letter-spacing: 0.1rem;
-	color: #73401e;
-	margin: 0;
-	font-family: "Montserrat", sans-serif;
-	text-transform: uppercase;
-}
 .menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	grid-area: menu;
-	display: none;
 }
 .product-list {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	grid-area: product-list;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -30,12 +21,7 @@
 }
 .load-button {
 	text-align: center;
-	text-decoration: underline;
-	text-decoration-thickness: 0.5px;
-	text-underline-offset: 2px;
 	grid-area: load-button;
-	font-family: "Montserrat", sans-serif;
-	color: #000;
 	margin-top: 1rem;
 }
 @media (min-width: 700px) {
@@ -60,30 +46,27 @@
 		background-color: #e2dad4;
 		padding: 3rem;
 	}
-	.categories {
+	.menu_group1 a,
+	.menu_group2 a,
+	.menu_group3 a {
 		display: block;
+		color: #000;
 	}
-	.group1,
-	.group2,
-	.group3 {
+	.menu_group1,
+	.menu_group2,
+	.menu_group3 {
 		font-weight: 200;
 		font-size: 1rem;
 		letter-spacing: 0.04rem;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
-	.categories {
-		color: #000;
-	}
-	.uppercase {
-		text-transform: uppercase;
-	}
-	.categories:hover {
+	.menu_group1 a:hover,
+	.menu_group2 a:hover,
+	.menu_group3 a:hover {
 		color: #73401e;
 	}
 	.selected {
 		font-weight: 400;
-		color: #72482b;
 	}
 }

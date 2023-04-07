@@ -1,22 +1,4 @@
 /*-----------------------GLOBAL--------------------*/
-/* * {
-	outline: solid 1px red;
-} */
-body {
-	margin: 0;
-	background-color: #fffcfa;
-}
-a {
-	text-decoration: none;
-}
-nav,
-.hamburger-menu_icon {
-	color: #72482b;
-}
-nav,
-#menu-checkbox {
-	display: none;
-}
 #menu-checkbox:checked ~ nav {
 	display: block;
 }
@@ -26,76 +8,48 @@ header {
 	background: rgba(217, 211, 211, 0.3);
 	display: flex;
 	max-width: 100%;
-	/*min-height: 30px;*/
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: nowrap;
-	/* flex-grow: none; */
-}
-.header-fixed-background {
-	display: none;
 }
 
 /*-----------------------TOP----------------------*/
-/* .logo-icon_wrapper,
-.shoppingbag-icon_wrapper {
-	display: inline-block;
-} */
-/* .hamburger-menu_wrapper {
-	margin: auto auto auto 0;
-} */
 .hamburger-menu_icon {
 	font-size: 1.56rem;
 }
-/* .logo-icon_wrapper {
-	 margin: auto auto;
-} */
 .logo_icon {
 	filter: drop-shadow(2px 3px 3px rgba(000, 000, 000, 0.3));
 	max-height: 1.5rem;
 }
-/* .shoppingbag-icon_wrapper {
-	margin: auto 0 auto auto;
-} */
 .shoppingbag_icon {
 	height: 1.5rem;
 }
 /*------------------DROP DOWN MENU------------------*/
 nav {
 	position: absolute;
-	/* display: block; */
 	left: 0;
 	background: rgba(217, 211, 211);
 	top: 70px;
 	padding-top: 5px;
 	width: 100%;
-	/* border:solid rgba(114, 72, 43, 0.5) 2px; */
 }
 nav a {
-	/* display: block; */
-	color: #72482b;
 	padding: 10px 20px;
-	font-family: "Montserrat", sans-serif;
 }
 .dropdown-menu {
 	max-width: 100%;
-	/* margin-top: 0rem; */
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: normal;
 	flex-wrap: wrap;
 }
-/* .dropdown-menu_items a:last-of-type {
-	padding-bottom: 20px;
-} */
 .store-locator_field {
 	position: relative;
 	display: flex;
 	column-gap: 10px;
 	white-space: nowrap;
-	/* min-width: 250px; */
 }
 .searchbar_field {
 	display: flex;
@@ -110,53 +64,23 @@ nav a {
 	box-shadow: inset 6px 6px 10px 0 rgba(114, 72, 43, 0.25),
 		inset -6px -6px 10px 0 rgba(114, 72, 43, 0.25);
 	border: 0.07rem solid #72482b;
-	/* margin-right: 15px; */
-	/* margin-top: 10px; */
-	font-family: "Montserrat", sans-serif;
 }
 input[type="search" i] {
 	appearance: auto;
 	box-sizing: border-box;
 	padding: 2px 10px;
 }
-::-webkit-input-placeholder {
-	color: rgba (114, 72, 43, 0.7);
-	font-size: 0.8rem;
-	color: rgba(75, 47, 27, 0.7);
-}
-::-moz-placeholder {
-	color: rgba (114, 72, 43, 0.7);
-	font-size: 0.8rem;
-	color: rgba(75, 47, 27, 0.7);
-}
-::-ms-placeholder {
-	color: rgba (114, 72, 43, 0.7);
-	font-size: 0.8rem;
-	color: rgba(75, 47, 27, 0.7);
-}
 ::placeholder {
-	color: rgba (114, 72, 43, 0.7);
 	font-size: 0.8rem;
-	color: rgba(75, 47, 27, 0.7);
 }
 .searchbar_icon {
 	height: 16px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	/* margin: 0; */
-	/* position: absolute; */
-	/* top: 10px;
-	right: 27px; */
 }
-/* .store-locator_link {
-	width: 220px;
-} */
 .store-locator_icon {
 	height: 19px;
 	padding: 11.5px 0;
-	/* position: absolute;
-	top: 10px;
-	right: 28px; */
 }
 .dropdown-menu_items {
 	background-color: rgb(216, 203, 194);
@@ -177,33 +101,21 @@ input[type="search" i] {
 		display: none;
 	}
 	header {
-		/* position: relative; */
-		/* flex-direction: row; */
-
 		justify-content: flex-start;
-		/* flex-wrap: nowrap; */
 	}
 	nav {
 		display: flex;
-		/* position: static; */
-		/* margin-top: 0; */
-		/* width: auto; */
-		/* border-top: solid rgba(114, 72, 43, 0.25) 1px; */
 		top: 64px;
 		padding-top: 0px;
 		position: static-sticky;
 	}
 	.dropdown-menu {
 		max-width: 100%;
-		/* margin-top: 0rem; */
 		display: flex;
 		flex-direction: row;
-		/* align-items: baseline; */
-		/* justify-content: normal; */
 		flex-wrap: nowrap;
 		justify-content: space-around;
 		flex-grow: 1;
-		/* position: fixed; */
 	}
 	.searchbar_field {
 		order: 5;
@@ -228,14 +140,8 @@ input[type="search" i] {
 	}
 	.shoppingbag {
 		margin-left: auto;
-		/* width: 20px; */
 	}
 	.logo_icon:hover {
 		filter: drop-shadow(3px 3px 3px rgba(000, 000, 000, 0.4));
-	}
-	.dropdown-menu_items:hover {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-		text-underline-offset: 3px;
 	}
 }

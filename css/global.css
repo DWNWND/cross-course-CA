@@ -1,0 +1,108 @@
+nav,
+.ad1,
+.bottom-right,
+.bottom-left,
+.menu,
+#menu-checkbox,
+.header-fixed-background,
+.stickyfooter,
+.area3 {
+	display: none;
+}
+body {
+	margin: 0;
+	background-color: #fffcfa;
+	overscroll-behavior: none;
+}
+a {
+	text-decoration: none;
+}
+p {
+	margin: 0;
+}
+.h1 {
+	color: #73401e;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: bolder;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	text-shadow: 4px 2px 0px #e8d0bd;
+	margin: 0;
+	padding-bottom: 0.5rem;
+	display: inline-block;
+}
+h2 {
+	color: #73401e;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	grid-area: h2;
+	font-weight: 600;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+	margin: 0;
+}
+h4 {
+	font-style: normal;
+	font-size: 0.7rem;
+	margin: 0;
+	font-weight: 600;
+}
+.bold,
+.product a {
+	font-weight: 600;
+}
+/*-----TEXT-COLOR----.-*/
+.brown,
+footer,
+::placeholder {
+	/* color: #72482b; */
+	color: #73401e;
+}
+.black {
+	color: #000;
+}
+.white {
+	color: #fff9f4;
+}
+.gray {
+	color: #e2dad4;
+}
+
+/*----TEXT FONT AND STYLE----*/
+.montserrat,
+footer {
+	font-family: "Montserrat", sans-serif;
+}
+.helvetica,
+.stickyfooter {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.uppercase,
+h4,
+.productname,
+.productprice,
+.stickyfooter {
+	text-transform: uppercase;
+}
+.underline {
+	/* color: #000; */
+	text-decoration: underline;
+	text-decoration-thickness: 0.5px;
+	text-underline-offset: 2px;
+}
+
+/*----MQ----*/
+
+@media (min-width: 700px) {
+	.product-text:hover a,
+	footer li:hover,
+	.dropdown-menu_items:hover {
+		/* color: #000; */
+		text-decoration: underline;
+		text-decoration-thickness: 0.5px;
+		text-underline-offset: 2px;
+	}
+}
