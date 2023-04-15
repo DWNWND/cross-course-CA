@@ -1,3 +1,45 @@
 .product-section__grid {
-	display: grid;
+  display: grid;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.blod {
+  font-weight: 600;
+}
+.product-section__grid {
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+}
+.product-img-section {
+  grid-template-areas:
+    "big big big big"
+    "thumbnail1 thumbnail2 thumbnail3 thumbnail4";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 35rem;
+  justify-items: center;
+  row-gap: 25px;
+}
+.thumbnail1 {
+  grid-area: thumbnail1;
+}
+.thumbnail2 {
+  grid-area: thumbnail2;
+}
+.thumbnail3 {
+  grid-area: thumbnail3;
+}
+.thumbnail4 {
+  grid-area: thumbnail4;
+}
+.big {
+  grid-area: big;
+}
+.thumbnailsize {
+  inline-size: 50%;
+  align-self: center;
+  justify-self: center;
+}
+.product-detail-section {
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
