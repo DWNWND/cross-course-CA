@@ -1,4 +1,6 @@
-/*-----------------------GLOBAL--------------------*/
+/*---------------HEADER--------------*/
+
+/*---HEADER : GLOBAL---*/
 #menu-checkbox:checked ~ nav {
 	display: block;
 }
@@ -13,8 +15,6 @@ header {
 	justify-content: space-between;
 	flex-wrap: nowrap;
 }
-
-/*-----------------------TOP----------------------*/
 .hamburger-menu_icon {
 	font-size: 1.56rem;
 }
@@ -25,7 +25,7 @@ header {
 .shoppingbag_icon {
 	height: 1.5rem;
 }
-/*------------------DROP DOWN MENU------------------*/
+/*---DROP DOWN MENU---*/
 nav {
 	position: absolute;
 	left: 0;
