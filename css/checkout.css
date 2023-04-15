@@ -1,215 +1,215 @@
 .checkout-section {
-	padding: 2rem 2rem 6rem 2rem;
+  padding: 2rem 2rem 6rem 2rem;
 }
 
 /*------BACK-BTN SECTION ----*/
 
 .back-section {
-	text-align: center;
-	margin-bottom: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
 .back-btn {
-	text-align: center;
-	background-color: #e2dad4;
-	display: inline-block;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 1.2rem;
-	letter-spacing: 0.04rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	width: 100%;
+  text-align: center;
+  background-color: #e2dad4;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
 }
 
 /*------SUMMARY SECTION ----*/
 
 .summary-product-container {
-	display: grid;
-	padding: 0.7rem;
-	margin: 1.2rem 0;
-	grid-template-columns: 100px auto 2rem;
-	grid-template-rows: auto;
-	background-color: #fff9f4;
-	row-gap: 5px;
-	box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
-	grid-template-areas:
-		"productimg . ."
-		"productimg productinfo productinfo"
-		"productimg size-selector ."
-		"productimg qty-selector price"
-		"productimg . . ";
+  display: grid;
+  padding: 0.7rem;
+  margin: 1.2rem 0;
+  grid-template-columns: 100px auto 2rem;
+  grid-template-rows: auto;
+  background-color: #fff9f4;
+  row-gap: 5px;
+  box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
+  grid-template-areas:
+    "productimg . ."
+    "productimg productinfo productinfo"
+    "productimg size-selector ."
+    "productimg qty-selector price"
+    "productimg . . ";
 }
 .summary-product {
-	grid-area: productimg;
-	inline-size: 73%;
+  grid-area: productimg;
+  inline-size: 73%;
 }
 .summary-product-text {
-	grid-area: productinfo;
+  grid-area: productinfo;
 }
 .summary-product-text * {
-	display: inline-block;
+  display: inline-block;
 }
 .summary-product-text p {
-	font-size: 1.1rem;
-	padding-right: 0.4rem;
+  font-size: 1.1rem;
+  padding-right: 0.4rem;
 }
 .summary-product-text a {
-	font-size: 0.9rem;
-	font-weight: 800;
-	padding: 0.2rem 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0.2rem 0;
 }
 .size-selector {
-	grid-area: size-selector;
+  grid-area: size-selector;
 }
 .qty-selector {
-	grid-area: qty-selector;
+  grid-area: qty-selector;
 }
 .selector-btns {
-	border: none;
-	background-color: #fff9f4;
+  border: none;
+  background-color: #fff9f4;
 }
 .summary-product-price {
-	grid-area: price;
-	font-size: 1.2rem;
-	font-weight: 500;
-	justify-self: right;
+  grid-area: price;
+  font-size: 1.2rem;
+  font-weight: 500;
+  justify-self: right;
 }
 /*------DELIVERY-SECTION ----*/
 
 .delivery-section {
-	margin: 2rem 0;
+  margin: 2rem 0;
 }
 .ship-input {
-	width: 100%;
-	padding: 0;
+  width: 100%;
+  padding: 0;
 }
 .delivery-selector-btn {
-	border: solid 2px #72482b;
-	background-color: #fff9f4;
-	width: 100%;
-	height: 3rem;
-	margin: 0.5rem 0;
-	padding: 0 10px;
-	font-size: 1rem;
-	font-weight: 600;
+  border: solid 2px #72482b;
+  background-color: #fff9f4;
+  width: 100%;
+  height: 3rem;
+  margin: 0.5rem 0;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /*------TOTAL-PRICE-SECTION ----*/
 
 .total-price-section {
-	margin: 2rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 .align-left {
-	text-align: left;
+  text-align: left;
 }
 .align-right {
-	text-align: right;
+  text-align: right;
 }
 .shipping,
 .vat,
 .total-price {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 1rem;
-	padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0 10px;
 }
 .total-price {
-	background-color: #ebe7de;
-	border-top: solid 2px #72482b;
-	border-bottom: solid 2px #72482b;
-	height: 3rem;
-	align-items: center;
-	font-size: 1.1rem;
-	font-weight: 600;
-	text-transform: uppercase;
+  background-color: #ebe7de;
+  border-top: solid 2px #72482b;
+  border-bottom: solid 2px #72482b;
+  height: 3rem;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 /*------SHIPPING-INFO-SECTION ----*/
 .login {
-	margin-top: 3rem;
+  margin-top: 3rem;
 }
 .shipping-info-section {
-	margin: 4rem 0 0rem 0;
+  margin: 4rem 0 0rem 0;
 }
 .form-delivery {
-	margin: 1.2rem 0 0 0;
+  margin: 1.2rem 0 0 0;
 }
 fieldset {
-	margin: 0;
-	border: 0;
-	padding: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 .checkbox-label {
-	font-style: italic;
-	font-size: 1rem;
-	font-weight: 300;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
 }
 .checkbox-container {
-	margin: 10px 0;
+  margin: 10px 0;
 }
 
 /*------NEXT-BTN----*/
 
 .next-btn {
-	text-align: center;
-	background-color: #72482b;
-	border: solid 2px #e2dad4;
-	display: inline-block;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 1.2rem;
-	letter-spacing: 0.04rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	width: 100%;
-	box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
-	margin-top: 2rem;
+  text-align: center;
+  background-color: #72482b;
+  border: solid 2px #e2dad4;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
 }
 
 /*------------------Media Queries--------------------*/
 @media (min-width: 730px) {
-	.checkout-section {
-		padding: 5rem 2rem 6rem 2rem;
-	}
+  .checkout-section {
+    padding: 5rem 2rem 6rem 2rem;
+  }
 }
 
 @media (min-width: 1000px) {
-	.checkout-section {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas:
-			"backbtn login"
-			"summary shipping"
-			"delivery shipping"
-			"sum shipping";
-		column-gap: 5rem;
-		max-width: 100%;
-		padding: 7rem 5rem 5rem 5rem;
-	}
-	.back-section {
-		grid-area: backbtn;
-	}
-	.summary-section {
-		grid-area: summary;
-	}
-	.delivery-section {
-		grid-area: delivery;
-		margin: 1rem 0;
-	}
-	.total-price-section {
-		grid-area: sum;
-		margin: 0;
-	}
-	.shipping-info-section {
-		grid-area: shipping;
-		margin: 0;
-	}
-	.login {
-		grid-area: login;
-		align-self: end;
-		margin-bottom: 1rem;
-		margin-top: 0rem;
-	}
-	.form-delivery {
-		margin: 0;
-	}
+  .checkout-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "backbtn login"
+      "summary shipping"
+      "delivery shipping"
+      "sum shipping";
+    column-gap: 5rem;
+    max-width: 100%;
+    padding: 7rem 5rem 5rem 5rem;
+  }
+  .back-section {
+    grid-area: backbtn;
+  }
+  .summary-section {
+    grid-area: summary;
+  }
+  .delivery-section {
+    grid-area: delivery;
+    margin: 1rem 0;
+  }
+  .total-price-section {
+    grid-area: sum;
+    margin: 0;
+  }
+  .shipping-info-section {
+    grid-area: shipping;
+    margin: 0;
+  }
+  .login {
+    grid-area: login;
+    align-self: end;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+  }
+  .form-delivery {
+    margin: 0;
+  }
 }
