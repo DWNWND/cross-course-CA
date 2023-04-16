@@ -268,7 +268,8 @@ footer li {
 }
 .product-text {
   font-size: 0.75rem;
-  /* align-self: end; */
+  align-self: end;
+  margin-left: 0.5rem;
 }
 .shopping-bag {
   justify-self: end;
@@ -300,7 +301,6 @@ footer li {
 .block a {
   display: block;
 }
-
 /*----MQ----*/
 
 @media (min-width: 500px) {
@@ -312,7 +312,7 @@ footer li {
     row-gap: 0px;
   }
 }
-@media (min-width: 730px) {
+@media (min-width: 740px) {
   .product-text:hover a,
   footer li:hover,
   .dropdown-menu_items:hover {

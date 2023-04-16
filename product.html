@@ -9,9 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/279950e6bf.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/checkout.css" />
+    <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/global.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,9 +44,9 @@
       </a>
     </header>
     <main>
-      <section class="product-section__grid">
-        <section class="back-section">
-          <a href="list.html" class="back-btn helvetica brown">back</a>
+      <section class="product-section__flex">
+        <section class="back-section-product">
+          <a href="list.html" class="back-btn-product helvetica brown mobile">back</a>
         </section>
         <section class="product-img-section product">
           <div class="big"><img src="images/assets/asset1_ash-gray.png" /></div>
@@ -63,47 +62,44 @@
             <p class="productprice end">$50</p>
           </div>
           <form action="#" method="#" class="size-color-selector-form">
-            <div class="size-color-selector-container">
-              <div class="color-selection_container mobile">
-                <select name="color" id="color" class="size-color_selector-btn helvetica brown" required>
-                  <option value="no-selection">Choose color</option>
-                  <option value="moss-green">Moss green</option>
-                  <option value="ash-gray">Ash gray</option>
-                  <option value="silver">Silver</option>
-                </select>
-              </div>
-              <div class="size-selection_container mobile">
-                <select name="size" id="size" class="size-color_selector-btn helvetica brown" required>
-                  <option value="no-selection">Choose size</option>
-                  <option value="XS">XS</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                </select>
-              </div>
-              <div class="color-selection_container desktop" required>
-                <input type="radio" id="moss-green" name="moss-green" value="moss-green" />
-                <label for="moss-green">Moss green</label>
-                <input type="radio" id="ash-gray" name="ash-gray" value="ash-gray" />
-                <label for="ash-gray">Ash gray</label>
-                <input type="radio" id="silver" name="silver" value="silver" />
-                <label for="silver">Silver</label>
-              </div>
-              <div class="size-selection_container desktop" required>
-                <input type="radio" id="xs" name="size-xs" value="xs" />
-                <label for="xs">XS</label>
-                <input type="radio" id="s" name="size-s" value="s" />
-                <label for="s">S</label>
-                <input type="radio" id="m" name="size-m" value="m" />
-                <label for="m">M</label>
-                <input type="radio" id="l" name="size-l" value="l" />
-                <label for="l">L</label>
-                <input type="radio" id="xl" name="size-xl" value="xl" />
-                <label for="xl">XL</label>
-              </div>
+            <div class="color-selection_container mobile">
+              <select name="color" id="color" class="size-color_selector-btn helvetica brown" required>
+                <option value="no-selection">Choose color</option>
+                <option value="moss-green">Moss green</option>
+                <option value="ash-gray">Ash gray</option>
+                <option value="silver">Silver</option>
+              </select>
             </div>
-            <!-- <input type="submit" value="add to bag" class="submit-btn helvetica brown uppercase" /> -->
+            <div class="size-selection_container mobile">
+              <select name="size" id="size" class="size-color_selector-btn helvetica brown" required>
+                <option value="no-selection">Choose size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </div>
+            <div class="color-selection_container desktop" required>
+              <input type="radio" id="moss-green" name="moss-green" value="moss-green" />
+              <label for="moss-green">Moss green</label>
+              <input type="radio" id="ash-gray" name="ash-gray" value="ash-gray" />
+              <label for="ash-gray">Ash gray</label>
+              <input type="radio" id="silver" name="silver" value="silver" />
+              <label for="silver">Silver</label>
+            </div>
+            <div class="size-selection_container desktop" required>
+              <input type="radio" id="xs" name="size-xs" value="xs" />
+              <label for="xs">XS</label>
+              <input type="radio" id="s" name="size-s" value="s" />
+              <label for="s">S</label>
+              <input type="radio" id="m" name="size-m" value="m" />
+              <label for="m">M</label>
+              <input type="radio" id="l" name="size-l" value="l" />
+              <label for="l">L</label>
+              <input type="radio" id="xl" name="size-xl" value="xl" />
+              <label for="xl">XL</label>
+            </div>
             <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
           </form>
         </section>

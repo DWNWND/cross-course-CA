@@ -19,3 +19,8 @@ input[type="date" i] {
   font-weight: 300;
   color: rgba(75, 47, 27, 0.7);
 }
+@media (min-width: 730px) {
+  .payment-section {
+    padding: 7rem 10rem;
+  }
+}

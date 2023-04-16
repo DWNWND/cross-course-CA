@@ -2,13 +2,8 @@
   padding: 2rem 2rem 6rem 2rem;
 }
 
-/*------BACK-BTN SECTION ----*/
-
-.back-section {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.back-btn {
+/*-------BUTTONS------*/
+.back-btn-checkout {
   text-align: center;
   background-color: #e2dad4;
   display: inline-block;
@@ -20,7 +15,10 @@
   padding-bottom: 1rem;
   width: 100%;
 }
-
+.back-section-checkout {
+  text-align: center;
+  margin-bottom: 4rem;
+}
 /*------SUMMARY SECTION ----*/
 
 .summary-product-container {
