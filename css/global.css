@@ -50,6 +50,9 @@ span {
 .product a {
   font-weight: 600;
 }
+.inline {
+  display: inline;
+}
 /*-----TEXT-COLOR----.-*/
 .brown,
 footer,
