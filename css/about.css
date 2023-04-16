@@ -19,6 +19,9 @@
 .sloganimg {
   max-width: 100%;
 }
+.sloganimg-section {
+  align-self: center;
+}
 .weathericons {
   max-width: 15rem;
   margin: 1rem 0 2rem 0;
@@ -29,7 +32,13 @@
 .sloganimg {
   margin-top: 3rem;
 }
-@media (min-width: 700px) {
+@media (min-width: 500px) {
+  .about__grid {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+  }
+}
+@media (min-width: 825px) {
   .about__grid {
     display: grid;
     grid-template-columns: 2fr 3fr;
