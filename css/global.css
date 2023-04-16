@@ -16,8 +16,51 @@ body {
 a {
   text-decoration: none;
 }
-p {
-  margin: 0;
+.inline {
+  display: inline-block;
+}
+
+/*------------------COLOR-------------------*/
+.brown,
+footer,
+::placeholder {
+  color: #72482b;
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #fff9f4;
+}
+.gray {
+  color: #e2dad4;
+}
+
+/*-------------TEXT-STYLE---------------*/
+.montserrat,
+footer {
+  font-family: "Montserrat", sans-serif;
+}
+.helvetica,
+.stickyfooter {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.uppercase,
+span,
+.productname,
+.productprice,
+.stickyfooter {
+  text-transform: uppercase;
+}
+.underline {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+}
+.bold,
+.product a {
+  font-weight: 600;
 }
 h1 {
   color: #73401e;
@@ -40,65 +83,23 @@ h2 {
   font-size: 0.7rem;
   margin: 0;
 }
+p {
+  margin: 0;
+}
 span {
   font-style: normal;
   font-size: 0.7rem;
   margin: 0;
   font-weight: 600;
 }
-.bold,
-.product a {
-  font-weight: 600;
-}
-.inline {
-  display: inline;
-}
-/*-----TEXT-COLOR----.-*/
-.brown,
-footer,
-::placeholder {
-  color: #72482b;
-}
-.black {
-  color: #000;
-}
-.white {
-  color: #fff9f4;
-}
-.gray {
-  color: #e2dad4;
-}
-
-/*----TEXT FONT AND STYLE----*/
-.montserrat,
-footer {
-  font-family: "Montserrat", sans-serif;
-}
-.helvetica,
-.stickyfooter {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.uppercase,
-span,
-.productname,
-.productprice,
-.stickyfooter {
-  text-transform: uppercase;
-}
-.underline {
-  color: #000;
-  text-decoration: underline;
-  text-decoration-thickness: 0.5px;
-  text-underline-offset: 2px;
-}
 .margin-bottom {
   margin-bottom: 1rem;
 }
+.margin-left {
+  margin-left: 0.5rem;
+}
 
-/*---------------HEADER--------------*/
-
-/*---HEADER : GLOBAL---*/
+/*------------------HEADER-----------------*/
 #menu-checkbox:checked ~ nav {
   display: block;
 }
@@ -123,7 +124,7 @@ header {
 .shoppingbag_icon {
   height: 1.5rem;
 }
-/*---DROP DOWN MENU---*/
+/*-DROP-DOWN-MENU-*/
 nav {
   position: absolute;
   left: 0;
@@ -188,8 +189,67 @@ input[type="search" i] {
 .shoppingbag {
   height: 24px;
 }
+/*---------------------FORM-INPUT-------------------*/
+.form__input {
+  border: 0.07rem solid #72482b;
+  border-radius: 0px;
+  box-shadow: inset 6px 6px 10px 0 rgba(114, 72, 43, 0.25), inset -6px -6px 10px 0 rgba(114, 72, 43, 0.25);
+  width: 100%;
+  height: 3rem;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+::placeholder {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(75, 47, 27, 0.7);
+  font-family: "Montserrat", sans-serif;
+}
 
-/*---------FOOTER------*/
+/*----------------PRODUCT-PRESENTATION-----------------------*/
+.product {
+  background-color: #fff9f4;
+  display: grid;
+  grid-template-rows: min-content;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.07);
+}
+.product-text {
+  font-size: 0.75rem;
+  align-self: end;
+}
+.shopping-bag {
+  justify-self: end;
+  display: inline-block;
+  padding: 0.3rem;
+  max-height: 25px;
+}
+.shopping-bag img {
+  max-height: 25px;
+}
+.product-link {
+  align-self: center;
+  text-align: center;
+}
+.jacket {
+  inline-size: 90%;
+  align-self: center;
+  justify-self: center;
+}
+.productprice {
+  padding: 0.1rem 0 0.7rem;
+}
+.productname {
+  padding: 0.7rem 0 0.1rem;
+}
+.block p {
+  display: block;
+}
+.block a {
+  display: block;
+}
+
+/*--------------------FOOTER-------------------*/
 footer {
   background: 100% no-repeat url(../images/illustrations/footer-background.jpg);
   display: grid;
@@ -200,13 +260,6 @@ footer {
   column-gap: 10px;
   row-gap: 25px;
   padding: 35px 25px;
-}
-h4 {
-  font-style: normal;
-  font-size: 0.8rem;
-  margin: 0;
-  font-weight: 600;
-  white-space: nowrap;
 }
 ul {
   padding: 0px;
@@ -246,71 +299,10 @@ footer li {
   max-height: auto;
 }
 
-/*-------Field/form-inputs------*/
-.form__input {
-  border: 0.07rem solid #72482b;
-  border-radius: 0px;
-  box-shadow: inset 6px 6px 10px 0 rgba(114, 72, 43, 0.25), inset -6px -6px 10px 0 rgba(114, 72, 43, 0.25);
-  width: 100%;
-  height: 3rem;
-  margin: 0.5rem 0 1rem 0;
-  padding: 0 10px;
-  box-sizing: border-box;
-}
-::placeholder {
-  font-size: 0.8rem;
-  font-weight: 300;
-  color: rgba(75, 47, 27, 0.7);
-  font-family: "Montserrat", sans-serif;
-}
-/*------General product presentation style---------*/
-.product {
-  /* padding: 0.7rem; */
-  background-color: #fff9f4;
-  display: grid;
-  grid-template-rows: min-content;
-  /* grid-template-rows: auto auto auto; */
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.07);
-}
-.product-text {
-  font-size: 0.75rem;
-  align-self: end;
-  margin-left: 0.5rem;
-}
-.shopping-bag {
-  justify-self: end;
-  display: inline-block;
-  padding: 0.3rem;
-  max-height: 25px;
-}
-.shopping-bag img {
-  max-height: 25px;
-}
-.product-link {
-  align-self: center;
-  text-align: center;
-}
-.jacket {
-  inline-size: 90%;
-  align-self: center;
-  justify-self: center;
-}
-.productprice {
-  padding: 0.1rem 0 0.7rem;
-}
-.productname {
-  padding: 0.7rem 0 0.1rem;
-}
-.block p {
-  display: block;
-}
-.block a {
-  display: block;
-}
-/*----MQ----*/
+/*----------------------MEDIA QUERIES-------------------------*/
 
 @media (min-width: 500px) {
-  /*------------------Footer Media Queries--------------------*/
+  /*------------------Footer MQ--------------------*/
   footer {
     grid-template-areas:
       "area1 area2"
@@ -319,29 +311,16 @@ footer li {
   }
 }
 @media (min-width: 740px) {
+  /*--------------- Hover:state ------------*/
   .product-text:hover a,
   footer li:hover,
   .dropdown-menu_items:hover {
-    /* color: #000; */
     text-decoration: underline;
     text-decoration-thickness: 0.5px;
     text-underline-offset: 2px;
   }
-  /*------General product presentation style---------*/
-  .product-text {
-    font-size: 0.85rem;
-  }
-  .shopping-bag {
-    padding: 0.5rem;
-    max-height: 25px;
-  }
-  .shopping-bag img {
-    max-height: 25px;
-  }
-  .jacket:hover {
-    transform: scale(1.07);
-  }
-  /*--------------- Header Media Queries ------------*/
+
+  /*--------------- Header MQ ------------*/
   .hamburger-menu_icon {
     display: none;
   }
@@ -389,7 +368,23 @@ footer li {
   .logo_icon:hover {
     filter: drop-shadow(3px 3px 3px rgba(000, 000, 000, 0.4));
   }
-  /*------------------Footer Media Queries--------------------*/
+
+  /*------Product presentation MQ---------*/
+  .product-text {
+    font-size: 0.85rem;
+  }
+  .shopping-bag {
+    padding: 0.5rem;
+    max-height: 25px;
+  }
+  .shopping-bag img {
+    max-height: 25px;
+  }
+  .jacket:hover {
+    transform: scale(1.07);
+  }
+
+  /*------------------Footer MQ--------------------*/
   footer {
     grid-template-areas:
       "area1 area2 area3"

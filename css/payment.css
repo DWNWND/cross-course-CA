@@ -1,5 +1,5 @@
 .payment-section {
-  padding: 2rem 1rem 4rem;
+  padding: 5rem 1rem 7rem;
 }
 input[type="radio" i] {
   margin: 0;
@@ -19,8 +19,11 @@ input[type="date" i] {
   font-weight: 300;
   color: rgba(75, 47, 27, 0.7);
 }
-@media (min-width: 730px) {
+@media (min-width: 800px) {
   .payment-section {
-    padding: 7rem 10rem;
+    padding: 7rem 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
   }
 }

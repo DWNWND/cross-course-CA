@@ -2,7 +2,7 @@
   padding: 2rem 2rem 6rem 2rem;
 }
 
-/*-------BUTTONS------*/
+/*------------BUTTONS-----------*/
 .back-btn-checkout {
   text-align: center;
   background-color: #e2dad4;
@@ -19,8 +19,8 @@
   text-align: center;
   margin-bottom: 4rem;
 }
-/*------SUMMARY SECTION ----*/
 
+/*-----------SUMMARY SECTION ----------*/
 .summary-product-container {
   display: grid;
   padding: 0.7rem;
@@ -72,7 +72,7 @@
   font-weight: 500;
   justify-self: right;
 }
-/*------DELIVERY-SECTION ----*/
+/*------------DELIVERY-SECTION ---------*/
 
 .delivery-section {
   margin: 2rem 0;
@@ -92,7 +92,7 @@
   font-weight: 600;
 }
 
-/*------TOTAL-PRICE-SECTION ----*/
+/*-----------TOTAL-PRICE-SECTION ---------*/
 
 .total-price-section {
   margin: 2rem 0 0 0;
@@ -121,7 +121,7 @@
   font-weight: 600;
   text-transform: uppercase;
 }
-/*------SHIPPING-INFO-SECTION ----*/
+/*-----------SHIPPING-INFO-SECTION ----------*/
 .login {
   margin-top: 3rem;
 }
@@ -145,7 +145,7 @@ fieldset {
   margin: 10px 0;
 }
 
-/*------NEXT-BTN----*/
+/*------------NEXT-BTN----------*/
 
 .next-btn {
   text-align: center;
