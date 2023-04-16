@@ -69,19 +69,23 @@
   position: relative;
   text-align: center;
 }
-.bottom-left {
+.product-name-info {
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  font-size: 0.75rem;
+  bottom: 1.5rem;
+  width: 100%;
+  background-color: rgba(114, 72, 43, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-left {
+  font-size: 0.7rem;
   display: inline;
+  padding: 0.5rem 1rem;
 }
 .bottom-right {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   display: inline;
+  padding: 0.5rem 1rem;
 }
 
 /*-----------ambience-section--------------*/
@@ -90,45 +94,33 @@
   background-position: center;
   max-height: 30rem;
   padding-top: 5rem;
+  padding-bottom: 5rem;
   object-fit: contain;
   object-position: center;
   text-align: center;
   margin-bottom: 3rem;
   background-size: cover;
 }
-.gradient {
-  background-image: linear-gradient(rgba(114, 72, 43, 0.5), rgba(114, 72, 43, 0));
-  padding: 1rem;
-}
 .slogan-first-part {
   font-style: italic;
   font-weight: bolder;
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
   margin: 0;
+  text-shadow: 3px 3px 2px rgba(232, 208, 189, 0.9);
 }
 .slogan-second-part {
   font-style: italic;
   font-weight: 1000;
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
-  margin: 0;
-  text-shadow: 2px 1px 0px #72482b;
+  margin: 0 0 1rem 0;
+  text-shadow: 3px 3px 2px rgba(232, 208, 189, 0.9);
 }
 .logo-ambience {
   background: center no-repeat url(../images/logo-footer.png);
   background-size: 20%;
-  padding-bottom: 1rem;
   padding-top: 1.5rem;
-}
-a.some {
-  padding: 15px;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  background-color: rgba(114, 72, 43, 0.9);
-  border-radius: 50%;
-  margin: 10px 5px;
 }
 /*------------------Media Queries--------------------*/
 @media (min-width: 500px) {
@@ -174,11 +166,11 @@ a.some {
     object-position: bottom;
   }
   .slogan-first-part {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
   .slogan-second-part {
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-size: 2.1rem;
+    margin: 1rem 0;
   }
   .ambience-carousel {
     margin-left: 5rem;
@@ -186,7 +178,6 @@ a.some {
   }
   .logo-ambience {
     background-size: 10%;
-    padding-bottom: 2rem;
     padding-top: 3rem;
   }
   /*-------------:hover-state------------*/
