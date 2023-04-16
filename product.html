@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rainydays - Scott 1.1.2 Fleece Layer</title>
+    <title>Rainydays - Scott 1.12 Fleece Layer</title>
     <meta name="description" content="Fleece layer from Scott 1.1.2. Available in three colors. Perfect as an inner layer in any situation" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Thea Oland" />
@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/279950e6bf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/checkout.css" />
     <link rel="stylesheet" href="css/global.css" />
     <meta charset="UTF-8" />
@@ -45,41 +46,65 @@
     </header>
     <main>
       <section class="product-section__grid">
+        <section class="back-section">
+          <a href="list.html" class="back-btn helvetica brown">back</a>
+        </section>
         <section class="product-img-section product">
-          <img src="images/assets/asset1_ash-gray.png" class="big" />
-          <img src="images/assets/asset1_ash-gray.png" class="in-focus thumbnail1 thumbnailsize" />
-          <img src="images/assets/asset1_ash-gray.png" class="thumbnail2 thumbnailsize" />
-          <img src="images/assets/asset1_ash-gray.png" class="thumbnail3 thumbnailsize" />
-          <img src="images/assets/asset1_ash-gray.png" class="thumbnail4 thumbnailsize" />
+          <div class="big"><img src="images/assets/asset1_ash-gray.png" /></div>
+          <div class="thumbnail1 in-focus thumbnailsize"><img src="images/assets/asset1_ash-gray.png" /></div>
+          <div class="thumbnail2 thumbnailsize no-focus"><img src="images/assets/asset1_ash-gray.png" /></div>
+          <div class="thumbnail3 thumbnailsize no-focus"><img src="images/assets/asset1_ash-gray.png" /></div>
+          <div class="thumbnail4 thumbnailsize no-focus"><img src="images/assets/asset1_ash-gray.png" /></div>
         </section>
         <section class="product-detail-section">
-          <div class="product-text block">
-            <p class="productname">Scott 1.1.2</p>
+          <div class="product-text margin">
+            <p class="productname">Scott 1.12</p>
             <p class="bold">Fleece layer</p>
-            <p class="productprice">$50</p>
+            <p class="productprice end">$50</p>
           </div>
-          <form action="#" method="#" class="size-and-color-selector">
-            <div class="color-selection_container" required>
-              <input type="radio" id="moss-green" name="moss-green" value="moss-green" />
-              <label for="moss-green">Moss green</label>
-              <input type="radio" id="ash-gray" name="ash-gray" value="ash-gray" />
-              <label for="ash-gray">Ash gray</label>
-              <input type="radio" id="silver" name="silver" value="silver" />
-              <label for="silver">Silver</label>
+          <form action="#" method="#" class="size-color-selector-form">
+            <div class="size-color-selector-container">
+              <div class="color-selection_container mobile">
+                <select name="color" id="color" class="size-color_selector-btn helvetica brown" required>
+                  <option value="no-selection">Choose color</option>
+                  <option value="moss-green">Moss green</option>
+                  <option value="ash-gray">Ash gray</option>
+                  <option value="silver">Silver</option>
+                </select>
+              </div>
+              <div class="size-selection_container mobile">
+                <select name="size" id="size" class="size-color_selector-btn helvetica brown" required>
+                  <option value="no-selection">Choose size</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+              </div>
+              <div class="color-selection_container desktop" required>
+                <input type="radio" id="moss-green" name="moss-green" value="moss-green" />
+                <label for="moss-green">Moss green</label>
+                <input type="radio" id="ash-gray" name="ash-gray" value="ash-gray" />
+                <label for="ash-gray">Ash gray</label>
+                <input type="radio" id="silver" name="silver" value="silver" />
+                <label for="silver">Silver</label>
+              </div>
+              <div class="size-selection_container desktop" required>
+                <input type="radio" id="xs" name="size-xs" value="xs" />
+                <label for="xs">XS</label>
+                <input type="radio" id="s" name="size-s" value="s" />
+                <label for="s">S</label>
+                <input type="radio" id="m" name="size-m" value="m" />
+                <label for="m">M</label>
+                <input type="radio" id="l" name="size-l" value="l" />
+                <label for="l">L</label>
+                <input type="radio" id="xl" name="size-xl" value="xl" />
+                <label for="xl">XL</label>
+              </div>
             </div>
-            <div class="size-selection_container" required>
-              <input type="radio" id="xs" name="size-xs" value="xs" />
-              <label for="xs">XS</label>
-              <input type="radio" id="s" name="size-s" value="s" />
-              <label for="s">S</label>
-              <input type="radio" id="m" name="size-m" value="m" />
-              <label for="m">M</label>
-              <input type="radio" id="l" name="size-l" value="l" />
-              <label for="l">L</label>
-              <input type="radio" id="xl" name="size-xl" value="xl" />
-              <label for="xl">XL</label>
-            </div>
-            <input type="submit" value="add to bag" class="next-btn helvetica gray uppercase" />
+            <!-- <input type="submit" value="add to bag" class="submit-btn helvetica brown uppercase" /> -->
+            <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
           </form>
         </section>
       </section>

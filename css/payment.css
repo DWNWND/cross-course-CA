@@ -1,0 +1,21 @@
+.payment-section {
+  padding: 2rem 1rem 4rem;
+}
+input[type="radio" i] {
+  margin: 0;
+}
+label {
+  margin-right: 1rem;
+}
+.payment-selection {
+  margin: 1rem 0 2rem 0;
+}
+.light {
+  font-weight: 200;
+}
+input[type="date" i] {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(75, 47, 27, 0.7);
+}
