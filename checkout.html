@@ -18,10 +18,11 @@
     <header>
       <div class="hamburger-menu_wrapper">
         <input type="checkbox" id="menu-checkbox" />
-        <label for="menu-checkbox" class="hamburger-menu_icon brown"><i class="fa-solid fa-bars"></i></label>
+        <label for="menu-checkbox" class="hamburger-menu_icon brown"><i class="fa-solid fa-bars" alt="Hamburgermenu"></i></label>
         <nav>
           <div class="dropdown-menu">
             <div class="searchbar_field">
+              <label for="searchbar" class="hide">Searchbar</label>
               <input type="search" placeholder="Search.." class="searchbar montserrat" id="searchbar" />
               <img src="images/icons/looking-glass.png" alt="searchbar icon" class="searchbar_icon" />
             </div>
@@ -50,7 +51,7 @@
         <section class="summary-section">
           <h1>summary</h1>
           <div class="summary-product-container">
-            <img src="images/assets/asset1_silver.png" class="summary-product" />
+            <img src="images/assets/asset1_silver.png" class="summary-product" alt="Image of the selected product: Fleece layer from Scott 1.12 in Silver" />
             <div class="summary-product-text helvetica">
               <p class="productname-summary productname">Scott 1.12</p>
               <a href="product.html" class="black">Silver</a>
@@ -77,7 +78,7 @@
             <p class="summary-product-price helvetica brown">$50</p>
           </div>
           <div class="summary-product-container">
-            <img src="images/assets/asset1_moss-green.png" class="summary-product" />
+            <img src="images/assets/asset1_moss-green.png" class="summary-product" alt="Image of the selected product: Fleece layer from Scott 1.12 in Moss green" />
             <div class="summary-product-text helvetica">
               <p class="productname-summary">Scott 1.12</p>
               <a href="product.html" class="black">Moss green</a>
@@ -104,7 +105,7 @@
             <p class="summary-product-price helvetica brown">$50</p>
           </div>
           <div class="summary-product-container">
-            <img src="images/assets/asset1_ash-gray.png" class="summary-product" />
+            <img src="images/assets/asset1_ash-gray.png" class="summary-product" alt="Image of the selected product: Fleece layer from Scott 1.12 in Ash gray" />
             <div class="summary-product-text helvetica">
               <p class="productname-summary">Scott 1.12</p>
               <a href="product.html" class="black">Ash gray</a>
@@ -132,6 +133,7 @@
           </div>
         </section>
         <section class="delivery-section">
+          <label for="zipcode" class="hide">Choose Zipcode/City for shipping</label>
           <input type="text" name="zipcode" placeholder="Ship to: Zipcode/City" class="form__input" />
           <div class="delivery-method">
             <select name="delivery" id="delivery" class="delivery-selector-btn helvetica brown">
@@ -162,10 +164,15 @@
         <section class="shipping-info-section from-delivery">
           <h1>ship to</h1>
           <fieldset>
+            <label for="name" class="hide">Name</label>
             <input type="text" name="name" id="name" class="form__input" placeholder="Name" required />
+            <label for="adress" class="hide">Adress</label>
             <input type="text" name="address" id="address" class="form__input" placeholder="Address" required />
+            <label for="adress2" class="hide">Adress line 2</label>
             <input type="text" name="address2" id="address2" class="form__input" placeholder="Address line 2" />
+            <label for="phone" class="hide">Phone number</label>
             <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone number" />
+            <label for="email" class="hide">Email adress</label>
             <input type="email" name="email" id="email" class="form__input" placeholder="Email address" required />
             <div class="checkbox-container">
               <input type="checkbox" id="terms" />

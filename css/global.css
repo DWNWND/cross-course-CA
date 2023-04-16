@@ -2,7 +2,7 @@ nav,
 #menu-checkbox,
 .header-fixed-background,
 .stickyfooter,
-.area3 {
+.area3 .hide{
   display: none;
 }
 body {
