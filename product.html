@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rainydays - Scott 1.12 Fleece Layer</title>
+    <title id="title"></title>
     <meta name="description" content="Fleece layer from Scott 1.1.2. Available in three colors. Perfect as an inner layer in any situation" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Thea Oland" />
@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/279950e6bf.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="js/product.js"></script>
     <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/global.css" />
@@ -41,67 +42,10 @@
       <a href="checkout.html" class="shoppingbag"><img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" /> </a>
     </header>
     <main>
-      <section class="product-section__flex">
-        <section class="back-section-product">
-          <a href="list.html" class="back-btn-product helvetica brown mobile">back</a>
-        </section>
-        <section class="product-img-section product">
-          <div class="big"><img src="images/assets/asset1_ash-gray.png" /></div>
-          <div class="thumbnail1 in-focus thumbnailsize"><img src="images/assets/asset1_ash-gray.png" alt="Focused productimage of product: Fleece layer from Scott 1.12" /></div>
-          <div class="thumbnail2 thumbnailsize no-focus"><img src="images/assets/asset1_ash-gray.png" alt="Thumbnail productimage of product: Fleece layer from Scott 1.12" /></div>
-          <div class="thumbnail3 thumbnailsize no-focus"><img src="images/assets/asset1_ash-gray.png" alt="Thumbnail productimage of product: Fleece layer from Scott 1.12" /></div>
-          <div class="thumbnail4 thumbnailsize no-focus"><img src="images/assets/asset1_ash-gray.png" alt="Thumbnail productimage of product: Fleece layer from Scott 1.12" /></div>
-        </section>
-        <section class="product-detail-section">
-          <div class="product-text margin">
-            <h1>Scott 1.12</h1>
-            <p class="bold">Fleece layer</p>
-            <p class="productprice-productpage">$50</p>
-          </div>
-          <form action="#" method="#" class="size-color-selector-form">
-            <div class="color-selection_container mobile">
-              <select name="color" id="color" class="size-color_selector-btn helvetica brown" required>
-                <option value="no-selection">Choose color</option>
-                <option value="moss-green">Moss green</option>
-                <option value="ash-gray">Ash gray</option>
-                <option value="silver">Silver</option>
-              </select>
-            </div>
-            <div class="size-selection_container mobile">
-              <select name="size" id="size" class="size-color_selector-btn helvetica brown" required>
-                <option value="no-selection">Choose size</option>
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
-            </div>
-            <div class="product-colors margin desktop">
-              <div class="color_container">
-                <div class="color-1 colorbox"></div>
-                <p>Moss green</p>
-              </div>
-              <div class="color_container">
-                <div class="color-2 colorbox"></div>
-                <p>Ash gray</p>
-              </div>
-              <div class="color_container">
-                <div class="color-3 colorbox"></div>
-                <p>Silver</p>
-              </div>
-            </div>
-            <div class="product-size margin desktop">
-              <div class="sizebox">XS</div>
-              <div class="sizebox">S</div>
-              <div class="sizebox">M</div>
-              <div class="sizebox">L</div>
-              <div class="sizebox">XL</div>
-            </div>
-            <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
-          </form>
-        </section>
+      <section class="back-section-product">
+        <a href="list.html" class="back-btn-product helvetica brown mobile">back</a>
       </section>
+      <section class="product-section__flex"></section>
       <div class="stickyfooter">
         <div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>
         <div class="stickyfooter-link_wrapper">
