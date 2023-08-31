@@ -46,6 +46,7 @@
     margin-right: 5rem;
     padding: 35px 0px;
     column-gap: 25px;
+    grid-template-columns: 160px 1fr;
   }
   .product-list {
     grid-template-columns: 1fr 1fr;

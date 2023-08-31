@@ -1,11 +1,23 @@
 .desktop {
   display: none;
 }
-.color-1 {
+.Black {
+  background-color: #000;
+}
+.Green {
   background-color: #73694b;
 }
-.color-2 {
+.Gray {
   background-color: #707070;
+}
+.Blue {
+  background-color: #607ab4;
+}
+.Purple {
+  background-color: #583a7a;
+}
+.Red {
+  background-color: #995050;
 }
 .productprice-productpage {
   font-size: 1.2rem;
@@ -72,7 +84,7 @@
 }
 .back-section-product {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .margin {
   margin: 0 0.5rem;
@@ -121,12 +133,20 @@
   align-self: center;
   justify-self: center;
 }
+@media (min-width: 740px) {
+  .back-section-product {
+    padding: 4rem 1rem 2rem 1rem;
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 780px) {
-  .mobile {
+  .mobile,
+  .back-section-product {
     display: none;
   }
   .desktop {
     display: block;
+    white-space: nowrap;
   }
   .product-section__flex {
     padding: 5rem;
