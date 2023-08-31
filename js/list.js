@@ -2,12 +2,11 @@ import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "
 
 const listSection = document.querySelector(".product-list");
 
-//display each jacket by ID - inspired by the monday lecture
 async function displayProducts() {
   showLoadingIndicator(listSection);
   const product = await fetchJackets();
 
-  listSection.innerHTML = ""; //clear loading indicator
+  listSection.innerHTML = ""; //clearing loading indicator
 
   for (let i = 0; i < product.length; i++) {
     const title1 = createTitle1(product[i]);
@@ -30,10 +29,10 @@ async function displayProducts() {
     </div>`;
     productContainer.addEventListener("click", () => {
       window.location.href = `product.html?key=${product[i].id}`;
-    }); //This is unnessesary maybe? It's like repeating it twice. But it also enables the costumer to click anywhere on the product to get to the product page.
-    //at the same time, theres also links in the HTML, and i don't want to change the HTML because then i would have to make bigger changes in the CSS as well to get the right design and look.
+    });
+
     listSection.appendChild(productContainer);
-    //is this really better than the other way around?
+    
     if (i === 9) {
       break;
     }

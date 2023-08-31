@@ -1,9 +1,8 @@
 import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
 
-export const sliderSection = document.querySelector(".product-slider"); //add one for the adSection as well?
-const adSection = document.querySelector(".ad-section"); //move to global in some way to get the loading indicator
+export const sliderSection = document.querySelector(".product-slider");
+const adSection = document.querySelector(".ad-section"); 
 
-//display each jacket by ID - inspired by the monday lecture
 async function displayProducts() {
   showLoadingIndicator(sliderSection);
   showLoadingIndicator(adSection);
@@ -35,10 +34,8 @@ async function displayProducts() {
     </div>`;
     productContainer.addEventListener("click", () => {
       window.location.href = `product.html?key=${product[i].id}`;
-    }); //This is unnessesary maybe? It's like repeating it twice. But it also enables the costumer to click anywhere on the product to get to the product page.
-    //at the same time, theres also links in the HTML, and i don't want to change the HTML because then i would have to make bigger changes in the CSS as well to get the right design and look.
+    }); 
     sliderSection.appendChild(productContainer);
-    //is this really better than the other way around?
 
     if (i === 6) {
       break;

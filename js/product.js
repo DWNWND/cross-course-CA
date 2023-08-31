@@ -5,7 +5,7 @@ export const productSection = document.querySelector(".product-section__flex");
 async function displayProduct() {
   showLoadingIndicator(productSection);
   const product = await fetchJacketById();
-  productSection.innerHTML = ""; //clear loading indicator
+  productSection.innerHTML = ""; //clearing loading indicator
 
   const title1 = createTitle1(product);
   const title2 = createTitle2(product);
@@ -46,10 +46,10 @@ async function displayProduct() {
     <div class="product-colors margin desktop"></div>
     <div class="product-size margin desktop"></div>
     <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
-  </form>`; //Would like to be able to grab the sizes and colors and tag them in this html instead of afterwards(for readability)
+  </form>`;
 
   productSection.appendChild(productImagesContainer);
-  productSection.appendChild(productDetailsContainer); //Is it best to use innerHTML or appendChild??
+  productSection.appendChild(productDetailsContainer);
 
   //To get the sizes and colors looped in:
   const productSizeSelector = document.getElementById("size");
@@ -68,7 +68,7 @@ async function displayProduct() {
   const productColorSelectorDesktop = document.querySelector(".product-colors");
 
   const productColors = product.baseColor;
-  const colorArray = productColors.split(" "); //making the baseColor an array. ForEach work if baseColor is applied as an array. Does not work when it's one single string.
+  const colorArray = productColors.split(" "); //making the baseColor an array. ForEach work if baseColor is applied as an array.
 
   colorArray.forEach(function (colors) {
     productColorSelector.innerHTML += `

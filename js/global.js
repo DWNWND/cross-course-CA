@@ -1,5 +1,5 @@
 const url = "https://api.noroff.dev/api/v1/rainy-days/";
-const errorMessage = "Can't seem to reach server..."; //update this to something useful
+const errorMessage = "Can't seem to reach server...";
 
 //getting the product ID for API call - product spesific
 const queryString = document.location.search;
@@ -15,9 +15,6 @@ export async function fetchJackets() {
   } catch (error) {
     const main = document.querySelector("main");
     main.innerHTML = `<div class="error-message montserrat bold red">${errorMessage}</div>`;
-    console.log(error);
-  } finally {
-    console.log("This will run whether there is an error or not"); //remove all console.logs even these
   }
 }
 
@@ -30,9 +27,6 @@ export async function fetchJacketById() {
   } catch (error) {
     const main = document.querySelector("main");
     main.innerHTML = `<div class="error-message montserrat bold brown">${errorMessage}</div>`;
-    console.log(error);
-  } finally {
-    console.log("This will run whether there is an error or not"); //remove all console.logs even these
   }
 }
 
