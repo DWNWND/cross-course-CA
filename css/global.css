@@ -267,47 +267,57 @@ input[type="search" i] {
 .product {
   background-color: #fff9f4;
   display: grid;
-  grid-template-rows: min-content;
+  grid-template-rows: auto 250px auto;
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.07);
+  grid-template-areas:
+    "shoppingbag"
+    "productimg"
+    "producttext";
+}
+.product-image-container {
+  grid-area: productimg;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
 }
 .product-text {
+  grid-area: producttext;
   font-size: 0.75rem;
   align-self: end;
 }
 .shopping-bag {
+  grid-area: shoppingbag;
   justify-self: end;
   display: inline-block;
-  height: 27.8px;
-  width: 15px;
-  padding: 0.4rem;
-  margin: 0.4rem 0.4rem 0 0.4rem;
+  height: 20px;
+  width: 17px;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 }
 .shopping-bag_icon-empty {
   background-image: url(/images/icons/shopping-bag.png);
   background-repeat: no-repeat;
   background-position: bottom 0 left 0;
-  background-size: 75%;
+  background-size: 90%;
 }
 .shopping-bag_icon-added-product {
   background-image: url(/images/icons/shopping-bag_added-product.png);
   background-repeat: no-repeat;
   background-position: bottom 0 left 0;
-  background-size: 90%;
+  background-size: 100%;
 }
 .product-link {
   align-self: center;
   text-align: center;
 }
 .jacket {
-  inline-size: 90%;
+  inline-size: 70%;
   align-self: center;
   justify-self: center;
 }
 .productprice {
   padding: 0.1rem 0 0.7rem;
-}
-.productname {
-  padding: 0.7rem 0 0.1rem;
 }
 .block p {
   display: block;

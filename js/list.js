@@ -19,11 +19,12 @@ async function displayProducts() {
     productContainer.innerHTML += `
     <div class="shopping-bag shopping-bag_icon-empty" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}">
     </div>
-    <a href="product.html?key=${product[i].id}" class="product-link">
-      <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
-    </a>
+    <div class="product-image-container">
+      <a href="product.html?key=${product[i].id}" class="product-link">
+        <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
+      </a>
+    </div>
     <div class="product-text block margin-left">
-      <p class="productname">${title1}</p>
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
       <p class="productprice">$${product[i].price}</p>
     </div>`;
