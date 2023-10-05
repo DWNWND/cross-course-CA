@@ -277,11 +277,22 @@ input[type="search" i] {
 .shopping-bag {
   justify-self: end;
   display: inline-block;
-  padding: 0.3rem;
-  max-height: 25px;
+  height: 27.8px;
+  width: 15px;
+  padding: 0.4rem;
+  margin: 0.4rem 0.4rem 0 0.4rem;
 }
-.shopping-bag img {
-  max-height: 25px;
+.shopping-bag_icon-empty {
+  background-image: url(/images/icons/shopping-bag.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 0;
+  background-size: 75%;
+}
+.shopping-bag_icon-added-product {
+  background-image: url(/images/icons/shopping-bag_added-product.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 0;
+  background-size: 90%;
 }
 .product-link {
   align-self: center;
@@ -428,13 +439,6 @@ footer li {
   /*------Product presentation MQ---------*/
   .product-text {
     font-size: 0.85rem;
-  }
-  .shopping-bag {
-    padding: 0.5rem;
-    max-height: 25px;
-  }
-  .shopping-bag img {
-    max-height: 25px;
   }
   .jacket:hover {
     transform: scale(1.07);

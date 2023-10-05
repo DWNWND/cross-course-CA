@@ -1,7 +1,8 @@
 import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
+import { getProductsFromCart } from "./cartfunction.js";
 
 export const sliderSection = document.querySelector(".product-slider");
-const adSection = document.querySelector(".ad-section"); 
+const adSection = document.querySelector(".ad-section");
 
 async function displayProducts() {
   showLoadingIndicator(sliderSection);
@@ -21,9 +22,8 @@ async function displayProducts() {
     productContainer.classList.add("product");
 
     productContainer.innerHTML += `
-    <a href="checkout.html" class="shopping-bag">
-      <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" />
-    </a>
+    <div class="shopping-bag shopping-bag_icon-empty" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}">
+    </div>
     <a href="product.html?key=${product[i].id}" class="product-link">
       <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
     </a>
@@ -32,9 +32,6 @@ async function displayProducts() {
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
       <p class="productprice">$${product[i].price}</p>
     </div>`;
-    productContainer.addEventListener("click", () => {
-      window.location.href = `product.html?key=${product[i].id}`;
-    }); 
     sliderSection.appendChild(productContainer);
 
     if (i === 6) {
@@ -66,5 +63,46 @@ async function displayProducts() {
     </div>
   </div>`;
   adSection.appendChild(adContainer);
+
+  //move to its own js-file/or global after completing
+  const addToCartButton = document.querySelectorAll(".shopping-bag");
+
+  addToCartButton.forEach((cartButtons) => {
+    cartButtons.addEventListener("click", eventSaveLocally);
+  });
+
+  function eventSaveLocally() {
+    event.target.classList.toggle("shopping-bag_icon-empty");
+    event.target.classList.toggle("shopping-bag_icon-added-product");
+
+    const id = event.target.dataset.id;
+    const title1 = event.target.dataset.title1;
+    const title2 = event.target.dataset.title2;
+    const img = event.target.dataset.img;
+    const price = event.target.dataset.price;
+    const description = event.target.dataset.description;
+    const sizes = event.target.dataset.sizes;
+
+    const sizeArray = sizes.split(",");
+
+    const productsCurrentlyInCart = getProductsFromCart();
+
+    const productExists = productsCurrentlyInCart.find(function (item) {
+      return item.id === id;
+    });
+
+    if (!productExists) {
+      const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray };
+      productsCurrentlyInCart.push(item);
+      addToCart(productsCurrentlyInCart);
+    } else {
+      const newProducts = productsCurrentlyInCart.filter((item) => item.id !== id);
+      addToCart(newProducts);
+    }
+  }
 }
 displayProducts();
+
+function addToCart(product) {
+  localStorage.setItem("inCart", JSON.stringify(product));
+}

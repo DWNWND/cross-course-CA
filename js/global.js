@@ -1,4 +1,4 @@
-const url = "https://api.noroff.dev/api/v1/rainy-days/";
+export const url = "https://api.noroff.dev/api/v1/rainy-days/";
 const errorMessage = "Can't seem to reach server...";
 
 //getting the product ID for API call - product spesific
