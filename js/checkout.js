@@ -6,25 +6,18 @@ const checkoutSection = document.querySelector(".checkout-section");
 const summarySection = document.querySelector(".summary-section");
 var productsInCart = getProductsFromCart();
 
-function checkCart() {
-  if (Array.isArray(productsInCart) && productsInCart.length) {
-    return true;
-  } else {
-    return false;
-  }
+if (productsInCart.length === 0) {
+  checkoutSection.style.display = "block";
+  checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
 }
-const checkingCart = checkCart();
 
 function generateCart() {
-  if (!checkingCart) {
-    checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
-  } else {
-    productsInCart.forEach(function (item) {
-      const summaryProductContainer = document.createElement("div");
-      summaryProductContainer.classList.add("summary-product-container");
-      summarySection.appendChild(summaryProductContainer);
+  productsInCart.forEach(function (item) {
+    const summaryProductContainer = document.createElement("div");
+    summaryProductContainer.classList.add("summary-product-container");
+    summarySection.appendChild(summaryProductContainer);
 
-      summaryProductContainer.innerHTML += `
+    summaryProductContainer.innerHTML += `
     <div class="summary-product-img-container">
       <img src="${item.img}" class="summary-product-img" alt="Image of the selected product, Fleece layer from Scott 1.12 in Silver" />
     </div>
@@ -52,8 +45,7 @@ function generateCart() {
     </div>
     <p class="summary-product-price helvetica brown">$${item.price}</p>
     `;
-    });
-  }
+  });
 }
 generateCart();
 

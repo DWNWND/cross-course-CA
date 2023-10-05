@@ -40,7 +40,7 @@ async function displayProducts() {
         <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
       </a>
     </div>
-    <div class="product-text block margin-left">
+    <div class="product-text block">
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
       <p class="productprice">$${product[i].price}</p>
     </div>`;

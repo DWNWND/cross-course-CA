@@ -192,3 +192,8 @@
     grid-auto-columns: 21%;
   }
 }
+@media (min-width: 1200px) {
+  .product-slider {
+    grid-auto-columns: 18%;
+  }
+}

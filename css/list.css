@@ -48,9 +48,6 @@
     column-gap: 25px;
     grid-template-columns: 160px 1fr;
   }
-  .product-list {
-    grid-template-columns: 1fr 1fr;
-  }
   .menu {
     display: block;
     background-color: #e2dad4;
@@ -81,10 +78,17 @@
   }
 }
 @media (min-width: 900px) {
+  .menu {
+    padding: 3rem 3rem 3rem 2rem;
+  }
+}
+@media (min-width: 920px) {
   .product-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .menu {
-    padding: 3rem 3rem 3rem 2rem;
+}
+@media (min-width: 1250px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
