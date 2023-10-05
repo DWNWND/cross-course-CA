@@ -1,4 +1,5 @@
-import { showLoadingIndicator } from "./global.js";
+//add loading indicator... and error handling... + add an remove item from list... and try to fix quantity and size selectors
+
 import { getProductsFromCart } from "./cartfunction.js";
 
 const checkoutSection = document.querySelector(".checkout-section");
