@@ -1,14 +1,29 @@
+import { showLoadingIndicator } from "./global.js";
 import { getProductsFromCart } from "./cartfunction.js";
+
+const checkoutSection = document.querySelector(".checkout-section");
 const summarySection = document.querySelector(".summary-section");
+var productsInCart = getProductsFromCart();
 
-const productsInCart = getProductsFromCart();
+function checkCart() {
+  if (Array.isArray(productsInCart) && productsInCart.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const checkingCart = checkCart();
 
-productsInCart.forEach(function (item) {
-  const summaryProductContainer = document.createElement("div");
-  summaryProductContainer.classList.add("summary-product-container");
-  summarySection.appendChild(summaryProductContainer);
+function generateCart() {
+  if (!checkingCart) {
+    checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
+  } else {
+    productsInCart.forEach(function (item) {
+      const summaryProductContainer = document.createElement("div");
+      summaryProductContainer.classList.add("summary-product-container");
+      summarySection.appendChild(summaryProductContainer);
 
-  summaryProductContainer.innerHTML += `
+      summaryProductContainer.innerHTML += `
     <div class="summary-product-img-container">
       <img src="${item.img}" class="summary-product-img" alt="Image of the selected product, Fleece layer from Scott 1.12 in Silver" />
     </div>
@@ -36,6 +51,9 @@ productsInCart.forEach(function (item) {
     </div>
     <p class="summary-product-price helvetica brown">$${item.price}</p>
     `;
-});
+    });
+  }
+}
+generateCart();
 
 //DIDNT MANAGE TO MAKE THE SIZES CORRESPOND TO API CALL...

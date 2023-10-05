@@ -1,6 +1,9 @@
 .checkout-section {
   padding: 2rem 2rem 6rem 2rem;
 }
+.empty-cart {
+  text-align: center;
+}
 
 /*------------BUTTONS-----------*/
 .back-btn-checkout {
