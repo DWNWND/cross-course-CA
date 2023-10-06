@@ -1,22 +1,17 @@
 //add loading indicator... and error handling... + add an remove item from list... and try to fix quantity and size selectors
 
-import { getProductsFromCart } from "./cartfunction.js";
+import { getProductsFromCart, removeFromCart, emptyCartMessage } from "./cartfunction.js";
 
-const checkoutSection = document.querySelector(".checkout-section");
 const summarySection = document.querySelector(".summary-section");
 var productsInCart = getProductsFromCart();
-const shoppingCartTopRight = document.querySelector(".shoppingbag");
 
-if (productsInCart.length === 0) {
-  checkoutSection.style.display = "block";
-  checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
-  shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon"/>`;
-}
+emptyCartMessage();
 
 function generateCart() {
   productsInCart.forEach(function (item) {
     const summaryProductContainer = document.createElement("div");
     summaryProductContainer.classList.add("summary-product-container");
+
     summarySection.appendChild(summaryProductContainer);
 
     summaryProductContainer.innerHTML += `
@@ -26,6 +21,7 @@ function generateCart() {
     <div class="summary-product-text helvetica">
       <a href="product.html" class="black">${item.title2}</a>
     </div>
+    <div class="remove-item-from-cart helvetica brown" data-id="${item.id}">X</div>
     <div class="size-selector helvetica">
       <label for="size">Size:</label>
       <select name="size" id="size" class="size-selector-btns selector-btns black">
@@ -45,8 +41,15 @@ function generateCart() {
         <option value="6">6</option>
       </select>
     </div>
-    <p class="summary-product-price helvetica brown">$${item.price}</p>
+    <p class="summary-product-price helvetica brown">$ ${item.price}</p>
     `;
+  });
+
+  //REMOVE ITEMS FROM CART
+  const removeItemFromCart = document.querySelectorAll(".remove-item-from-cart");
+
+  removeItemFromCart.forEach((xButtons) => {
+    xButtons.addEventListener("click", removeFromCart);
   });
 }
 generateCart();

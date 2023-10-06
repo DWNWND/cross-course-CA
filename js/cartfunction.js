@@ -12,7 +12,7 @@ function addToCart(product) {
   localStorage.setItem("inCart", JSON.stringify(product));
 }
 
-export function eventSaveLocally() {
+export function eventSaveLocally(event) {
   event.target.classList.toggle("shopping-bag_icon-empty");
   event.target.classList.toggle("shopping-bag_icon-added-product");
 
@@ -38,12 +38,13 @@ export function eventSaveLocally() {
     addToCart(productsCurrentlyInCart);
     updateMainShoppingCart();
   } else {
-    const newProducts = productsCurrentlyInCart.filter((item) => item.id !== id);
-    addToCart(newProducts);
+    const updatedProductList = productsCurrentlyInCart.filter((item) => item.id !== id);
+    addToCart(updatedProductList);
     updateMainShoppingCart();
   }
 }
 
+//UPDATE MAIN SHOPPING CART ICON
 function updateMainShoppingCart() {
   const productsInCart = getProductsFromCart();
   const shoppingCartTopRight = document.querySelector(".shoppingbag");
@@ -52,5 +53,37 @@ function updateMainShoppingCart() {
     shoppingCartTopRight.innerHTML = ` <div alt="link to shopping-bag" class="shoppingbag_icon shopping-bag_icon-added-product"></div>`;
   } else {
     shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" />`;
+  }
+}
+
+export function removeFromCart() {
+  const productsCurrentlyInCart = getProductsFromCart();
+
+  const id = event.target.dataset.id;
+  const buttonClicked = event.target;
+  const productClicked = buttonClicked.parentElement;
+
+  const productExists = productsCurrentlyInCart.find(function (item) {
+    return item.id === id;
+  });
+
+  if (productExists) {
+    const updatedProductList = productsCurrentlyInCart.filter((item) => item.id !== id);
+    addToCart(updatedProductList);
+    productClicked.remove();
+    emptyCartMessage();
+  }
+}
+
+//EMPTY CART MESSAGE
+export function emptyCartMessage() {
+  const shoppingCartTopRight = document.querySelector(".shoppingbag");
+  const checkoutSection = document.querySelector(".checkout-section");
+  var productsInCart = getProductsFromCart();
+
+  if (productsInCart.length === 0) {
+    checkoutSection.style.display = "block";
+    checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
+    shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon"/>`;
   }
 }

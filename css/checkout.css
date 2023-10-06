@@ -28,13 +28,13 @@
   display: grid;
   padding: 0.7rem;
   margin: 1.2rem 0;
-  grid-template-columns: 120px auto 2rem;
+  grid-template-columns: 120px auto 5rem;
   grid-template-rows: auto;
   background-color: #fff9f4;
   row-gap: 5px;
   box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
   grid-template-areas:
-    "productimg productinfo productinfo"
+    "productimg productinfo x"
     "productimg size-selector ."
     "productimg qty-selector ."
     "productimg . price";
@@ -47,7 +47,6 @@
   padding: 0.5rem;
   display: flex;
   justify-content: center;
-
 }
 .summary-product-img {
   inline-size: 73%;
@@ -68,6 +67,12 @@
   font-size: 0.9rem;
   font-weight: 800;
   padding: 0.2rem 0;
+}
+.remove-item-from-cart {
+  grid-area: x;
+  font-size: 1rem;
+  justify-self: right;
+  font-weight: 500;
 }
 .size-selector {
   grid-area: size-selector;
