@@ -1,11 +1,12 @@
 import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
-import { eventSaveLocally, getProductsFromCart } from "./cartfunction.js";
+import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
 
 const listSection = document.querySelector(".product-list");
 const productsInCart = getProductsFromCart();
 
 async function displayProducts() {
   showLoadingIndicator(listSection);
+  updateMainShoppingCart()
   const product = await fetchJackets();
 
   listSection.innerHTML = ""; //clearing loading indicator

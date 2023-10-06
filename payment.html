@@ -58,69 +58,68 @@
     </header>
     <main>
       <!-- //fix this section -->
+      <section class="checkout">
+        <div class="login helvetica"><a href="#" class="underline black">Log in</a> for faster checkout</div>
 
-      <section class="delivery-section">
-        <label for="zipcode" class="hide">Choose Zipcode/City for shipping</label>
-        <input type="text" name="zipcode" id="zipcode" placeholder="Ship to: Zipcode/City" class="form__input" />
-        <div class="delivery-method">
-          <select name="delivery" id="delivery" class="delivery-selector-btn helvetica brown">
-            <option value="no-selection">Choose delivery method</option>
-            <option value="home-delivery">Home delivery - $3</option>
-            <option value="Post-office">Post office - $2</option>
-            <option value="instabox">Instabox - $3</option>
-          </select>
-        </div>
-      </section>
+        <section class="delivery-section"></section>
 
-      <div class="login helvetica"><a href="#" class="underline black">Log in</a> for faster checkout</div>
+        <section class="shipping-info-section form-delivery">
+          <h1>ship to</h1>
+          <fieldset>
+            <label for="name" class="hide">Name</label>
+            <input type="text" name="name" id="name" class="form__input" placeholder="Name" required />
+            <label for="address" class="hide">Address</label>
+            <input type="text" name="address" id="address" class="form__input" placeholder="Address" required />
+            <label for="address2" class="hide">Address line 2</label>
+            <input type="text" name="address2" id="address2" class="form__input" placeholder="Address line 2" />
+            <label for="zipcode" class="hide">Zipcode/City</label><input type="text" name="zipcode" id="zipcode" placeholder="Zipcode/City" class="form__input" />
+            <label for="phone" class="hide">Phone number</label>
+            <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone number" />
+            <label for="email" class="hide">Email adress</label>
+            <input type="email" name="email" id="email" class="form__input" placeholder="Email address" required />
 
-      <section class="shipping-info-section form-delivery">
-        <h1>ship to</h1>
-        <fieldset>
-          <label for="name" class="hide">Name</label>
-          <input type="text" name="name" id="name" class="form__input" placeholder="Name" required />
-          <label for="address" class="hide">Address</label>
-          <input type="text" name="address" id="address" class="form__input" placeholder="Address" required />
-          <label for="address2" class="hide">Address line 2</label>
-          <input type="text" name="address2" id="address2" class="form__input" placeholder="Address line 2" />
-          <label for="phone" class="hide">Phone number</label>
-          <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone number" />
-          <label for="email" class="hide">Email adress</label>
-          <input type="email" name="email" id="email" class="form__input" placeholder="Email address" required />
-          <div class="checkbox-container">
-            <input type="checkbox" id="terms" />
-            <label for="terms" class="helvetica checkbox-label">I accept the <a href="#" class="underline black">terms of agreement</a></label>
-          </div>
-          <div class="checkbox-container">
-            <input type="checkbox" id="promotion" />
-            <label for="promotion" class="helvetica checkbox-label">I accept to get promotional stuff via email</label>
-          </div>
-        </fieldset>
-        <a href="payment.html" class="next-btn helvetica gray uppercase">next</a>
-      </section>
-      <section class="payment-section helvetica">
-        <fieldset>
-          <p class="helvetica bold">Preferred method of paying</p>
-          <div class="payment-selection" required>
-            <input type="radio" id="visa" name="visa" value="visa" />
-            <label for="visa">Visa</label>
-            <input type="radio" id="klarna" name="klarna" value="klarna" />
-            <label for="klarna">Klarna</label>
-            <input type="radio" id="vipps" name="vipps" value="vipps" />
-            <label for="vipps">Vipps</label>
-            <input type="radio" id="paypal" name="paypal" value="paypal" />
-            <label for="paypal">Paypal</label>
-          </div>
-          <label for="card-number" class="light">Card number</label>
-          <input type="number" name="card-number" id="card-number" class="form__input" required />
-          <label for="valid-date" class="light">Valid date</label>
-          <input type="date" name="valid-date" id="valid-date" class="form__input" required />
-          <label for="cvv-cvc" class="light">CVV/CVC*</label>
-          <input type="number" name="cvv-cvc" id="cvv-cvc" class="form__input" />
-          <label for="name-on-card" class="light">Name on card</label>
-          <input type="text" name="name-on-card" id="name-on-card" class="form__input" />
-        </fieldset>
-        <a href="checkout-success.html" class="next-btn helvetica gray uppercase">Pay now</a>
+            <div class="delivery-method">
+              <select name="delivery" id="delivery" class="delivery-selector-btn helvetica brown">
+                <option value="no-selection">Choose delivery method</option>
+                <option value="home-delivery">Home delivery - $3</option>
+                <option value="Post-office">Post office - $2</option>
+                <option value="instabox">Instabox - $3</option>
+              </select>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="terms" />
+              <label for="terms" class="helvetica checkbox-label">I accept the <a href="#" class="underline black">terms of agreement</a></label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="promotion" />
+              <label for="promotion" class="helvetica checkbox-label">I accept to get promotional stuff via email</label>
+            </div>
+          </fieldset>
+        </section>
+        <section class="payment-section helvetica">
+          <fieldset>
+            <p class="helvetica bold">Preferred method of paying</p>
+            <div class="payment-selection" required>
+              <input type="radio" id="visa" name="visa" value="visa" />
+              <label for="visa">Visa</label>
+              <input type="radio" id="klarna" name="klarna" value="klarna" />
+              <label for="klarna">Klarna</label>
+              <input type="radio" id="vipps" name="vipps" value="vipps" />
+              <label for="vipps">Vipps</label>
+              <input type="radio" id="paypal" name="paypal" value="paypal" />
+              <label for="paypal">Paypal</label>
+            </div>
+            <label for="card-number" class="light">Card number</label>
+            <input type="number" name="card-number" id="card-number" class="form__input" required />
+            <label for="valid-date" class="light">Valid date</label>
+            <input type="date" name="valid-date" id="valid-date" class="form__input" required />
+            <label for="cvv-cvc" class="light">CVV/CVC*</label>
+            <input type="number" name="cvv-cvc" id="cvv-cvc" class="form__input" />
+            <label for="name-on-card" class="light">Name on card</label>
+            <input type="text" name="name-on-card" id="name-on-card" class="form__input" />
+          </fieldset>
+          <a href="checkout-success.html" class="next-btn helvetica gray uppercase">Pay now</a>
+        </section>
       </section>
       <div class="stickyfooter">
         <div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>

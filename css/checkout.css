@@ -1,3 +1,5 @@
+/* Sort classes that were here previously into "payment.css" instead */
+
 .checkout-section {
   padding: 2rem 2rem 6rem 2rem;
 }
@@ -222,12 +224,6 @@ fieldset {
   .shipping-info-section {
     grid-area: shipping;
     margin: 0;
-  }
-  .login {
-    grid-area: login;
-    align-self: end;
-    margin-bottom: 1rem;
-    margin-top: 0rem;
   }
   .form-delivery {
     margin: 0;

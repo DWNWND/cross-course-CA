@@ -1,5 +1,5 @@
 import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
-import { eventSaveLocally, getProductsFromCart } from "./cartfunction.js";
+import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
 
 export const sliderSection = document.querySelector(".product-slider");
 const adSection = document.querySelector(".ad-section");
@@ -8,6 +8,7 @@ const productsInCart = getProductsFromCart();
 async function displayProducts() {
   showLoadingIndicator(sliderSection);
   showLoadingIndicator(adSection);
+  updateMainShoppingCart();
   const product = await fetchJackets();
 
   const adContainer = document.createElement("div");

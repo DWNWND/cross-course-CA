@@ -45,7 +45,7 @@ export function eventSaveLocally(event) {
 }
 
 //UPDATE MAIN SHOPPING CART ICON
-function updateMainShoppingCart() {
+export function updateMainShoppingCart() {
   const productsInCart = getProductsFromCart();
   const shoppingCartTopRight = document.querySelector(".shoppingbag");
 
