@@ -86,7 +86,7 @@ footer,
   color: #e2dad4;
 }
 .red {
-  color: #a51b1b;
+  color: #dd2e2e;
 }
 
 /*-------------TEXT-STYLE---------------*/
@@ -420,14 +420,18 @@ footer li {
     flex-grow: 1;
   }
   .searchbar_field {
-    order: 5;
+    order: 6;
     flex: 1;
     padding-right: 20px;
   }
   .store-locator_field {
-    order: 4;
+    order: 5;
     flex: 1;
     padding-right: 10px;
+  }
+  .sale {
+    order: 4;
+    flex: 2;
   }
   .new-in {
     order: 1;
@@ -438,7 +442,6 @@ footer li {
   }
   .men {
     order: 3;
-    flex: 2;
   }
   .shoppingbag {
     margin-left: auto;
