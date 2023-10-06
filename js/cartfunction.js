@@ -36,8 +36,21 @@ export function eventSaveLocally() {
     const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray };
     productsCurrentlyInCart.push(item);
     addToCart(productsCurrentlyInCart);
+    updateMainShoppingCart();
   } else {
     const newProducts = productsCurrentlyInCart.filter((item) => item.id !== id);
     addToCart(newProducts);
+    updateMainShoppingCart();
+  }
+}
+
+function updateMainShoppingCart() {
+  const productsInCart = getProductsFromCart();
+  const shoppingCartTopRight = document.querySelector(".shoppingbag");
+
+  if (productsInCart.length > 1 || productsInCart.length === 1) {
+    shoppingCartTopRight.innerHTML = ` <div alt="link to shopping-bag" class="shoppingbag_icon shopping-bag_icon-added-product"></div>`;
+  } else {
+    shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" />`;
   }
 }

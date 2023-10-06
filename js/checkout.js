@@ -5,10 +5,12 @@ import { getProductsFromCart } from "./cartfunction.js";
 const checkoutSection = document.querySelector(".checkout-section");
 const summarySection = document.querySelector(".summary-section");
 var productsInCart = getProductsFromCart();
+const shoppingCartTopRight = document.querySelector(".shoppingbag");
 
 if (productsInCart.length === 0) {
   checkoutSection.style.display = "block";
   checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
+  shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon"/>`;
 }
 
 function generateCart() {
