@@ -52,7 +52,7 @@ export function updateMainShoppingCart() {
   if (productsInCart.length > 1 || productsInCart.length === 1) {
     shoppingCartTopRight.innerHTML = ` <div alt="link to shopping-bag" class="shoppingbag_icon shopping-bag_icon-added-product"></div>`;
   } else {
-    shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" />`;
+    shoppingCartTopRight.innerHTML = ` <img src="/images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" />`;
   }
 }
 
