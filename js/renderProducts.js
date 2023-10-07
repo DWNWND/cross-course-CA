@@ -29,18 +29,34 @@ export function renderProducts(productItem) {
       const productContainer = document.createElement("div");
       productContainer.classList.add("product");
 
-      productContainer.innerHTML += `
-      <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${productItem[i].image}" data-id="${productItem[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${productItem[i].description}" data-price="${productItem[i].price}" data-sizes="${productItem[i].sizes}">
-      </div>
-      <div class="product-image-container">
-        <a href="/product.html?key=${productItem[i].id}" class="product-link">
-          <img src="${productItem[i].image}" alt="${productItem[i].description}" class="jacket" />
-        </a>
-      </div>
-      <div class="product-text block">
-        <a href="/product.html?key=${productItem[i].id}" class="black">${title2}</a>
-        <p class="productprice">$${productItem[i].price}</p>
-      </div>`;
+      if (productItem[i].onSale) {
+        productContainer.innerHTML += `
+        <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${productItem[i].image}" data-id="${productItem[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${productItem[i].description}" data-price="${productItem[i].price}" data-sizes="${productItem[i].sizes}">
+        </div>
+        <div class="product-image-container">
+          <a href="/product.html?key=${productItem[i].id}" class="product-link">
+            <img src="${productItem[i].image}" alt="${productItem[i].description}" class="jacket" />
+          </a>
+        </div>
+        <div class="product-text">
+          <a href="/product.html?key=${productItem[i].id}" class="black">${title2}</a>
+          <p class="productprice discounted line-through">$${productItem[i].discountedPrice}</p>
+          <p class="productprice discounted red bold">$${productItem[i].discountedPrice}</p>
+        </div>`;
+      } else {
+        productContainer.innerHTML += `
+        <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${productItem[i].image}" data-id="${productItem[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${productItem[i].description}" data-price="${productItem[i].price}" data-sizes="${productItem[i].sizes}">
+        </div>
+        <div class="product-image-container">
+          <a href="/product.html?key=${productItem[i].id}" class="product-link">
+            <img src="${productItem[i].image}" alt="${productItem[i].description}" class="jacket" />
+          </a>
+        </div>
+        <div class="product-text block">
+          <a href="/product.html?key=${productItem[i].id}" class="black">${title2}</a>
+          <p class="productprice">$${productItem[i].price}</p>
+        </div>`;
+      }
 
       productList.appendChild(productContainer);
 

@@ -111,6 +111,12 @@ span,
   text-decoration-thickness: 0.5px;
   text-underline-offset: 2px;
 }
+.line-through {
+  text-decoration: line-through;
+}
+.discounted {
+  display: inline;
+}
 .bold,
 .product a {
   font-weight: 600;
@@ -288,6 +294,9 @@ input[type="search" i] {
   grid-area: producttext;
   font-size: 0.75rem;
   align-self: end;
+}
+.product-text a {
+  display: block;
 }
 .shopping-bag {
   grid-area: shoppingbag;
