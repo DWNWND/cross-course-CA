@@ -96,22 +96,3 @@ export function createTitle2(titleParam) {
   const jacketTitle = `${titleArray[2]} ${titleArray[3]} ${titleArray[4]}`;
   return jacketTitle;
 }
-
-//OLD FILTERIN TRIES
-//getting the product GENDER for API call - product spesific
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// const gender = params.get("gender");
-// console.log(gender)
-
-// API call by GENDER
-// export async function fetchJacketById() {
-//   try {
-//     const response = await fetch(url + id);
-//     const results = await response.json();
-//     return results;
-//   } catch (error) {
-//     const main = document.querySelector("main");
-//     main.innerHTML = `<div class="error-message montserrat bold brown">${errorMessage}</div>`;
-//   }
-// }

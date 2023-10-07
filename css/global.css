@@ -114,9 +114,6 @@ span,
 .line-through {
   text-decoration: line-through;
 }
-.discounted {
-  display: inline;
-}
 .bold,
 .product a {
   font-weight: 600;

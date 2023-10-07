@@ -35,7 +35,22 @@ async function displayProducts() {
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
 
-    productContainer.innerHTML += `
+    if (product[i].onSale) {
+      productContainer.innerHTML += `
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}">
+    </div>
+    <div class="product-image-container">
+      <a href="product.html?key=${product[i].id}" class="product-link">
+        <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
+      </a>
+    </div>
+    <div class="product-text">
+      <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
+      <p class="productprice inline line-through">$${product[i].discountedPrice}</p>
+          <p class="productprice inline red bold">$${product[i].discountedPrice}</p>
+    </div>`;
+    } else {
+      productContainer.innerHTML += `
     <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}">
     </div>
     <div class="product-image-container">
@@ -47,6 +62,7 @@ async function displayProducts() {
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
       <p class="productprice">$${product[i].price}</p>
     </div>`;
+    }
     sliderSection.appendChild(productContainer);
 
     if (i === 6) {

@@ -40,8 +40,8 @@ export function renderProducts(productItem) {
         </div>
         <div class="product-text">
           <a href="/product.html?key=${productItem[i].id}" class="black">${title2}</a>
-          <p class="productprice discounted line-through">$${productItem[i].discountedPrice}</p>
-          <p class="productprice discounted red bold">$${productItem[i].discountedPrice}</p>
+          <p class="productprice inline line-through">$${productItem[i].discountedPrice}</p>
+          <p class="productprice inline red bold">$${productItem[i].discountedPrice}</p>
         </div>`;
       } else {
         productContainer.innerHTML += `
