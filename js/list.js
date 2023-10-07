@@ -78,6 +78,12 @@ async function displayCategorizedProducts() {
     if (allItems.gender.toLowerCase().includes(selectedCategory.toLowerCase())) {
       return allItems;
     }
+    if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+      return allItems;
+    }
+    if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
+      return allItems;
+    }
   });
 
   // Checking products categorised
