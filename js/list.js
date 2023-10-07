@@ -1,6 +1,6 @@
 import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator, renderCategory, selectCategory } from "./global.js";
 import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
-import { renderProducts } from "./categoryDisplay.js";
+import { renderProducts } from "./renderProducts.js";
 
 const listSection = document.querySelector(".product-list");
 const searchInput = document.querySelector("#searchbar");
