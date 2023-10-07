@@ -13,7 +13,7 @@ const errorMessage = "Can't seem to reach server...";
 //   displayMessage("error", error, ".team-container");
 // }
 
-//RENDER CATEGORIES
+//RENDER CATEGORIES -- REMOVE??
 export function renderCategory(categoryToRender) {
   const listSection = document.querySelector(".product-list");
   listSection.innerHTML = "";
@@ -25,7 +25,7 @@ export function renderCategory(categoryToRender) {
   });
 }
 
-//SELECT CATEGORY
+//SELECT CATEGORY - REMOVE??
 export function selectCategory(categories) {
   const categorySelector = document.querySelector(".men");
 

@@ -4,8 +4,9 @@ import { getProductsFromCart } from "./cartfunction.js";
 const productsInCart = getProductsFromCart();
 const listSection = document.querySelector(".product-list");
 
-export function displayCategories(productItem) {
+export function renderProducts(productItem) {
   for (let i = 0; i < productItem.length; i++) {
+
     //setting the default and updating shopping cart icon on each product
     let cssClass = "shopping-bag_icon-empty";
     const isItemInCart = productsInCart.find(function (item) {
