@@ -7,6 +7,8 @@ var productsInCart = getProductsFromCart();
 
 emptyCartMessage();
 
+//Searchbar in this does not work (only in list view)
+
 function generateCart() {
   productsInCart.forEach(function (item) {
     const summaryProductContainer = document.createElement("div");

@@ -2,6 +2,8 @@ import { fetchJacketById, createTitle1, createTitle2, showLoadingIndicator } fro
 
 export const productSection = document.querySelector(".product-section__flex");
 
+//Searchbar in this does not work (only in list view)
+
 async function displayProduct() {
   showLoadingIndicator(productSection);
   const product = await fetchJacketById();

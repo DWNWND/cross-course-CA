@@ -5,6 +5,8 @@ export const sliderSection = document.querySelector(".product-slider");
 const adSection = document.querySelector(".ad-section");
 const productsInCart = getProductsFromCart();
 
+//Searchbar in this does not work (only in list view)
+
 async function displayProducts() {
   showLoadingIndicator(sliderSection);
   showLoadingIndicator(adSection);
