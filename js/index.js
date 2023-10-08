@@ -37,7 +37,7 @@ async function displayProducts() {
 
     if (product[i].onSale) {
       productContainer.innerHTML += `
-    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${productItem[i].image}" data-id="${productItem[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${productItem[i].description}" data-price="${productItem[i].price}" data-sizes="${productItem[i].sizes}" data-onsale="${productItem[i].onSale}" data-discountedprice="${productItem[i].discountedPrice}">
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}" data-onsale="${product[i].onSale}" data-discountedprice="${product[i].discountedPrice}">
     </div>
     <div class="product-image-container">
       <a href="product.html?key=${product[i].id}" class="product-link">
@@ -51,7 +51,7 @@ async function displayProducts() {
     </div>`;
     } else {
       productContainer.innerHTML += `
-    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${productItem[i].image}" data-id="${productItem[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${productItem[i].description}" data-price="${productItem[i].price}" data-sizes="${productItem[i].sizes}" data-onsale="${productItem[i].onSale}" data-discountedprice="${productItem[i].discountedPrice}">
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}" data-onsale="${product[i].onSale}" data-discountedprice="${product[i].discountedPrice}">
     </div>
     <div class="product-image-container">
       <a href="product.html?key=${product[i].id}" class="product-link">
