@@ -30,8 +30,6 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("key");
 
-// console.log(queryString)
-
 // API call by ID
 export async function fetchJacketById() {
   try {

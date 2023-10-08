@@ -36,7 +36,7 @@
     "productimg productinfo x"
     "productimg size-selector ."
     "productimg qty-selector ."
-    "productimg . price";
+    "productimg discounted-price price";
 }
 .summary-product-img-container {
   grid-area: productimg;
@@ -84,11 +84,17 @@
   border: none;
   background-color: #fff9f4;
 }
-.summary-product-price {
-  grid-area: price;
+.summary-product-price,
+.summary-product-discounted-price {
   font-size: 1rem;
   font-weight: 500;
   justify-self: right;
+}
+.summary-product-price {
+  grid-area: price;
+}
+.summary-product-discounted-price {
+  grid-area: discounted-price;
 }
 /*------------DELIVERY-SECTION ---------*/
 

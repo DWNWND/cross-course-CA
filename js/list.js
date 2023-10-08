@@ -62,9 +62,6 @@ async function displaySearchedProducts() {
     }
   });
 
-  //Checking what the filter fetches
-  console.log(productsFiltered);
-
   //clearing loading indicator
   productList.innerHTML = "";
 
@@ -100,9 +97,6 @@ async function displayCategorizedProducts() {
       return allItems;
     }
   });
-
-  // Checking products categorised
-  // console.log(productsCategoriesed);
 
   //clearing loading indicator
   productList.innerHTML = "";

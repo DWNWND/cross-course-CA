@@ -54,7 +54,7 @@ async function displayProduct() {
       </div>
       <div class="product-colors margin desktop"></div>
       <div class="product-size margin desktop"></div>
-      <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedPrice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}">Add to bag</div>
+      <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedprice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}" data-onsale="${product.onSale}">Add to bag</div>
     </form>`;
   } else {
     productDetailsContainer.innerHTML += `
@@ -76,7 +76,7 @@ async function displayProduct() {
     </div>
     <div class="product-colors margin desktop"></div>
     <div class="product-size margin desktop"></div>
-    <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedPrice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}">Add to bag</div>
+    <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedprice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}" data-onsale="${product.onSale}">Add to bag</div>
   </form>`;
   }
 

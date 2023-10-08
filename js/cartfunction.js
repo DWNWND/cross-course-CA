@@ -12,7 +12,7 @@ function addToCart(product) {
   localStorage.setItem("inCart", JSON.stringify(product));
 }
 
-//for Products page
+//for indivitual products page
 export function eventSaveLocallyProduct(event) {
   event.target.classList.toggle("add-btn");
   event.target.classList.toggle("added-btn");
@@ -23,10 +23,11 @@ export function eventSaveLocallyProduct(event) {
   const img = event.target.dataset.img;
   const price = event.target.dataset.price;
   const description = event.target.dataset.description;
-  const sizes = event.target.dataset.sizes;
-  const discountedPrice = event.target.dataset.discountedPrice;
+  // const sizes = event.target.dataset.sizes;
+  const discountedPrice = event.target.dataset.discountedprice;
+  const onSale = event.target.dataset.onsale;
 
-  const sizeArray = sizes.split(",");
+  // const sizeArray = sizes.split(",");
 
   const productsCurrentlyInCart = getProductsFromCart();
 
@@ -35,7 +36,7 @@ export function eventSaveLocallyProduct(event) {
   });
 
   if (!productExists) {
-    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray, discountedPrice: discountedPrice };
+    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, discountedPrice: discountedPrice, onSale: onSale };
     productsCurrentlyInCart.push(item);
     addToCart(productsCurrentlyInCart);
   } else {
@@ -56,7 +57,7 @@ export function eventSaveLocallyProduct(event) {
   }
 }
 
-//doublecheck if this works
+//for list views
 export function eventSaveLocallyList(event) {
   event.target.classList.toggle("shopping-bag_icon-empty");
   event.target.classList.toggle("shopping-bag_icon-added-product");
@@ -67,10 +68,10 @@ export function eventSaveLocallyList(event) {
   const img = event.target.dataset.img;
   const price = event.target.dataset.price;
   const description = event.target.dataset.description;
-  const sizes = event.target.dataset.sizes;
-  const discountedPrice = event.target.dataset.discountedPrice;
-
-  const sizeArray = sizes.split(",");
+  // const sizes = event.target.dataset.sizes;
+  const discountedPrice = event.target.dataset.discountedprice;
+  const onSale = event.target.dataset.onsale;
+  // const sizeArray = sizes.split(",");
 
   const productsCurrentlyInCart = getProductsFromCart();
 
@@ -79,7 +80,7 @@ export function eventSaveLocallyList(event) {
   });
 
   if (!productExists) {
-    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray, discountedPrice: discountedPrice };
+    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, discountedPrice: discountedPrice, onSale: onSale };
     productsCurrentlyInCart.push(item);
     addToCart(productsCurrentlyInCart);
     updateMainShoppingCart();
