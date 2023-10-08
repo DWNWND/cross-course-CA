@@ -306,6 +306,7 @@ input[type="search" i] {
   display: inline-block;
   height: 20px;
   width: 17px;
+  cursor: pointer;
 }
 .shopping-bag_icon-empty {
   background-image: url(/images/icons/shopping-bag.png);

@@ -39,6 +39,7 @@
   align-items: center;
   gap: 1.2rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .sizebox {
   padding: 0.3rem;
@@ -50,6 +51,7 @@
   display: inline-block;
   font-weight: 200;
   margin: 1rem 1rem 0 0;
+  cursor: pointer;
 }
 .product-section__flex {
   display: flex;
@@ -83,6 +85,7 @@
   width: 100%;
   box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
   margin-top: 2rem;
+  cursor: pointer;
 }
 .added-btn {
   background-color: #72482b;
@@ -147,11 +150,13 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .thumbnailsize > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .no-focus {
   filter: blur(0.7px) opacity(0.5);
