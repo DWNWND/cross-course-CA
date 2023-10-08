@@ -1,5 +1,5 @@
-import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator, renderCategory, selectCategory } from "./global.js";
-import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
+import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
+import { eventSaveLocallyList, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
 import { renderProducts } from "./renderProducts.js";
 
 const listSection = document.querySelector(".list-section");
@@ -74,7 +74,7 @@ async function displaySearchedProducts() {
   //add items to cart
   const addToCartButton = document.querySelectorAll(".shopping-bag");
   addToCartButton.forEach((cartButtons) => {
-    cartButtons.addEventListener("click", eventSaveLocally);
+    cartButtons.addEventListener("click", eventSaveLocallyList);
   });
 }
 
@@ -147,7 +147,7 @@ async function displayCategorizedProducts() {
   //add items to cart
   const addToCartButton = document.querySelectorAll(".shopping-bag");
   addToCartButton.forEach((cartButtons) => {
-    cartButtons.addEventListener("click", eventSaveLocally);
+    cartButtons.addEventListener("click", eventSaveLocallyList);
   });
 }
 displayCategorizedProducts();

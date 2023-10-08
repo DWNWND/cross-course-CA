@@ -1,5 +1,5 @@
 import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
-import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
+import { eventSaveLocallyList, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
 
 export const sliderSection = document.querySelector(".product-slider");
 const adSection = document.querySelector(".ad-section");
@@ -99,7 +99,7 @@ async function displayProducts() {
   const addToCartButton = document.querySelectorAll(".shopping-bag");
 
   addToCartButton.forEach((cartButtons) => {
-    cartButtons.addEventListener("click", eventSaveLocally);
+    cartButtons.addEventListener("click", eventSaveLocallyList);
   });
 }
 displayProducts();

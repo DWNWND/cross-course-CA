@@ -70,6 +70,30 @@
   width: 100%;
 }
 /*-------BUTTONS------*/
+.add-btn,
+.added-btn {
+  text-align: center;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+}
+.added-btn {
+  background-color: #72482b;
+  border: solid 2px #e2dad4;
+  color: #e2dad4;
+}
+.add-btn {
+  background-color: #e2dad4;
+  border: solid 2px #72482b;
+  color: #72482b;
+}
 .back-btn-product {
   text-align: center;
   background-color: #e2dad4;

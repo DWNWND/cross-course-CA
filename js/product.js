@@ -1,12 +1,17 @@
 import { fetchJacketById, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
-
+import { eventSaveLocallyProduct, updateMainShoppingCart, getProductsFromCart } from "./cartfunction.js";
 export const productSection = document.querySelector(".product-section__flex");
 
 //Searchbar in this does not work (only in list view)
 
 async function displayProduct() {
   showLoadingIndicator(productSection);
+
+  //loading the right Main shopping cart icon when loading the page
+  updateMainShoppingCart();
+
   const product = await fetchJacketById();
+
   productSection.innerHTML = ""; //clearing loading indicator
 
   const title1 = createTitle1(product);
@@ -49,7 +54,7 @@ async function displayProduct() {
       </div>
       <div class="product-colors margin desktop"></div>
       <div class="product-size margin desktop"></div>
-      <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
+      <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedPrice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}">Add to bag</div>
     </form>`;
   } else {
     productDetailsContainer.innerHTML += `
@@ -71,7 +76,7 @@ async function displayProduct() {
     </div>
     <div class="product-colors margin desktop"></div>
     <div class="product-size margin desktop"></div>
-    <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
+    <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedPrice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}">Add to bag</div>
   </form>`;
   }
 
@@ -106,5 +111,26 @@ async function displayProduct() {
         <p>${colors}</p>
       </div>`; //DESKTOP
   });
+
+  //add items to cart
+  const addToBagBtn = document.querySelector(".add-btn");
+  addToBagBtn.addEventListener("click", eventSaveLocallyProduct);
+
+  const productsCurrentlyInCart = getProductsFromCart();
+  const productExists = productsCurrentlyInCart.find(function (item) {
+    return item.id === product.id;
+  });
+
+  if (!productExists) {
+    addToBagBtn.innerHTML = "add to bag";
+    addToBagBtn.classList.add("add-btn");
+    addToBagBtn.classList.remove("added-btn");
+    updateMainShoppingCart();
+  } else {
+    updateMainShoppingCart();
+    addToBagBtn.innerHTML = "added";
+    addToBagBtn.classList.add("added-btn");
+    addToBagBtn.classList.remove("add-btn");
+  }
 }
 displayProduct();

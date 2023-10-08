@@ -13,37 +13,6 @@ const errorMessage = "Can't seem to reach server...";
 //   displayMessage("error", error, ".team-container");
 // }
 
-//RENDER CATEGORIES -- REMOVE??
-export function renderCategory(categoryToRender) {
-  const listSection = document.querySelector(".product-list");
-  listSection.innerHTML = "";
-
-  categoryToRender.forEach(function (category) {
-    listSection.innerHTML += `<div class="">
-                                      <h4>${category}Rendered?</h4>
-                                  </div>`;
-  });
-}
-
-//SELECT CATEGORY - REMOVE??
-export function selectCategory(categories) {
-  const categorySelector = document.querySelector(".men");
-
-  categorySelector.onkeyup = function (event) {
-    console.log(event);
-    console.log("clicked men");
-
-    // const searchValue = event.target.value.trim().toLowerCase();
-
-    // const filteredProducts = categories.filter(function (item) {
-    //   if (item.gender.toLowerCase().startsWith(searchValue)) {
-    //     return true;
-    //   }
-    // });
-    // renderCategory(filteredProducts);
-  };
-}
-
 // //API call ALL products
 export async function fetchJackets() {
   try {

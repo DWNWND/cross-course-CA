@@ -12,9 +12,10 @@ function addToCart(product) {
   localStorage.setItem("inCart", JSON.stringify(product));
 }
 
-export function eventSaveLocally(event) {
-  event.target.classList.toggle("shopping-bag_icon-empty");
-  event.target.classList.toggle("shopping-bag_icon-added-product");
+//for Products page
+export function eventSaveLocallyProduct(event) {
+  event.target.classList.toggle("add-btn");
+  event.target.classList.toggle("added-btn");
 
   const id = event.target.dataset.id;
   const title1 = event.target.dataset.title1;
@@ -23,6 +24,7 @@ export function eventSaveLocally(event) {
   const price = event.target.dataset.price;
   const description = event.target.dataset.description;
   const sizes = event.target.dataset.sizes;
+  const discountedPrice = event.target.dataset.discountedPrice;
 
   const sizeArray = sizes.split(",");
 
@@ -33,7 +35,51 @@ export function eventSaveLocally(event) {
   });
 
   if (!productExists) {
-    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray };
+    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray, discountedPrice: discountedPrice };
+    productsCurrentlyInCart.push(item);
+    addToCart(productsCurrentlyInCart);
+  } else {
+    const updatedProductList = productsCurrentlyInCart.filter((item) => item.id !== id);
+    addToCart(updatedProductList);
+  }
+
+  if (!productExists) {
+    event.target.innerHTML = "added";
+    event.target.classList.add("added-btn");
+    event.target.classList.remove("add-btn");
+    updateMainShoppingCart();
+  } else {
+    updateMainShoppingCart();
+    event.target.innerHTML = "add to bag";
+    event.target.classList.add("add-btn");
+    event.target.classList.remove("added-btn");
+  }
+}
+
+//doublecheck if this works
+export function eventSaveLocallyList(event) {
+  event.target.classList.toggle("shopping-bag_icon-empty");
+  event.target.classList.toggle("shopping-bag_icon-added-product");
+
+  const id = event.target.dataset.id;
+  const title1 = event.target.dataset.title1;
+  const title2 = event.target.dataset.title2;
+  const img = event.target.dataset.img;
+  const price = event.target.dataset.price;
+  const description = event.target.dataset.description;
+  const sizes = event.target.dataset.sizes;
+  const discountedPrice = event.target.dataset.discountedPrice;
+
+  const sizeArray = sizes.split(",");
+
+  const productsCurrentlyInCart = getProductsFromCart();
+
+  const productExists = productsCurrentlyInCart.find(function (item) {
+    return item.id === id;
+  });
+
+  if (!productExists) {
+    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, sizes: sizeArray, discountedPrice: discountedPrice };
     productsCurrentlyInCart.push(item);
     addToCart(productsCurrentlyInCart);
     updateMainShoppingCart();
