@@ -134,3 +134,14 @@ export function emptyCartMessage() {
     shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon"/>`;
   }
 }
+
+//Update total sum
+export function updateCartTotal() {
+  const productsCurrentlyInCart = getProductsFromCart();
+  var sum = 0;
+  for (var i = 0; i < productsCurrentlyInCart.length; i++) {
+    sum += parseInt(productsCurrentlyInCart[i].price);
+  }
+  console.log(sum);
+  return sum;
+}

@@ -1,8 +1,9 @@
 //add loading indicator... and error handling... + add an remove item from list... and try to fix quantity and size selectors
 
-import { getProductsFromCart, removeFromCart, emptyCartMessage } from "./cartfunction.js";
+import { getProductsFromCart, removeFromCart, emptyCartMessage, updateCartTotal } from "./cartfunction.js";
 
 const summarySection = document.querySelector(".summary-section");
+const totalPrice = document.querySelector(".total-price");
 var productsInCart = getProductsFromCart();
 
 emptyCartMessage();
@@ -84,9 +85,21 @@ function generateCart() {
   const removeItemFromCart = document.querySelectorAll(".remove-item-from-cart");
 
   removeItemFromCart.forEach((xButtons) => {
-    xButtons.addEventListener("click", removeFromCart);
+    xButtons.addEventListener("click", function (event) {
+      removeFromCart();
+      generateSum();
+    });
   });
 }
 generateCart();
+
+//generate sum
+function generateSum() {
+  const sum = updateCartTotal();
+  totalPrice.innerHTML = `  
+  <p>sum total</p>
+  <p>$ ${sum}</p>`;
+}
+generateSum();
 
 //DIDNT MANAGE TO MAKE THE SIZES CORRESPOND TO API CALL...
