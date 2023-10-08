@@ -17,9 +17,9 @@ function generateCart() {
 
     summarySection.appendChild(summaryProductContainer);
 
-    console.log(item.onSale.toLowerCase().includes("true"));
+    const itemOnSaleString = JSON.stringify(item.onSale);
 
-    if (item.onSale.toLowerCase().includes("true")) {
+    if (itemOnSaleString.toLowerCase().includes("true")) {
       summaryProductContainer.innerHTML += `
       <div class="summary-product-img-container">
         <img src="${item.img}" class="summary-product-img" alt="Image of the selected product, Fleece layer from Scott 1.12 in Silver" />
