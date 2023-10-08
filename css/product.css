@@ -90,6 +90,7 @@
   margin: 0 0.5rem;
 }
 .product-img-section {
+  display: grid;
   grid-template-areas:
     "big big big big"
     "thumbnail1 thumbnail2 thumbnail3 thumbnail4";
@@ -133,9 +134,9 @@
   align-self: center;
   justify-self: center;
 }
-@media (min-width: 740px) {
+@media (min-width: 500px) {
   .back-section-product {
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     margin-bottom: 0;
   }
 }
@@ -156,7 +157,7 @@
     justify-self: start;
   }
   .thumbnailsize {
-    inline-size: 50%;
+    inline-size: 70%;
     align-self: center;
     justify-self: center;
   }

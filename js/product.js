@@ -16,7 +16,7 @@ async function displayProduct() {
   titleContainer.textContent = title2;
 
   const productImagesContainer = document.createElement("div");
-  productImagesContainer.classList.add("product-img-section", "product");
+  productImagesContainer.classList.add("product-img-section");
 
   productImagesContainer.innerHTML += `
   <div class="big"><img src="${product.image}" /></div>
