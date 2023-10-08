@@ -17,6 +17,8 @@ function generateCart() {
 
     summarySection.appendChild(summaryProductContainer);
 
+    console.log(item.onSale.toLowerCase().includes("true"));
+
     if (item.onSale.toLowerCase().includes("true")) {
       summaryProductContainer.innerHTML += `
       <div class="summary-product-img-container">
