@@ -3,6 +3,7 @@ import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from ".
 import { renderProducts } from "./renderProducts.js";
 
 const listSection = document.querySelector(".list-section");
+const sortingSection = document.querySelector(".sorting");
 const productList = document.querySelector(".product-list");
 const searchInput = document.querySelector("#searchbar");
 
@@ -96,9 +97,10 @@ async function displayCategorizedProducts() {
   // looping through the results
   renderProducts(productsCategoriesed);
 
-  listSection.innerHTML += `
+  sortingSection.innerHTML += `
   <div class="sorting-section">
-  <h3 class="helvetica brown">Sort products by:</h2>
+  <h3 class="helvetica brown">Sort products by:</h3>
+  <div class="sorting-selections">
   <select name="sort-price" id="sort-price" class="sorting-options helvetica brown">
     <option value="no-selection">Price</option>
   </select>
@@ -125,6 +127,7 @@ async function displayCategorizedProducts() {
     <option value="GoreTex">GoreTex</option>
     <option value="Whool">Whool</option>
   </select>
+  </div>
 </div>`;
 
   //add items to cart

@@ -140,8 +140,8 @@ h2 {
   margin: 0;
 }
 h3 {
-  font-size: 0.9rem;
-  margin: 0 0 0.4rem 0;
+  font-size: 0.8rem;
+  margin: 0 0 0.6rem 0;
 }
 p {
   margin: 0;
@@ -408,58 +408,6 @@ footer li {
     text-underline-offset: 2px;
   }
 
-  /*--------------- Header MQ ------------*/
-  .hamburger-menu_icon {
-    display: none;
-  }
-  header {
-    justify-content: flex-start;
-  }
-  nav {
-    display: flex;
-    top: 64px;
-    padding-top: 0px;
-    position: static-sticky;
-  }
-  .dropdown-menu {
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    flex-grow: 1;
-  }
-  .searchbar_field {
-    order: 6;
-    flex: 1;
-    padding-right: 20px;
-  }
-  .store-locator_field {
-    order: 5;
-    flex: 1;
-    padding-right: 10px;
-  }
-  .sale {
-    order: 4;
-    flex: 2;
-  }
-  .new-in {
-    order: 1;
-    white-space: nowrap;
-  }
-  .women {
-    order: 2;
-  }
-  .men {
-    order: 3;
-  }
-  .shoppingbag {
-    margin-left: auto;
-  }
-  .logo_icon:hover {
-    filter: drop-shadow(3px 3px 3px rgba(000, 000, 000, 0.4));
-  }
-
   /*------Product presentation MQ---------*/
   .product-text {
     font-size: 0.85rem;
@@ -510,5 +458,59 @@ footer li {
   }
   .stickyfooter a {
     margin-left: 10px;
+  }
+}
+
+@media (min-width: 830px) {
+  /*--------------- Header MQ ------------*/
+  .hamburger-menu_icon {
+    display: none;
+  }
+  header {
+    justify-content: flex-start;
+  }
+  nav {
+    display: flex;
+    top: 64px;
+    padding-top: 0px;
+    position: static-sticky;
+  }
+  .dropdown-menu {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+  .searchbar_field {
+    order: 6;
+    flex: 1;
+    padding-right: 20px;
+  }
+  .store-locator_field {
+    order: 5;
+    flex: 1;
+    padding-right: 10px;
+  }
+  .sale {
+    order: 4;
+    flex: 2;
+  }
+  .new-in {
+    order: 1;
+    white-space: nowrap;
+  }
+  .women {
+    order: 2;
+  }
+  .men {
+    order: 3;
+  }
+  .shoppingbag {
+    margin-left: auto;
+  }
+  .logo_icon:hover {
+    filter: drop-shadow(3px 3px 3px rgba(000, 000, 000, 0.4));
   }
 }
