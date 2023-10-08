@@ -28,6 +28,17 @@
   grid-area: load-button;
   margin-top: 1rem;
 }
+.sorting-options {
+  border: solid 2px #72482b;
+  background-color: #fff9f4;
+  width: 100%;
+  height: 1.7rem;
+  margin: 0.4rem 0;
+  padding: 0 3px;
+}
+.sorting-section {
+  margin: 0.5rem;
+}
 @media (min-width: 400px) {
   .product-list {
     grid-template-columns: 1fr 1fr;

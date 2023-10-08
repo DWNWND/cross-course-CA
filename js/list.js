@@ -2,7 +2,8 @@ import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator, renderC
 import { eventSaveLocally, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
 import { renderProducts } from "./renderProducts.js";
 
-const listSection = document.querySelector(".product-list");
+const listSection = document.querySelector(".list-section");
+const productList = document.querySelector(".product-list");
 const searchInput = document.querySelector("#searchbar");
 
 const categorySelector = document.querySelector(".category");
@@ -28,7 +29,7 @@ async function displaySearchedProducts() {
   let query = searchInput.value;
 
   //loading indicator
-  showLoadingIndicator(listSection);
+  showLoadingIndicator(productList);
 
   //loading the right Main shopping cart icon when loading the page
   updateMainShoppingCart();
@@ -51,7 +52,7 @@ async function displaySearchedProducts() {
   console.log(productsFiltered);
 
   //clearing loading indicator
-  listSection.innerHTML = "";
+  productList.innerHTML = "";
 
   // looping through results
   renderProducts(productsFiltered);
@@ -65,7 +66,7 @@ async function displaySearchedProducts() {
 
 async function displayCategorizedProducts() {
   //loading indicator
-  showLoadingIndicator(listSection);
+  showLoadingIndicator(productList);
 
   //loading the right Main shopping cart icon when loading the page
   updateMainShoppingCart();
@@ -90,10 +91,41 @@ async function displayCategorizedProducts() {
   // console.log(productsCategoriesed);
 
   //clearing loading indicator
-  listSection.innerHTML = "";
+  productList.innerHTML = "";
 
   // looping through the results
   renderProducts(productsCategoriesed);
+
+  listSection.innerHTML += `
+  <div class="sorting-section">
+  <h3 class="helvetica brown">Sort products by:</h2>
+  <select name="sort-price" id="sort-price" class="sorting-options helvetica brown">
+    <option value="no-selection">Price</option>
+  </select>
+  <select name="sort-size" id="sort-size" class="sorting-options helvetica brown">
+  <option value="no-selection">Size</option>
+  <option value="XS">XS</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+  <select name="sort-color" id="sort-color" class="sorting-options helvetica brown">
+    <option value="no-selection">Color</option>
+    <option value="Black">Black</option>
+    <option value="Brown">Brown</option>
+    <option value="Blue">Blue</option>
+    <option value="Gray">Gray</option>
+    <option value="Purple">Purple</option>
+    <option value="Red">Red</option>
+  </select>
+  <select name="sort-material" id="sort-material" class="sorting-options helvetica brown">
+    <option value="no-selection">Material</option>
+    <option value="Polyester">Polyester</option>
+    <option value="GoreTex">GoreTex</option>
+    <option value="Whool">Whool</option>
+  </select>
+</div>`;
 
   //add items to cart
   const addToCartButton = document.querySelectorAll(".shopping-bag");
