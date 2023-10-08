@@ -7,9 +7,15 @@ const listSection = document.querySelector(".list-section");
 
 export function renderProducts(productItem) {
   console.log(productItem);
+  //generating the load more button
+  const loadMore = document.createElement("a");
+  loadMore.classList.add("load-button", "black", "underline", "montserrat");
+  loadMore.innerHTML += `Load more`;
+  listSection.appendChild(loadMore);
 
   if (productItem.length === 0) {
     productList.innerHTML = "We do not have any items in this category";
+    sortingSection.innerHTML = "";
   } else {
     for (let i = 0; i < productItem.length; i++) {
       //setting the default and updating shopping cart icon on each product
@@ -64,10 +70,5 @@ export function renderProducts(productItem) {
         break;
       }
     }
-    //generatin the load more button
-    const loadMore = document.createElement("a");
-    loadMore.classList.add("load-button", "black", "underline", "montserrat");
-    loadMore.innerHTML += `Load more`;
-    listSection.appendChild(loadMore);
   }
 }

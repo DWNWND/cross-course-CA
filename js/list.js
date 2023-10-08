@@ -38,11 +38,24 @@ async function displaySearchedProducts() {
   //fetching API
   const product = await fetchJackets();
 
+  //Filter categories - using selectedCategory (WORKING)
+  let productsCategoriesed = product.filter((allItems) => {
+    if (allItems.gender.toLowerCase().includes(selectedCategory.toLowerCase())) {
+      return allItems;
+    }
+    if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+      return allItems;
+    }
+    if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
+      return allItems;
+    }
+  });
+
   //Filter items - from using searchbar (WORKING IN LIST VIEW) - Also takes the categories into consideration
   let productsFiltered = product.filter((allItems) => {
     if (query === "") {
       h1.innerHTML = theTrueCategoryName;
-      displayCategorizedProducts();
+      return productsCategoriesed;
     } else if (allItems.title.toLowerCase().includes(query.toLowerCase())) {
       h1.innerHTML = "Search results";
       return allItems;
@@ -97,6 +110,7 @@ async function displayCategorizedProducts() {
   // looping through the results
   renderProducts(productsCategoriesed);
 
+  // sorting section
   sortingSection.innerHTML += `
   <div class="sorting-section">
   <h3 class="helvetica brown">Sort products by:</h3>

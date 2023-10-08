@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
+  grid-area: sorting;
 }
 @media (min-width: 400px) {
   .product-list {
@@ -53,7 +54,7 @@
     grid-template-areas:
       "menu header"
       "menu product-list"
-      ". product-list"
+      "sorting product-list"
       ". product-list"
       ". load-button";
     margin-left: 5rem;
