@@ -140,8 +140,7 @@ export function updateCartTotal() {
   const productsCurrentlyInCart = getProductsFromCart();
   var sum = 0;
   for (var i = 0; i < productsCurrentlyInCart.length; i++) {
-    sum += parseInt(productsCurrentlyInCart[i].price);
+    sum += parseInt(productsCurrentlyInCart[i].discountedPrice);
   }
-  console.log(sum);
   return sum;
 }
