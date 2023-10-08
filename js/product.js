@@ -28,7 +28,31 @@ async function displayProduct() {
   const productDetailsContainer = document.createElement("div");
   productDetailsContainer.classList.add("product-detail-section");
 
-  productDetailsContainer.innerHTML += `
+  if (product.onSale) {
+    productDetailsContainer.innerHTML += `
+    <div class="product-text margin">
+      <h1>${title1}</h1>
+      <p class="bold">${title2}</p>
+      <p class="productprice-productpage inline line-through">$${product.price}</p>
+      <p class="productprice-productpage inline red bold">$${product.discountedPrice}</p>
+    </div>
+    <form action="#" method="#" class="size-color-selector-form">
+      <div class="color-selection_container mobile">
+        <select name="color" id="color" class="size-color_selector-btn helvetica brown" required>
+          <option value="no-selection">Choose color</option> 
+        </select>
+      </div>
+      <div class="size-selection_container mobile">
+        <select name="size" id="size" class="size-color_selector-btn helvetica brown" required>
+          <option value="no-selection">Choose size</option>
+        </select>
+      </div>
+      <div class="product-colors margin desktop"></div>
+      <div class="product-size margin desktop"></div>
+      <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
+    </form>`;
+  } else {
+    productDetailsContainer.innerHTML += `
   <div class="product-text margin">
     <h1>${title1}</h1>
     <p class="bold">${title2}</p>
@@ -49,6 +73,7 @@ async function displayProduct() {
     <div class="product-size margin desktop"></div>
     <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
   </form>`;
+  }
 
   productSection.appendChild(productImagesContainer);
   productSection.appendChild(productDetailsContainer);
