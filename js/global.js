@@ -1,17 +1,5 @@
 export const url = "https://api.noroff.dev/api/v1/rainy-days/";
-const errorMessage = "Can't seem to reach server...";
-
-//EXAMPLE ERROR MESSAGE TO INC
-// function displayMessage(messageType, message, target) {
-//   const element = document.querySelector(target);
-
-//   element.innerHTML = `<div class="message ${messageType}">${message}</div>`;
-// }
-//with this in the async api call
-// } catch (error) {
-//   console.log(error);
-//   displayMessage("error", error, ".team-container");
-// }
+const errorMessage = "An error has occurred...";
 
 // //API call ALL products
 export async function fetchJackets() {

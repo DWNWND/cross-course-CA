@@ -4,18 +4,19 @@ import { getProductsFromCart } from "./cartfunction.js";
 const productsInCart = getProductsFromCart();
 const productList = document.querySelector(".product-list");
 const listSection = document.querySelector(".list-section");
+const sortingSection = document.querySelector(".sorting");
 
 export function renderProducts(productItem) {
-  //generating the load more button
-  const loadMore = document.createElement("a");
-  loadMore.classList.add("load-button", "black", "underline", "montserrat");
-  loadMore.innerHTML += `Load more`;
-  listSection.appendChild(loadMore);
-
   if (productItem.length === 0) {
-    productList.innerHTML = "We do not have any items in this category";
-    sortingSection.innerHTML = "";
+    productList.innerHTML =  "Sorry, we currently have no items in this category...";
+    sortingSection.style.display = "none";
   } else {
+    //generating the load more button
+    const loadMore = document.createElement("a");
+    loadMore.classList.add("load-button", "black", "underline", "montserrat");
+    loadMore.innerHTML += `Load more`;
+    listSection.appendChild(loadMore);
+
     for (let i = 0; i < productItem.length; i++) {
       //setting the default and updating shopping cart icon on each product
       let cssClass = "shopping-bag_icon-empty";

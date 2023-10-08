@@ -19,6 +19,13 @@ a {
 .inline {
   display: inline-block;
 }
+.error-message-container {
+  margin: 15rem;
+}
+.error {
+  color: red;
+  font-weight: 600;
+}
 /*-------------LOADER---------------*/
 /* FOUND ON GITHUB: https://cssloaders.github.io/ */
 .loader {
