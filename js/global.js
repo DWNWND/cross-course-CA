@@ -1,11 +1,13 @@
-export const url = "https://api.noroff.dev/api/v1/rainy-days/";
+export const url = "http://rainy-days.local/wp-json/wc/store/v1/products";
 const errorMessage = "An error has occurred...";
+
 
 // //API call ALL products
 export async function fetchJackets() {
   try {
     const response = await fetch(url);
     const results = await response.json();
+    console.log(results)
     return results;
   } catch (error) {
     const main = document.querySelector("main");
