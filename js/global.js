@@ -39,13 +39,13 @@ export function showLoadingIndicator(section) {
 
 //Title split
 export function createTitle1(titleParam) {
-  const title = titleParam.title;
+  const title = titleParam.name;
   const titleArray = title.split(" ");
   const rainyDaysTitle = `${titleArray[0]} ${titleArray[1]}`;
   return rainyDaysTitle;
 }
 export function createTitle2(titleParam) {
-  const title = titleParam.title;
+  const title = titleParam.name;
   const titleArray = title.split(" ");
   if (!titleArray[4]) {
     titleArray[4] = "";
