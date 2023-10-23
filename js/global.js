@@ -1,13 +1,12 @@
-export const url = "http://rainy-days.local/wp-json/wc/store/v1/products";
+export const url = "http://rainy-days.site/wp-json/wc/store/v1/products";
 const errorMessage = "An error has occurred...";
-
 
 // //API call ALL products
 export async function fetchJackets() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results)
+    console.log(results);
     return results;
   } catch (error) {
     const main = document.querySelector("main");
