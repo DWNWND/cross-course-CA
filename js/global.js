@@ -22,7 +22,7 @@ const id = params.get("key");
 // API call by ID
 export async function fetchJacketById() {
   try {
-    const response = await fetch(url + id);
+    const response = await fetch(url + "/" + id);
     const results = await response.json();
     return results;
   } catch (error) {

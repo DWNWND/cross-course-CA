@@ -24,11 +24,11 @@ async function displayProduct() {
   productImagesContainer.classList.add("product-img-section");
 
   productImagesContainer.innerHTML += `
-  <div class="big"><img src="${product.image}" /></div>
-  <div class="thumbnail1 thumbnailsize in-focus"><img src="${product.image}" alt="${product.description}" /></div>
-  <div class="thumbnail2 thumbnailsize no-focus"><img src="${product.image}" alt="${product.description}" /></div>
-  <div class="thumbnail3 thumbnailsize no-focus"><img src="${product.image}" alt="${product.description}" /></div>
-  <div class="thumbnail4 thumbnailsize no-focus"><img src="${product.image}" alt="${product.description}" /></div>`;
+  <div class="big"><img src="${product.images[0].src}" /></div>
+  <div class="thumbnail1 thumbnailsize in-focus"><img src="${product.images[0].src}" alt="${product.images.alt}" /></div>
+  <div class="thumbnail2 thumbnailsize no-focus"><img src="${product.images[0].src}" alt="${product.images.alt}" /></div>
+  <div class="thumbnail3 thumbnailsize no-focus"><img src="${product.images[0].src}" alt="${product.images.alt}" /></div>
+  <div class="thumbnail4 thumbnailsize no-focus"><img src="${product.images[0].src}" alt="${product.images.alt}" /></div>`;
 
   const productDetailsContainer = document.createElement("div");
   productDetailsContainer.classList.add("product-detail-section");
