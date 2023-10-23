@@ -7,8 +7,8 @@ const sortingSection = document.querySelector(".sorting");
 const productList = document.querySelector(".product-list");
 const searchInput = document.querySelector("#searchbar");
 
-const categorySelector = document.querySelector(".category");
-const selectedCategory = categorySelector.innerHTML;
+// const categorySelector = document.querySelector(".category");
+// const selectedCategory = categorySelector.innerHTML;
 
 const theTrueCategorySelector = document.querySelector(".true-category");
 const theTrueCategoryName = theTrueCategorySelector.innerHTML;
@@ -16,7 +16,7 @@ const theTrueCategoryName = theTrueCategorySelector.innerHTML;
 const h1 = document.querySelector(".h1_list");
 
 //checking which category we´re on
-console.log("selected category: ", selectedCategory.toLowerCase());
+console.log("selected category: ", theTrueCategoryName.toLowerCase());
 
 // const productsInCart = getProductsFromCart();
 
@@ -40,7 +40,7 @@ async function displaySearchedProducts() {
 
   //Filter categories - using selectedCategory (WORKING)
   let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.gender.toLowerCase().includes(selectedCategory.toLowerCase())) {
+    if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
       return allItems;
     }
     if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
@@ -87,7 +87,7 @@ async function displayCategorizedProducts() {
 
   //Filter categories - using selectedCategory (WORKING)
   let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.gender.toLowerCase().includes(selectedCategory.toLowerCase())) {
+    if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
       return allItems;
     }
     if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
