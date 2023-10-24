@@ -6,7 +6,6 @@ export function getProductsFromCart() {
   } else {
     return JSON.parse(inCart);
   }
-  
 }
 
 function addToCart(product) {

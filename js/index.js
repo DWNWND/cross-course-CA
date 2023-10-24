@@ -46,8 +46,7 @@ async function displayProducts() {
     </div>
     <div class="product-text">
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
-      <p class="productprice inline line-through">$${product[i].prices.regular_price}</p>
-          <p class="productprice inline red bold">$${product[i].prices.sale_price}</p>
+      ${product[i].price_html}
     </div>`;
     } else {
       productContainer.innerHTML += `
@@ -60,10 +59,15 @@ async function displayProducts() {
     </div>
     <div class="product-text block">
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
-      <p class="productprice">$${product[i].prices.regular_price}</p>
+      ${product[i].price_html}
     </div>`;
     }
     sliderSection.appendChild(productContainer);
+
+    // <p class="productprice inline line-through">$${product[i].prices.regular_price}</p>
+    // <p class="productprice inline red bold">$${product[i].prices.sale_price}</p>
+
+    // <p class="productprice">$${product[i].prices.regular_price}</p>
 
     if (i === 6) {
       break;

@@ -46,8 +46,7 @@ export function renderProducts(productItem) {
         </div>
         <div class="product-text">
           <a href="/product.html?key=${productItem[i].id}" class="black">${title2}</a>
-          <p class="productprice inline line-through">$${productItem[i].prices.price}</p>
-          <p class="productprice inline red bold">$${productItem[i].prices.sale_price}</p>
+          ${productItem[i].price_html}
         </div>`;
       } else {
         productContainer.innerHTML += `
@@ -60,7 +59,7 @@ export function renderProducts(productItem) {
         </div>
         <div class="product-text block">
           <a href="/product.html?key=${productItem[i].id}" class="black">${title2}</a>
-          <p class="productprice">$${productItem[i].prices.price}</p>
+          ${productItem[i].price_html}
         </div>`;
       }
 
@@ -72,3 +71,8 @@ export function renderProducts(productItem) {
     }
   }
 }
+
+/* <p class="productprice">$${productItem[i].prices.price}</p> */
+
+/* <p class="productprice inline line-through">$${productItem[i].prices.price}</p>
+<p class="productprice inline red bold">$${productItem[i].prices.sale_price}</p> */
