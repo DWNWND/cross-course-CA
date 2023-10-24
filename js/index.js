@@ -77,6 +77,8 @@ async function displayProducts() {
   adContainer.addEventListener("click", () => {
     window.location.href = `product.html?key=${product[3].id}`;
   });
+
+  adContainer.classList.add("ad-container");
   adContainer.innerHTML += `
   <h1>
     <a href="list.html" class="h1_homepage margin-bottom">New in from Rainy Days . . .</a>
