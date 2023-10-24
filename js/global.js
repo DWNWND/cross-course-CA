@@ -6,7 +6,7 @@ export async function fetchJackets() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results);
+    // console.log(results);
     return results;
   } catch (error) {
     const main = document.querySelector("main");

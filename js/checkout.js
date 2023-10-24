@@ -11,15 +11,24 @@ emptyCartMessage();
 //Searchbar in this does not work (only in list view)
 
 function generateCart() {
+  console.log(productsInCart);
+
   productsInCart.forEach(function (item) {
     const summaryProductContainer = document.createElement("div");
     summaryProductContainer.classList.add("summary-product-container");
 
     summarySection.appendChild(summaryProductContainer);
 
-    const itemOnSaleString = JSON.stringify(item.onSale);
+    // const itemOnSaleString = item.on_sale;
 
-    if (itemOnSaleString.toLowerCase().includes("true")) {
+    // console.log(itemOnSaleString);
+
+    // const itemOnSaleString = JSON.stringify(item.on_sale);
+    // console.log(itemOnSaleString)
+
+    // if (itemOnSaleString.toLowerCase().includes("true"))
+
+    if (item.on_sale) {
       summaryProductContainer.innerHTML += `
       <div class="summary-product-img-container">
         <img src="${item.img}" class="summary-product-img" alt="Image of the selected product, Fleece layer from Scott 1.12 in Silver" />

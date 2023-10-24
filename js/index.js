@@ -21,9 +21,18 @@ async function displayProducts() {
   for (let i = 0; i < product.length; i++) {
     let cssClass = "shopping-bag_icon-empty";
 
-    const isItemInCart = productsInCart.find(function (item) {
-      return item.id === product[i].id;
-    });
+    console.log(productsInCart);
+
+    if (productsInCart.id === product[i].id) {
+      const isItemInCart = true;
+      return isItemInCart;
+    }
+
+    console.log(isItemInCart);
+
+    // const isItemInCart = productsInCart.find(function (item) {
+    //   return item.id === product[i].id;
+    // });
 
     if (isItemInCart) {
       cssClass = "shopping-bag_icon-added-product";
@@ -37,7 +46,7 @@ async function displayProducts() {
 
     if (product[i].on_sale) {
       productContainer.innerHTML += `
-    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].images[0].src}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].images.alt}" data-price="${product[i].prices.price}" data-sizes="${product[i].sizes}" data-onsale="${product[i].on_sale}" data-discountedprice="${product[i].prices.sale_price}">
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].images[0].src}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].images.alt}" data-price="${product[i].prices.price}" data-onsale="${product[i].on_sale}" data-discountedprice="${product[i].prices.sale_price}">
     </div>
     <div class="product-image-container">
       <a href="product.html?key=${product[i].id}" class="product-link">
@@ -51,7 +60,7 @@ async function displayProducts() {
     </div>`;
     } else {
       productContainer.innerHTML += `
-    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].images[0].src}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].images.alt}" data-price="${product[i].prices.price}" data-sizes="${product[i].sizes}" data-onsale="${product[i].on_sale}" data-discountedprice="${product[i].prices.sale_price}">
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].images[0].src}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].images.alt}" data-price="${product[i].prices.price}" data-onsale="${product[i].on_sale}" data-discountedprice="${product[i].prices.sale_price}">
     </div>
     <div class="product-image-container">
       <a href="product.html?key=${product[i].id}" class="product-link">

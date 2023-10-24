@@ -7,8 +7,8 @@ const sortingSection = document.querySelector(".sorting");
 const productList = document.querySelector(".product-list");
 const searchInput = document.querySelector("#searchbar");
 
-// const categorySelector = document.querySelector(".category");
-// const selectedCategory = categorySelector.innerHTML;
+const categorySelector = document.querySelector(".category");
+const selectedCategory = categorySelector.innerHTML;
 
 const theTrueCategorySelector = document.querySelector(".true-category");
 const theTrueCategoryName = theTrueCategorySelector.innerHTML;
@@ -37,6 +37,7 @@ async function displaySearchedProducts() {
 
   //fetching API
   const product = await fetchJackets();
+  console.log(product.categories[0].name.toLowerCase());
 
   //Filter categories - using selectedCategory (WORKING)
   let productsCategoriesed = product.filter((allItems) => {
@@ -87,10 +88,10 @@ async function displayCategorizedProducts() {
 
   //Filter categories - using selectedCategory (WORKING)
   let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
+    if (allItems.categories[0].name.toLowerCase() === theTrueCategoryName.toLowerCase()) {
       return allItems;
     }
-    if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+    if (selectedCategory.toLowerCase().includes("on sale") && allItems.on_sale) {
       return allItems;
     }
     if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
@@ -98,6 +99,17 @@ async function displayCategorizedProducts() {
     }
   });
 
+  // let productsCategoriesed = product.filter((allItems) => {
+  //   if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
+  //     return allItems;
+  //   }
+  //   if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+  //     return allItems;
+  //   }
+  //   if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
+  //     return allItems;
+  //   }
+  // });
   //clearing loading indicator
   productList.innerHTML = "";
 

@@ -6,6 +6,7 @@ export function getProductsFromCart() {
   } else {
     return JSON.parse(inCart);
   }
+  
 }
 
 function addToCart(product) {
@@ -23,7 +24,6 @@ export function eventSaveLocallyProduct(event) {
   const img = event.target.dataset.img;
   const price = event.target.dataset.price;
   const description = event.target.dataset.description;
-  // const sizes = event.target.dataset.sizes;
   const discountedPrice = event.target.dataset.discountedprice;
   const onSale = event.target.dataset.onsale;
 

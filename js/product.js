@@ -33,13 +33,13 @@ async function displayProduct() {
   const productDetailsContainer = document.createElement("div");
   productDetailsContainer.classList.add("product-detail-section");
 
-  if (product.onSale) {
+  if (product.on_sale) {
     productDetailsContainer.innerHTML += `
     <div class="product-text margin">
       <h1>${title1}</h1>
       <p class="bold">${title2}</p>
-      <p class="productprice-productpage inline line-through">$${product.price}</p>
-      <p class="productprice-productpage inline red bold">$${product.discountedPrice}</p>
+      <p class="productprice-productpage inline line-through">$${product.prices.regular_price}</p>
+      <p class="productprice-productpage inline red bold">$${product.prices.sale_price}</p>
     </div>
     <form action="#" method="#" class="size-color-selector-form">
       <div class="color-selection_container mobile">
@@ -54,14 +54,14 @@ async function displayProduct() {
       </div>
       <div class="product-colors margin desktop"></div>
       <div class="product-size margin desktop"></div>
-      <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedprice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}" data-onsale="${product.onSale}">Add to bag</div>
+      <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.images[0].src}" data-price="${product.prices.regular_price}" data-discountedprice="${product.prices.sale_price}" data-description="${product.images[0].alt}" data-onsale="${product.on_sale}">Add to bag</div>
     </form>`;
   } else {
     productDetailsContainer.innerHTML += `
   <div class="product-text margin">
     <h1>${title1}</h1>
     <p class="bold">${title2}</p>
-    <p class="productprice-productpage">$${product.price}</p>
+    <p class="productprice-productpage">$${product.prices.regular_price}</p>
   </div>
   <form action="#" method="#" class="size-color-selector-form">
     <div class="color-selection_container mobile">
@@ -76,7 +76,7 @@ async function displayProduct() {
     </div>
     <div class="product-colors margin desktop"></div>
     <div class="product-size margin desktop"></div>
-    <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.image}" data-price="${product.price}" data-discountedprice="${product.discountedPrice}" data-description="${product.description}" data-sizes="${product.sizes}" data-onsale="${product.onSale}">Add to bag</div>
+    <div class="add-btn helvetica uppercase" data-id="${product.id}" data-title2="${title2}" data-title1="${title1}" data-img="${product.images[0].src}" data-price="${product.prices.regular_price}" data-discountedprice="${product.prices.sale_price}" data-description="${product.images[0].alt}" data-onsale="${product.on_sale}">Add to bag</div>
   </form>`;
   }
 
@@ -87,19 +87,20 @@ async function displayProduct() {
   const productSizeSelector = document.getElementById("size");
   const productSizeSelectorDesktop = document.querySelector(".product-size");
 
-  const productSizes = product.sizes;
+  const productSizeObjects = product.variations;
+  console.log(productSizeObjects);
 
-  productSizes.forEach(function (sizes) {
+  productSizeObjects.forEach(function (sizes) {
     productSizeSelector.innerHTML += `
-      <option value="${sizes}">${sizes}</option>`; //MOBILE
+      <option value="${sizes.attributes[0].value}">${sizes.attributes[0].value}</option>`; //MOBILE
     productSizeSelectorDesktop.innerHTML += `
-      <div class="sizebox">${sizes}</div>`; //DESKTOP
+      <div class="sizebox">${sizes.attributes[0].value}</div>`; //DESKTOP
   });
 
   const productColorSelector = document.getElementById("color"); //getElementById or querySelector?? Be consise
   const productColorSelectorDesktop = document.querySelector(".product-colors");
 
-  const productColors = product.baseColor;
+  const productColors = product.attributes[1].terms[0].name;
   const colorArray = productColors.split(" "); //making the baseColor an array. ForEach work if baseColor is applied as an array.
 
   colorArray.forEach(function (colors) {
