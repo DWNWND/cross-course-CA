@@ -21,18 +21,9 @@ async function displayProducts() {
   for (let i = 0; i < product.length; i++) {
     let cssClass = "shopping-bag_icon-empty";
 
-    console.log(productsInCart);
-
-    if (productsInCart.id === product[i].id) {
-      const isItemInCart = true;
-      return isItemInCart;
-    }
-
-    console.log(isItemInCart);
-
-    // const isItemInCart = productsInCart.find(function (item) {
-    //   return item.id === product[i].id;
-    // });
+    const isItemInCart = productsInCart.find(function (item) {
+      return item.id === product[i].id;
+    });
 
     if (isItemInCart) {
       cssClass = "shopping-bag_icon-added-product";
