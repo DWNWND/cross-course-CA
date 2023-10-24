@@ -79,22 +79,17 @@ async function displayProducts() {
   });
   adContainer.innerHTML += `
   <h1>
-    <a href="list.html" class="h1_homepage">New in from Rainy Days . . .</a>
+    <a href="list.html" class="h1_homepage margin-bottom">New in from Rainy Days . . .</a>
   </h1>
-  <div class="product-text inline helvetica">
-    <p class="productname">${createTitle1(product[3])}</p>
-    <a href="product.html" class="black bold">${createTitle2(product[3])}</a>
-  </div>
   <div class="container helvetica white uppercase bold">
-    <div class="new-in_1">
-      <img src="../images/productphoto-1.jpg" alt="${product[3].images.alt}" class="productphoto-ad new-in_1" />
-    </div>
     <div class="new-in_2">
       <img src="../images/productphoto-2.jpg" alt="${product[3].images.alt}" class="productphoto-ad new-in_2" />
     </div>
-    <div class="product-name-info">
-      <p class="bottom-left"> ${createTitle1(product[3])} - 2023 collection</p>
-      <p class="bottom-right">$${product[3].prices.regular_price}</p>
+  </div> 
+  <div>
+    <div class="product-text helvetica white product-name-info">
+      <a href="product.html" class="white bold">${createTitle2(product[3])}</a>
+      ${product[3].price_html}
     </div>
   </div>`;
   adSection.appendChild(adContainer);
