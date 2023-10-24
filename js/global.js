@@ -1,4 +1,4 @@
-export const url = "http://rainy-days.site/wp-json/wc/store/v1/products";
+export const url = "https://rainy-days.site/wp-json/wc/store/v1/products";
 const errorMessage = "An error has occurred...";
 
 // //API call ALL products
