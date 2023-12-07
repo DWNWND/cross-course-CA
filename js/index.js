@@ -35,35 +35,39 @@ async function displayProducts() {
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
 
-    if (product[i].onSale) {
+    if (product[i].on_sale) {
       productContainer.innerHTML += `
-    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}" data-onsale="${product[i].onSale}" data-discountedprice="${product[i].discountedPrice}">
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].images[0].src}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].images.alt}" data-price="${product[i].prices.price}" data-onsale="${product[i].on_sale}" data-discountedprice="${product[i].prices.sale_price}">
     </div>
     <div class="product-image-container">
       <a href="product.html?key=${product[i].id}" class="product-link">
-        <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
+        <img src="${product[i].images[0].src}" alt="${product[i].images.alt}" class="jacket" />
       </a>
     </div>
     <div class="product-text">
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
-      <p class="productprice inline line-through">$${product[i].discountedPrice}</p>
-          <p class="productprice inline red bold">$${product[i].discountedPrice}</p>
+      ${product[i].price_html}
     </div>`;
     } else {
       productContainer.innerHTML += `
-    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].image}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].description}" data-price="${product[i].price}" data-sizes="${product[i].sizes}" data-onsale="${product[i].onSale}" data-discountedprice="${product[i].discountedPrice}">
+    <div class="shopping-bag ${cssClass}" alt="link to shopping-bag" data-img="${product[i].images[0].src}" data-id="${product[i].id}" data-title1="${title1}" data-title2="${title2}" data-description="${product[i].images.alt}" data-price="${product[i].prices.price}" data-onsale="${product[i].on_sale}" data-discountedprice="${product[i].prices.sale_price}">
     </div>
     <div class="product-image-container">
       <a href="product.html?key=${product[i].id}" class="product-link">
-        <img src="${product[i].image}" alt="${product[i].description}" class="jacket" />
+        <img src="${product[i].images[0].src}" alt="${product[i].images.alt}" class="jacket" />
       </a>
     </div>
     <div class="product-text block">
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
-      <p class="productprice">$${product[i].price}</p>
+      ${product[i].price_html}
     </div>`;
     }
     sliderSection.appendChild(productContainer);
+
+    // <p class="productprice inline line-through">$${product[i].prices.regular_price}</p>
+    // <p class="productprice inline red bold">$${product[i].prices.sale_price}</p>
+
+    // <p class="productprice">$${product[i].prices.regular_price}</p>
 
     if (i === 6) {
       break;
@@ -73,24 +77,21 @@ async function displayProducts() {
   adContainer.addEventListener("click", () => {
     window.location.href = `product.html?key=${product[3].id}`;
   });
+
+  adContainer.classList.add("ad-container");
   adContainer.innerHTML += `
   <h1>
-    <a href="list.html" class="h1_homepage">New in from Rainy Days . . .</a>
+    <a href="list.html" class="h1_homepage margin-bottom">New in from Rainy Days . . .</a>
   </h1>
-  <div class="product-text inline helvetica">
-    <p class="productname">${createTitle1(product[3])}</p>
-    <a href="product.html" class="black bold">${createTitle2(product[3])}</a>
-  </div>
   <div class="container helvetica white uppercase bold">
-    <div class="new-in_1">
-      <img src="../images/productphoto-1.jpg" alt="${product[3].description}" class="productphoto-ad new-in_1" />
-    </div>
     <div class="new-in_2">
-      <img src="../images/productphoto-2.jpg" alt="${product[3].description}" class="productphoto-ad new-in_2" />
+      <img src="../images/productphoto-2.jpg" alt="${product[3].images.alt}" class="productphoto-ad new-in_2" />
     </div>
-    <div class="product-name-info">
-      <p class="bottom-left"> ${createTitle1(product[3])} - 2023 collection</p>
-      <p class="bottom-right">$${product[3].price}</p>
+  </div> 
+  <div>
+    <div class="product-text helvetica white product-name-info">
+      <a href="product.html" class="white bold">${createTitle2(product[3])}</a>
+      ${product[3].price_html}
     </div>
   </div>`;
   adSection.appendChild(adContainer);

@@ -1,4 +1,4 @@
-export const url = "https://api.noroff.dev/api/v1/rainy-days/";
+export const url = "https://rainy-days.site/wp-json/wc/store/v1/products";
 const errorMessage = "An error has occurred...";
 
 // //API call ALL products
@@ -6,6 +6,7 @@ export async function fetchJackets() {
   try {
     const response = await fetch(url);
     const results = await response.json();
+    // console.log(results);
     return results;
   } catch (error) {
     const main = document.querySelector("main");
@@ -21,7 +22,7 @@ const id = params.get("key");
 // API call by ID
 export async function fetchJacketById() {
   try {
-    const response = await fetch(url + id);
+    const response = await fetch(url + "/" + id);
     const results = await response.json();
     return results;
   } catch (error) {
@@ -37,13 +38,13 @@ export function showLoadingIndicator(section) {
 
 //Title split
 export function createTitle1(titleParam) {
-  const title = titleParam.title;
+  const title = titleParam.name;
   const titleArray = title.split(" ");
   const rainyDaysTitle = `${titleArray[0]} ${titleArray[1]}`;
   return rainyDaysTitle;
 }
 export function createTitle2(titleParam) {
-  const title = titleParam.title;
+  const title = titleParam.name;
   const titleArray = title.split(" ");
   if (!titleArray[4]) {
     titleArray[4] = "";

@@ -16,7 +16,7 @@ const theTrueCategoryName = theTrueCategorySelector.innerHTML;
 const h1 = document.querySelector(".h1_list");
 
 //checking which category we´re on
-console.log("selected category: ", selectedCategory.toLowerCase());
+console.log("selected category: ", theTrueCategoryName.toLowerCase());
 
 // const productsInCart = getProductsFromCart();
 
@@ -37,10 +37,11 @@ async function displaySearchedProducts() {
 
   //fetching API
   const product = await fetchJackets();
+  console.log(product.categories[0].name.toLowerCase());
 
   //Filter categories - using selectedCategory (WORKING)
   let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.gender.toLowerCase().includes(selectedCategory.toLowerCase())) {
+    if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
       return allItems;
     }
     if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
@@ -87,10 +88,10 @@ async function displayCategorizedProducts() {
 
   //Filter categories - using selectedCategory (WORKING)
   let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.gender.toLowerCase().includes(selectedCategory.toLowerCase())) {
+    if (allItems.categories[0].name.toLowerCase() === theTrueCategoryName.toLowerCase()) {
       return allItems;
     }
-    if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+    if (selectedCategory.toLowerCase().includes("on sale") && allItems.on_sale) {
       return allItems;
     }
     if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
@@ -98,6 +99,17 @@ async function displayCategorizedProducts() {
     }
   });
 
+  // let productsCategoriesed = product.filter((allItems) => {
+  //   if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
+  //     return allItems;
+  //   }
+  //   if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+  //     return allItems;
+  //   }
+  //   if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
+  //     return allItems;
+  //   }
+  // });
   //clearing loading indicator
   productList.innerHTML = "";
 
