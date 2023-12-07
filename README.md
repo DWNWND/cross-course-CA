@@ -19,8 +19,6 @@ These are the subject where we worked on this project for the final assignemnts 
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
 - HTML
 - CSS
 - JavaScript
@@ -46,5 +44,7 @@ git clone https://github.com/DWNWND/HTML-CSS_CA.git
 ## Acknowledgments
 
 Noroff Online Studies
+
 The artists at Unsplash.com
+
 Fontawesome.com
