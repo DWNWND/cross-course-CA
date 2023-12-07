@@ -14,6 +14,22 @@
     <link rel="stylesheet" href="css/global.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Hotjar Tracking Code for ID-CA -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3663593, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
   </head>
   <body>
     <header>
@@ -22,6 +38,8 @@
         <label for="menu-checkbox" class="hamburger-menu_icon brown" alt="Hamburgermenu"><i class="fa-solid fa-bars"></i></label>
         <nav>
           <div class="dropdown-menu">
+              <!-- //Searchbar in this does not work (only in list view) -->
+              
             <div class="searchbar_field">
               <label for="searchbar" class="hide">Searchbar</label>
               <input type="search" placeholder="Search.." class="searchbar montserrat" id="searchbar" />
@@ -31,9 +49,10 @@
               <a href="#" class="store-locator_link brown montserrat">Store locator </a>
               <img src="images/icons/location.png" alt="link to store-locator" class="store-locator_icon" />
             </div>
-            <a href="list.html" class="dropdown-menu_items new-in brown montserrat">New in</a>
-            <a href="list.html" class="dropdown-menu_items women brown montserrat">Women</a>
-            <a href="list.html" class="dropdown-menu_items men brown montserrat">Men</a>
+            <a href="listCategoriesHTML/newIn.html" class="dropdown-menu_items new-in brown montserrat">New in</a>
+            <a href="listCategoriesHTML/women.html" class="dropdown-menu_items women brown montserrat">Women</a>
+            <a href="listCategoriesHTML/men.html" class="dropdown-menu_items men brown montserrat">Men</a>
+            <a href="listCategoriesHTML/onSale.html" class="dropdown-menu_items sale red montserrat">SALE</a>
           </div>
         </nav>
       </div>
@@ -41,29 +60,70 @@
       <a href="checkout.html" class="shoppingbag"><img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" /> </a>
     </header>
     <main>
-      <section class="payment-section helvetica">
-        <fieldset>
-          <p class="helvetica bold">Preferred method of paying</p>
-          <div class="payment-selection" required>
-            <input type="radio" id="visa" name="visa" value="visa" />
-            <label for="visa">Visa</label>
-            <input type="radio" id="klarna" name="klarna" value="klarna" />
-            <label for="klarna">Klarna</label>
-            <input type="radio" id="vipps" name="vipps" value="vipps" />
-            <label for="vipps">Vipps</label>
-            <input type="radio" id="paypal" name="paypal" value="paypal" />
-            <label for="paypal">Paypal</label>
-          </div>
-          <label for="card-number" class="light">Card number</label>
-          <input type="number" name="card-number" id="card-number" class="form__input" required />
-          <label for="valid-date" class="light">Valid date</label>
-          <input type="date" name="valid-date" id="valid-date" class="form__input" required />
-          <label for="cvv-cvc" class="light">CVV/CVC*</label>
-          <input type="number" name="cvv-cvc" id="cvv-cvc" class="form__input" />
-          <label for="name-on-card" class="light">Name on card</label>
-          <input type="text" name="name-on-card" id="name-on-card" class="form__input" />
-        </fieldset>
-        <a href="checkout-success.html" class="next-btn helvetica gray uppercase">Pay now</a>
+      <!-- //fix this section -->
+      <section class="checkout">
+        <div class="login helvetica"><a href="#" class="underline black">Log in</a> for faster checkout</div>
+
+        <section class="delivery-section"></section>
+
+        <section class="shipping-info-section form-delivery">
+          <!-- add a total-price on this page aswell -->
+
+          <h1>ship to</h1>
+          <fieldset>
+            <label for="name" class="hide">Name</label>
+            <input type="text" name="name" id="name" class="form__input" placeholder="Name" required />
+            <label for="address" class="hide">Address</label>
+            <input type="text" name="address" id="address" class="form__input" placeholder="Address" required />
+            <label for="address2" class="hide">Address line 2</label>
+            <input type="text" name="address2" id="address2" class="form__input" placeholder="Address line 2" />
+            <label for="zipcode" class="hide">Zipcode/City</label><input type="text" name="zipcode" id="zipcode" placeholder="Zipcode/City" class="form__input" />
+            <label for="phone" class="hide">Phone number</label>
+            <input type="tel" name="phone" id="phone" class="form__input" placeholder="Phone number" />
+            <label for="email" class="hide">Email adress</label>
+            <input type="email" name="email" id="email" class="form__input" placeholder="Email address" required />
+            <div class="delivery-method">
+              <select name="delivery" id="delivery" class="delivery-selector-btn helvetica brown">
+                <option value="no-selection">Choose delivery method</option>
+                <option value="home-delivery">Home delivery - $3</option>
+                <option value="Post-office">Post office - $2</option>
+                <option value="instabox">Instabox - $3</option>
+              </select>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="terms" />
+              <label for="terms" class="helvetica checkbox-label">I accept the <a href="#" class="underline black">terms of agreement</a></label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="promotion" />
+              <label for="promotion" class="helvetica checkbox-label">I accept to get promotional stuff via email</label>
+            </div>
+          </fieldset>
+        </section>
+        <section class="payment-section helvetica">
+          <fieldset>
+            <p class="helvetica bold">Preferred method of paying</p>
+            <div class="payment-selection" required>
+              <input type="radio" id="visa" name="visa" value="visa" />
+              <label for="visa">Visa</label>
+              <input type="radio" id="klarna" name="klarna" value="klarna" />
+              <label for="klarna">Klarna</label>
+              <input type="radio" id="vipps" name="vipps" value="vipps" />
+              <label for="vipps">Vipps</label>
+              <input type="radio" id="paypal" name="paypal" value="paypal" />
+              <label for="paypal">Paypal</label>
+            </div>
+            <label for="card-number" class="light">Card number</label>
+            <input type="number" name="card-number" id="card-number" class="form__input" required />
+            <label for="valid-date" class="light">Valid date</label>
+            <input type="date" name="valid-date" id="valid-date" class="form__input" required />
+            <label for="cvv-cvc" class="light">CVV/CVC*</label>
+            <input type="number" name="cvv-cvc" id="cvv-cvc" class="form__input" />
+            <label for="name-on-card" class="light">Name on card</label>
+            <input type="text" name="name-on-card" id="name-on-card" class="form__input" />
+          </fieldset>
+          <a href="checkout-success.html" class="next-btn helvetica gray uppercase">Pay now</a>
+        </section>
       </section>
       <div class="stickyfooter">
         <div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>

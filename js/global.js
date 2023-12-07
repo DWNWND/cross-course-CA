@@ -1,10 +1,5 @@
-const url = "https://api.noroff.dev/api/v1/rainy-days/";
-const errorMessage = "Can't seem to reach server...";
-
-//getting the product ID for API call - product spesific
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("key");
+export const url = "https://api.noroff.dev/api/v1/rainy-days/";
+const errorMessage = "An error has occurred...";
 
 // //API call ALL products
 export async function fetchJackets() {
@@ -17,6 +12,11 @@ export async function fetchJackets() {
     main.innerHTML = `<div class="error-message montserrat bold red">${errorMessage}</div>`;
   }
 }
+
+//getting the product ID for API call - product spesific
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("key");
 
 // API call by ID
 export async function fetchJacketById() {

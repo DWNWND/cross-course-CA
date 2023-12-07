@@ -39,6 +39,7 @@
   align-items: center;
   gap: 1.2rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .sizebox {
   padding: 0.3rem;
@@ -50,6 +51,7 @@
   display: inline-block;
   font-weight: 200;
   margin: 1rem 1rem 0 0;
+  cursor: pointer;
 }
 .product-section__flex {
   display: flex;
@@ -70,6 +72,31 @@
   width: 100%;
 }
 /*-------BUTTONS------*/
+.add-btn,
+.added-btn {
+  text-align: center;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.added-btn {
+  background-color: #72482b;
+  border: solid 2px #e2dad4;
+  color: #e2dad4;
+}
+.add-btn {
+  background-color: #e2dad4;
+  border: solid 2px #72482b;
+  color: #72482b;
+}
 .back-btn-product {
   text-align: center;
   background-color: #e2dad4;
@@ -90,6 +117,7 @@
   margin: 0 0.5rem;
 }
 .product-img-section {
+  display: grid;
   grid-template-areas:
     "big big big big"
     "thumbnail1 thumbnail2 thumbnail3 thumbnail4";
@@ -115,16 +143,20 @@
 }
 .big {
   grid-area: big;
+  padding: 1rem;
+  background-color: white;
 }
 .big > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .thumbnailsize > img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .no-focus {
   filter: blur(0.7px) opacity(0.5);
@@ -132,10 +164,12 @@
 .thumbnailsize {
   align-self: center;
   justify-self: center;
+  padding: 1rem;
+  background-color: white;
 }
-@media (min-width: 740px) {
+@media (min-width: 500px) {
   .back-section-product {
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     margin-bottom: 0;
   }
 }
@@ -156,7 +190,7 @@
     justify-self: start;
   }
   .thumbnailsize {
-    inline-size: 50%;
+    inline-size: 70%;
     align-self: center;
     justify-self: center;
   }

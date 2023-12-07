@@ -2,7 +2,10 @@
 .hero-section {
   background: 100% no-repeat url(../images/hero-image.jpg);
   max-width: 100%;
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cta-button-container {
   max-width: 100%;
@@ -139,11 +142,8 @@
     margin: 0 0 3rem 0;
     overflow-y: scroll;
   }
-  .cta-button-container {
-    padding: 10rem 0;
-  }
   .hero-section {
-    height: 50rem;
+    padding: 10rem 10rem 15rem 10rem;
   }
   .new-in_1 {
     display: inline-block;
@@ -190,5 +190,10 @@
 @media (min-width: 1000px) {
   .product-slider {
     grid-auto-columns: 21%;
+  }
+}
+@media (min-width: 1200px) {
+  .product-slider {
+    grid-auto-columns: 18%;
   }
 }
