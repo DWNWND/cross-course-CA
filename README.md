@@ -2,7 +2,7 @@
 
 ![rainydays-screenshot](https://github.com/DWNWND/cross-course-CA/assets/126068161/5ea2672d-088a-4d70-9b21-646cc2426e16)
 
-This is the first website I made during my Frontend Dev. studies at Noroff. 
+This is the first website I made during my Frontend Dev. studies at Noroff. Deployed site: https://cms-ca-noroff.netlify.app/
 
 
 ## Description
