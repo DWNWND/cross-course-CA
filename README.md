@@ -1,6 +1,6 @@
 #  RAINYDAYS (cross-course project)
 
-![rainydays-screenshot](https://github.com/DWNWND/cross-course-CA/assets/126068161/22d5f13e-1c59-4c51-a98d-ac5f3768af64)
+![rainydays-screenshot](https://github.com/DWNWND/cross-course-CA/assets/126068161/5ea2672d-088a-4d70-9b21-646cc2426e16)
 
 This is the first website I made during my Frontend Dev. studies at Noroff. 
 
