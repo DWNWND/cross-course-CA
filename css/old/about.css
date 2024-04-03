@@ -1,0 +1,52 @@
+.about-section p,
+.about-section a {
+  font-size: 0.7rem;
+  letter-spacing: 0.04rem;
+}
+.about-section {
+  font-size: 0.7rem;
+  letter-spacing: 0.04rem;
+}
+.about__grid {
+  margin: 5rem 2rem;
+}
+.paragraph {
+  margin-bottom: 1.5rem;
+}
+.bold:first-of-type {
+  margin-top: 2rem;
+}
+.sloganimg {
+  max-width: 100%;
+}
+.sloganimg-section {
+  align-self: center;
+}
+.weathericons {
+  max-width: 15rem;
+  margin: 1rem 0 2rem 0;
+}
+.center {
+  text-align: center;
+}
+.sloganimg {
+  margin-top: 3rem;
+}
+@media (min-width: 500px) {
+  .about__grid {
+    display: grid;
+  }
+}
+@media (min-width: 825px) {
+  .about__grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin: 7rem 5rem 5rem 5rem;
+    column-gap: 5rem;
+    max-width: 100%;
+  }
+  .sloganimg {
+    inline-size: 100%;
+    margin-top: 0rem;
+  }
+}

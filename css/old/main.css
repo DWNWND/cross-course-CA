@@ -2,10 +2,7 @@
 .hero-section {
   background: 100% no-repeat url(../images/hero-image.jpg);
   max-width: 100%;
-  /* display: block; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 .cta-button-container {
   max-width: 100%;
@@ -52,38 +49,35 @@
 }
 
 /*-------------new-in-section--------------*/
-/* .new-in_1,
+.new-in_1,
 .bottom-right,
 .bottom-left {
   display: none;
-} */
+}
 .productphoto-ad {
-  /* width: 100%; */
-  max-height: 600px;
+  max-width: 100%;
 }
 .inline {
   padding-bottom: 0.7rem;
 }
 .ad-section {
-  margin-bottom: 6rem;
-  margin-top: 6rem;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  padding: 1rem;
 }
-.ad-container {
-  background-color: #e2dad4;
-  padding: 5rem;
-}
-/* .container {
+.container {
   position: relative;
   text-align: center;
-} */
-.product-name-info {
-  position: relative;
-  bottom: 3.5rem;
-  left: 1.5rem;
 }
-/* .bottom-left {
+.product-name-info {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  background-color: rgba(114, 72, 43, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-left {
   font-size: 0.7rem;
   display: inline;
   padding: 0.5rem 1rem;
@@ -92,7 +86,7 @@
   font-size: 0.7rem;
   display: inline;
   padding: 0.5rem 1rem;
-} */
+}
 
 /*-----------ambience-section--------------*/
 .ambience-carousel {
@@ -145,8 +139,14 @@
     margin: 0 0 3rem 0;
     overflow-y: scroll;
   }
+  .cta-button-container {
+    padding: 10rem 0;
+  }
   .hero-section {
-    padding: 10rem 10rem 15rem 10rem;
+    height: 50rem;
+  }
+  .new-in_1 {
+    display: inline-block;
   }
   .ad-section {
     padding: 0 5rem;
@@ -160,11 +160,11 @@
   .inline {
     padding-bottom: 1.5rem;
   }
-  /* .new-in_1,
+  .new-in_1,
   .new-in_2 {
     object-fit: contain;
     object-position: bottom;
-  } */
+  }
   .slogan-first-part {
     font-size: 1.7rem;
   }
@@ -191,12 +191,4 @@
   .product-slider {
     grid-auto-columns: 21%;
   }
-}
-@media (min-width: 1200px) {
-  .product-slider {
-    grid-auto-columns: 18%;
-  }
-  /* .new-in_1 {
-    display: inline-block;
-  } */
 }

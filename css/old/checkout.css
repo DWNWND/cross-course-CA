@@ -1,10 +1,5 @@
-/* Sort classes that were here previously into "payment.css" instead */
-
 .checkout-section {
   padding: 2rem 2rem 6rem 2rem;
-}
-.empty-cart {
-  text-align: center;
 }
 
 /*------------BUTTONS-----------*/
@@ -18,8 +13,11 @@
   letter-spacing: 0.04rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-top: 2rem;
   width: 100%;
+}
+.back-section-checkout {
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
 /*-----------SUMMARY SECTION ----------*/
@@ -27,30 +25,21 @@
   display: grid;
   padding: 0.7rem;
   margin: 1.2rem 0;
-  grid-template-columns: 120px auto 5rem;
+  grid-template-columns: 100px auto 2rem;
   grid-template-rows: auto;
   background-color: #fff9f4;
   row-gap: 5px;
   box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.2);
   grid-template-areas:
-    'productimg productinfo x'
+    'productimg . .'
+    'productimg productinfo productinfo'
     'productimg size-selector .'
-    'productimg qty-selector .'
-    'productimg discounted-price price';
+    'productimg qty-selector price'
+    'productimg . . ';
 }
-.summary-product-img-container {
+.summary-product {
   grid-area: productimg;
-  width: 83px;
-  height: 83px;
-  background-color: white;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: center;
-}
-.summary-product-img {
   inline-size: 73%;
-  height: 83px;
-  width: auto;
 }
 .summary-product-text {
   grid-area: productinfo;
@@ -67,13 +56,6 @@
   font-weight: 800;
   padding: 0.2rem 0;
 }
-.remove-item-from-cart {
-  grid-area: x;
-  font-size: 1rem;
-  justify-self: right;
-  font-weight: 500;
-  cursor: pointer;
-}
 .size-selector {
   grid-area: size-selector;
 }
@@ -84,17 +66,11 @@
   border: none;
   background-color: #fff9f4;
 }
-.summary-product-price,
-.summary-product-discounted-price {
-  font-size: 1rem;
-  font-weight: 500;
-  justify-self: right;
-}
 .summary-product-price {
   grid-area: price;
-}
-.summary-product-discounted-price {
-  grid-area: discounted-price;
+  font-size: 1.2rem;
+  font-weight: 500;
+  justify-self: right;
 }
 /*------------DELIVERY-SECTION ---------*/
 
@@ -199,27 +175,20 @@ fieldset {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      'summary-h1 .'
-      'summary CTAs'
-      'sum .';
+      'backbtn login'
+      'summary shipping'
+      'delivery shipping'
+      'sum shipping';
     column-gap: 5rem;
     max-width: 100%;
     padding: 7rem 5rem 5rem 5rem;
-    align-items: start;
   }
-  .CTA-section {
-    grid-area: CTAs;
-  }
-  .back-btn-checkout {
-    margin-top: 0;
+  .back-section {
+    grid-area: backbtn;
   }
   .summary-section {
     grid-area: summary;
   }
-  .summary-h1 {
-    grid-area: summary-h1;
-  }
-
   .delivery-section {
     grid-area: delivery;
     margin: 1rem 0;
@@ -231,6 +200,12 @@ fieldset {
   .shipping-info-section {
     grid-area: shipping;
     margin: 0;
+  }
+  .login {
+    grid-area: login;
+    align-self: end;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
   }
   .form-delivery {
     margin: 0;

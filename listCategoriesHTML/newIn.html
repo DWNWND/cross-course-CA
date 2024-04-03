@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title id="title"></title>
+    <title>Rainydays - Jackets New In</title>
     <meta
       name="description"
-      content="Fleece layer from Scott 1.1.2. Available in three colors. Perfect as an inner layer in any situation"
+      content="Select a jacket that meets your needs. Snow, rain or sunshine. Rainydays will keep you dry and warm."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Thea Oland" />
@@ -15,10 +15,9 @@
       rel="stylesheet"
     />
     <!-- <script src="https://kit.fontawesome.com/279950e6bf.js" crossorigin="anonymous"></script> -->
-    <script defer type="module" src="js/product.js"></script>
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/product.css" />
-    <link rel="stylesheet" href="css/global.css" />
+    <script defer type="module" src="/js/list.js"></script>
+    <link rel="stylesheet" href="/css/list.css" />
+    <link rel="stylesheet" href="/css/global.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   </head>
@@ -34,8 +33,6 @@
         ></label>
         <nav>
           <div class="dropdown-menu">
-            <!-- //Searchbar in this does not work (only in list view) -->
-
             <div class="searchbar_field">
               <label for="searchbar" class="hide">Searchbar</label>
               <input
@@ -45,71 +42,94 @@
                 id="searchbar"
               />
               <img
-                src="images/icons/looking-glass.png"
+                src="/images/icons/looking-glass.png"
                 alt="searchbar icon"
                 class="searchbar_icon"
               />
             </div>
             <div class="store-locator_field">
-              <a href="index.html" class="store-locator_link brown montserrat"
-                >Store locator </a
-              ><img
-                src="images/icons/location.png"
+              <a href="/index.html" class="store-locator_link brown montserrat"
+                >Store locator
+              </a>
+              <img
+                src="/images/icons/location.png"
                 alt="link to store-locator"
                 class="store-locator_icon"
               />
             </div>
             <a
-              href="listCategoriesHTML/newIn.html"
+              href="newIn.html"
               class="dropdown-menu_items new-in brown montserrat"
               >New in</a
             >
             <a
-              href="listCategoriesHTML/women.html"
+              href="women.html"
               class="dropdown-menu_items women brown montserrat"
               >Women</a
             >
-            <a
-              href="listCategoriesHTML/men.html"
-              class="dropdown-menu_items men brown montserrat"
+            <a href="men.html" class="dropdown-menu_items men brown montserrat"
               >Men</a
             >
             <a
-              href="listCategoriesHTML/onSale.html"
+              href="onsale.html"
               class="dropdown-menu_items sale red montserrat"
               >SALE</a
             >
           </div>
         </nav>
       </div>
-      <a href="index.html" class="logo"
-        ><img
-          src="images/logo-header-noshadow.png"
-          alt="Rainydays logo - Home"
+      <a href="/index.html" class="logo">
+        <img
+          src="/images/logo-header-noshadow.png"
+          alt="Rainydays logo - Homebutton"
           class="logo_icon"
         />
       </a>
-      <a href="checkout.html" class="shoppingbag"
-        ><img
-          src="images/icons/shopping-bag.png"
+      <a href="/checkout.html" class="shoppingbag">
+        <img
+          src="/images/icons/shopping-bag.png"
           alt="link to shopping-bag"
           class="shoppingbag_icon"
         />
       </a>
     </header>
     <main>
-      <section class="back-section-product">
-        <a href="list.html" class="back-btn-product helvetica brown mobile"
-          >back</a
-        >
+      <div class="category hide">New in</div>
+      <div class="true-category hide">New in</div>
+      <section class="list-section">
+        <h1 class="h1_list">New in</h1>
+        <div class="menu">
+          <div class="menu_group1">
+            <a href="/index.html" class="uppercase">New in</a>
+            <a href="/index.html" class="">Outlet</a>
+          </div>
+          <div class="menu_group3">
+            <a href="/index.html" class="uppercase">City</a>
+            <a href="/index.html">Rain jackets</a>
+            <a href="/index.html">Wind jackets</a>
+            <a href="/index.html">Inner layer</a>
+          </div>
+          <div class="menu_group2">
+            <a href="/index.html" class="uppercase">Hiking</a>
+            <a href="/index.html">Expedition</a>
+            <a href="/index.html">Double layered</a>
+            <a href="/index.html">Fleece</a>
+          </div>
+          <div class="menu_group3">
+            <a href="/index.html" class="uppercase">Sports</a>
+            <a href="/index.html">Light weight</a>
+            <a href="/index.html">Goretex</a>
+          </div>
+        </div>
+        <div class="sorting"></div>
+        <div class="product-list"></div>
       </section>
-      <section class="product-section__flex"></section>
       <div class="stickyfooter">
         <div class="copyright_wrapper">RAINYDAYS 2023 &copy;</div>
         <div class="stickyfooter-link_wrapper">
-          <a href="#" class="black">Shipping & delivery</a>
-          <a href="#" class="black">Refunds & returns</a>
-          <a href="contact.html" class="black">Contact us</a>
+          <a href="/index.html" class="black">Shipping & delivery</a>
+          <a href="/index.html" class="black">Refunds & returns</a>
+          <a href="/contact.html" class="black">Contact us</a>
         </div>
       </div>
     </main>
@@ -117,40 +137,44 @@
       <div class="area1">
         <span>Help</span>
         <ul>
-          <li><a href="#" class="brown">Refunds & returns</a></li>
-          <li><a href="#" class="brown">Shipping & delivery</a></li>
+          <li><a href="/index.html" class="brown">Refunds & returns</a></li>
+          <li><a href="/index.html" class="brown">Shipping & delivery</a></li>
           <li>
-            <a href="#" class="brown">Frequently Asked Questions (FAQ)</a>
+            <a href="/index.html" class="brown"
+              >Frequently Asked Questions (FAQ)</a
+            >
           </li>
           <li>
-            <a href="#" class="brown">Terms of service & Privacy policy</a>
+            <a href="/index.html" class="brown"
+              >Terms of service & Privacy policy</a
+            >
           </li>
         </ul>
       </div>
       <div class="area2">
         <span>About rainydays</span>
         <ul>
-          <li><a href="about.html" class="brown">About us</a></li>
-          <li><a href="contact.html" class="brown">Contact</a></li>
+          <li><a href="/about.html" class="brown">About us</a></li>
+          <li><a href="/contact.html" class="brown">Contact</a></li>
         </ul>
       </div>
       <div class="area3">
         <img
-          src="images/logo-footer.png"
+          src="/images/logo-footer.png"
           alt="Rainydays logo"
           class="logo_footer"
         />
       </div>
       <div class="area4">
-        <a href="#"
+        <a href="/index.html"
           ><img
-            src="images/icons/instagram.png"
+            src="/images/icons/instagram.png"
             alt="link to Rainydays instagram-page"
             class="some-icons_footer"
         /></a>
-        <a href="#"
+        <a href="/index.html"
           ><img
-            src="images/icons/facebook.png"
+            src="/images/icons/facebook.png"
             alt="link to Rainydays facebook-page"
             class="some-icons_footer"
         /></a>
