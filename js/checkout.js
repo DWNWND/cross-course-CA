@@ -103,8 +103,8 @@ function generateCart() {
   );
 
   removeItemFromCart.forEach((xButtons) => {
-    xButtons.addEventListener('click', () => {
-      removeFromCart();
+    xButtons.addEventListener('click', (event) => {
+      removeFromCart(event);
       generateSum();
     });
   });
