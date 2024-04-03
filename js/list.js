@@ -1,21 +1,26 @@
-import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
+import {
+	fetchJackets,
+	createTitle1,
+	createTitle2,
+	showLoadingIndicator,
+} from './global.js';
 
-const listSection = document.querySelector(".product-list");
+const listSection = document.querySelector('.product-list');
 
 async function displayProducts() {
-  showLoadingIndicator(listSection);
-  const product = await fetchJackets();
+	showLoadingIndicator(listSection);
+	const product = await fetchJackets();
 
-  listSection.innerHTML = ""; //clearing loading indicator
+	listSection.innerHTML = ''; // Clearing loading indicator
 
-  for (let i = 0; i < product.length; i++) {
-    const title1 = createTitle1(product[i]);
-    const title2 = createTitle2(product[i]);
+	for (let i = 0; i < product.length; i++) {
+		const title1 = createTitle1(product[i]);
+		const title2 = createTitle2(product[i]);
 
-    const productContainer = document.createElement("div");
-    productContainer.classList.add("product");
+		const productContainer = document.createElement('div');
+		productContainer.classList.add('product');
 
-    productContainer.innerHTML += `
+		productContainer.innerHTML += `
     <a href="checkout.html" class="shopping-bag">
       <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" />
     </a>
@@ -27,15 +32,16 @@ async function displayProducts() {
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
       <p class="productprice">$${product[i].price}</p>
     </div>`;
-    productContainer.addEventListener("click", () => {
-      window.location.href = `product.html?key=${product[i].id}`;
-    });
+		productContainer.addEventListener('click', () => {
+			window.location.href = `product.html?key=${product[i].id}`;
+		});
 
-    listSection.appendChild(productContainer);
-    
-    if (i === 9) {
-      break;
-    }
-  }
+		listSection.appendChild(productContainer);
+
+		if (i === 9) {
+			break;
+		}
+	}
 }
+
 displayProducts();

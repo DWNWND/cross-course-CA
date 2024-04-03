@@ -1,32 +1,37 @@
-import { fetchJacketById, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
+import {
+	fetchJacketById,
+	createTitle1,
+	createTitle2,
+	showLoadingIndicator,
+} from './global.js';
 
-export const productSection = document.querySelector(".product-section__flex");
+export const productSection = document.querySelector('.product-section__flex');
 
 async function displayProduct() {
-  showLoadingIndicator(productSection);
-  const product = await fetchJacketById();
-  productSection.innerHTML = ""; //clearing loading indicator
+	showLoadingIndicator(productSection);
+	const product = await fetchJacketById();
+	productSection.innerHTML = ''; // Clearing loading indicator
 
-  const title1 = createTitle1(product);
-  const title2 = createTitle2(product);
+	const title1 = createTitle1(product);
+	const title2 = createTitle2(product);
 
-  const titleContainer = document.querySelector("#title");
-  titleContainer.textContent = title2;
+	const titleContainer = document.querySelector('#title');
+	titleContainer.textContent = title2;
 
-  const productImagesContainer = document.createElement("div");
-  productImagesContainer.classList.add("product-img-section", "product");
+	const productImagesContainer = document.createElement('div');
+	productImagesContainer.classList.add('product-img-section', 'product');
 
-  productImagesContainer.innerHTML += `
+	productImagesContainer.innerHTML += `
   <div class="big"><img src="${product.image}" /></div>
   <div class="thumbnail1 thumbnailsize in-focus"><img src="${product.image}" alt="${product.description}" /></div>
   <div class="thumbnail2 thumbnailsize no-focus"><img src="${product.image}" alt="${product.description}" /></div>
   <div class="thumbnail3 thumbnailsize no-focus"><img src="${product.image}" alt="${product.description}" /></div>
   <div class="thumbnail4 thumbnailsize no-focus"><img src="${product.image}" alt="${product.description}" /></div>`;
 
-  const productDetailsContainer = document.createElement("div");
-  productDetailsContainer.classList.add("product-detail-section");
+	const productDetailsContainer = document.createElement('div');
+	productDetailsContainer.classList.add('product-detail-section');
 
-  productDetailsContainer.innerHTML += `
+	productDetailsContainer.innerHTML += `
   <div class="product-text margin">
     <h1>${title1}</h1>
     <p class="bold">${title2}</p>
@@ -48,36 +53,37 @@ async function displayProduct() {
     <a href="checkout.html" class="submit-btn helvetica brown uppercase">Add to bag</a>
   </form>`;
 
-  productSection.appendChild(productImagesContainer);
-  productSection.appendChild(productDetailsContainer);
+	productSection.appendChild(productImagesContainer);
+	productSection.appendChild(productDetailsContainer);
 
-  //To get the sizes and colors looped in:
-  const productSizeSelector = document.getElementById("size");
-  const productSizeSelectorDesktop = document.querySelector(".product-size");
+	// To get the sizes and colors looped in:
+	const productSizeSelector = document.getElementById('size');
+	const productSizeSelectorDesktop = document.querySelector('.product-size');
 
-  const productSizes = product.sizes;
+	const productSizes = product.sizes;
 
-  productSizes.forEach(function (sizes) {
-    productSizeSelector.innerHTML += `
-      <option value="${sizes}">${sizes}</option>`; //MOBILE
-    productSizeSelectorDesktop.innerHTML += `
-      <div class="sizebox">${sizes}</div>`; //DESKTOP
-  });
+	productSizes.forEach(sizes => {
+		productSizeSelector.innerHTML += `
+      <option value="${sizes}">${sizes}</option>`; // MOBILE
+		productSizeSelectorDesktop.innerHTML += `
+      <div class="sizebox">${sizes}</div>`; // DESKTOP
+	});
 
-  const productColorSelector = document.getElementById("color"); //getElementById or querySelector?? Be consise
-  const productColorSelectorDesktop = document.querySelector(".product-colors");
+	const productColorSelector = document.getElementById('color'); // GetElementById or querySelector?? Be consise
+	const productColorSelectorDesktop = document.querySelector('.product-colors');
 
-  const productColors = product.baseColor;
-  const colorArray = productColors.split(" "); //making the baseColor an array. ForEach work if baseColor is applied as an array.
+	const productColors = product.baseColor;
+	const colorArray = productColors.split(' '); // Making the baseColor an array. ForEach work if baseColor is applied as an array.
 
-  colorArray.forEach(function (colors) {
-    productColorSelector.innerHTML += `
-      <option value="${colors}">${colors}</option>`; //MOBILE
-    productColorSelectorDesktop.innerHTML += `
+	colorArray.forEach(colors => {
+		productColorSelector.innerHTML += `
+      <option value="${colors}">${colors}</option>`; // MOBILE
+		productColorSelectorDesktop.innerHTML += `
       <div class="color_container">
         <div class="${colors} colorbox"></div>
         <p>${colors}</p>
-      </div>`; //DESKTOP
-  });
+      </div>`; // DESKTOP
+	});
 }
+
 displayProduct();

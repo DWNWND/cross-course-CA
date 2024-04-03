@@ -6,6 +6,8 @@
   "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint js/*.js",
+    "lint-fix": "eslint js/*.js --cache --fix",
     "format": "prettier -w js/*.js"
   },
   "keywords": [],

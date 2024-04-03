@@ -1,26 +1,31 @@
-import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
+import {
+	fetchJackets,
+	createTitle1,
+	createTitle2,
+	showLoadingIndicator,
+} from './global.js';
 
-export const sliderSection = document.querySelector(".product-slider");
-const adSection = document.querySelector(".ad-section"); 
+export const sliderSection = document.querySelector('.product-slider');
+const adSection = document.querySelector('.ad-section');
 
 async function displayProducts() {
-  showLoadingIndicator(sliderSection);
-  showLoadingIndicator(adSection);
-  const product = await fetchJackets();
+	showLoadingIndicator(sliderSection);
+	showLoadingIndicator(adSection);
+	const product = await fetchJackets();
 
-  const adContainer = document.createElement("div");
+	const adContainer = document.createElement('div');
 
-  sliderSection.innerHTML = "";
-  adSection.innerHTML = ""; //clearing the loading indicator
+	sliderSection.innerHTML = '';
+	adSection.innerHTML = ''; // Clearing the loading indicator
 
-  for (let i = 0; i < product.length; i++) {
-    const title1 = createTitle1(product[i]);
-    const title2 = createTitle2(product[i]);
+	for (let i = 0; i < product.length; i++) {
+		const title1 = createTitle1(product[i]);
+		const title2 = createTitle2(product[i]);
 
-    const productContainer = document.createElement("div");
-    productContainer.classList.add("product");
+		const productContainer = document.createElement('div');
+		productContainer.classList.add('product');
 
-    productContainer.innerHTML += `
+		productContainer.innerHTML += `
     <a href="checkout.html" class="shopping-bag">
       <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" />
     </a>
@@ -32,20 +37,20 @@ async function displayProducts() {
       <a href="product.html?key=${product[i].id}" class="black">${title2}</a>
       <p class="productprice">$${product[i].price}</p>
     </div>`;
-    productContainer.addEventListener("click", () => {
-      window.location.href = `product.html?key=${product[i].id}`;
-    }); 
-    sliderSection.appendChild(productContainer);
+		productContainer.addEventListener('click', () => {
+			window.location.href = `product.html?key=${product[i].id}`;
+		});
+		sliderSection.appendChild(productContainer);
 
-    if (i === 6) {
-      break;
-    }
-  }
+		if (i === 6) {
+			break;
+		}
+	}
 
-  adContainer.addEventListener("click", () => {
-    window.location.href = `product.html?key=${product[3].id}`;
-  });
-  adContainer.innerHTML += `
+	adContainer.addEventListener('click', () => {
+		window.location.href = `product.html?key=${product[3].id}`;
+	});
+	adContainer.innerHTML += `
   <h1>
     <a href="list.html" class="h1_homepage">New in from Rainy Days . . .</a>
   </h1>
@@ -65,6 +70,7 @@ async function displayProducts() {
       <p class="bottom-right">$${product[3].price}</p>
     </div>
   </div>`;
-  adSection.appendChild(adContainer);
+	adSection.appendChild(adContainer);
 }
+
 displayProducts();
