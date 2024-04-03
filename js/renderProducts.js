@@ -23,6 +23,7 @@ export function renderProducts(productItem) {
       const isItemInCart = productsInCart.find(function (item) {
         return item.id === productItem[i].id;
       });
+
       if (isItemInCart) {
         cssClass = "shopping-bag_icon-added-product";
       }
