@@ -1,0 +1,22 @@
+.success-section {
+  padding: 0 1rem 5rem;
+  justify-items: center;
+  text-align: center;
+}
+.green-checkmark {
+  margin-top: 2rem;
+}
+.order-confirmation {
+  margin: 3rem;
+}
+@media (min-width: 730px) {
+  .success-section {
+    padding: 5rem 5rem 7rem 5rem;
+  }
+  .green-checkmark {
+    margin-top: 5rem;
+  }
+  .order-confirmation {
+    margin: 2rem;
+  }
+}

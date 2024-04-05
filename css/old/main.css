@@ -1,0 +1,194 @@
+/*---------hero-section---------*/
+.hero-section {
+  background: 100% no-repeat url(../images/hero-image.jpg);
+  max-width: 100%;
+  display: block;
+}
+.cta-button-container {
+  max-width: 100%;
+  text-align: center;
+  padding: 5rem 0;
+}
+.cta-button {
+  background-color: #9c916c;
+  border: 2px solid #fff;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 15rem;
+  margin: 2rem;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+/*------------slider-section---------------*/
+.inline p {
+  display: inline;
+}
+.slider-section {
+  background-color: #efe1d5;
+  padding: 2rem 0 3rem 1rem;
+}
+.product-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 65%;
+  gap: 1.5rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/*-------------new-in-section--------------*/
+.new-in_1,
+.bottom-right,
+.bottom-left {
+  display: none;
+}
+.productphoto-ad {
+  max-width: 100%;
+}
+.inline {
+  padding-bottom: 0.7rem;
+}
+.ad-section {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.container {
+  position: relative;
+  text-align: center;
+}
+.product-name-info {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  background-color: rgba(114, 72, 43, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-left {
+  font-size: 0.7rem;
+  display: inline;
+  padding: 0.5rem 1rem;
+}
+.bottom-right {
+  font-size: 0.7rem;
+  display: inline;
+  padding: 0.5rem 1rem;
+}
+
+/*-----------ambience-section--------------*/
+.ambience-carousel {
+  background: 100% no-repeat url(../images/ambience-1.jpg);
+  background-position: center;
+  max-height: 30rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  object-fit: contain;
+  object-position: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  background-size: cover;
+}
+.slogan-first-part {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  text-shadow: 3px 3px 2px rgba(232, 208, 189, 0.9);
+}
+.slogan-second-part {
+  font-style: italic;
+  font-weight: 1000;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 3px 3px 2px rgba(232, 208, 189, 0.9);
+}
+.logo-ambience {
+  background: center no-repeat url(../images/logo-footer.png);
+  background-size: 20%;
+  padding-top: 1.5rem;
+}
+/*------------------Media Queries--------------------*/
+@media (min-width: 500px) {
+  .product-slider {
+    grid-auto-columns: 34%;
+  }
+}
+@media (min-width: 730px) {
+  .product-slider {
+    grid-auto-columns: 30%;
+    gap: 2rem;
+  }
+  .slider-section {
+    background-color: #efe1d5;
+    padding: 3rem 0 3rem 5rem;
+    margin: 0 0 3rem 0;
+    overflow-y: scroll;
+  }
+  .cta-button-container {
+    padding: 10rem 0;
+  }
+  .hero-section {
+    height: 50rem;
+  }
+  .new-in_1 {
+    display: inline-block;
+  }
+  .ad-section {
+    padding: 0 5rem;
+  }
+  .container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  .inline {
+    padding-bottom: 1.5rem;
+  }
+  .new-in_1,
+  .new-in_2 {
+    object-fit: contain;
+    object-position: bottom;
+  }
+  .slogan-first-part {
+    font-size: 1.7rem;
+  }
+  .slogan-second-part {
+    font-size: 2.1rem;
+    margin: 1rem 0;
+  }
+  .ambience-carousel {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .logo-ambience {
+    background-size: 10%;
+    padding-top: 3rem;
+  }
+  /*-------------:hover-state------------*/
+  .cta-button:hover {
+    background-color: #fff;
+    border: 2px solid #9c916c;
+    color: #9c916c;
+  }
+}
+@media (min-width: 1000px) {
+  .product-slider {
+    grid-auto-columns: 21%;
+  }
+}

@@ -1,145 +1,178 @@
 export function getProductsFromCart() {
-  const inCart = localStorage.getItem("inCart");
+  const inCart = localStorage.getItem('inCart');
 
   if (!inCart) {
     return [];
-  } else {
-    return JSON.parse(inCart);
   }
+
+  return JSON.parse(inCart);
 }
 
 function addToCart(product) {
-  localStorage.setItem("inCart", JSON.stringify(product));
+  localStorage.setItem('inCart', JSON.stringify(product));
 }
 
-//for indivitual products page
+// For indivitual products page
 export function eventSaveLocallyProduct(event) {
-  event.target.classList.toggle("add-btn");
-  event.target.classList.toggle("added-btn");
+  event.target.classList.toggle('add-btn');
+  event.target.classList.toggle('added-btn');
 
-  const id = event.target.dataset.id;
-  const title1 = event.target.dataset.title1;
-  const title2 = event.target.dataset.title2;
-  const img = event.target.dataset.img;
-  const price = event.target.dataset.price;
-  const description = event.target.dataset.description;
+  const { id } = event.target.dataset;
+  const { title1 } = event.target.dataset;
+  const { title2 } = event.target.dataset;
+  const { img } = event.target.dataset;
+  const { price } = event.target.dataset;
+  const { description } = event.target.dataset;
   const discountedPrice = event.target.dataset.discountedprice;
   const onSale = event.target.dataset.onsale;
 
-  // const sizeArray = sizes.split(",");
+  // Const sizeArray = sizes.split(",");
 
   const productsCurrentlyInCart = getProductsFromCart();
 
-  const productExists = productsCurrentlyInCart.find(function (item) {
-    return item.id === id;
-  });
+  const productExists = productsCurrentlyInCart.find((item) => item.id === id);
 
   if (!productExists) {
-    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, discountedPrice: discountedPrice, onSale: onSale };
+    const item = {
+      id,
+      title1,
+      title2,
+      img,
+      price,
+      description,
+      discountedPrice,
+      onSale,
+    };
     productsCurrentlyInCart.push(item);
     addToCart(productsCurrentlyInCart);
-  } else {
-    const updatedProductList = productsCurrentlyInCart.filter((item) => item.id !== id);
+    event.target.innerHTML = 'added';
+    event.target.classList.add('added-btn');
+    event.target.classList.remove('add-btn');
+    updateMainShoppingCart();
+  } else if (productExists) {
+    const updatedProductList = productsCurrentlyInCart.filter(
+      (item) => item.id !== id,
+    );
     addToCart(updatedProductList);
+    updateMainShoppingCart();
+    event.target.innerHTML = 'add to bag';
+    event.target.classList.add('add-btn');
+    event.target.classList.remove('added-btn');
   }
 
-  if (!productExists) {
-    event.target.innerHTML = "added";
-    event.target.classList.add("added-btn");
-    event.target.classList.remove("add-btn");
-    updateMainShoppingCart();
-  } else {
-    updateMainShoppingCart();
-    event.target.innerHTML = "add to bag";
-    event.target.classList.add("add-btn");
-    event.target.classList.remove("added-btn");
-  }
+  // 	If (!productExists) {
+  // 		event.target.innerHTML = 'added';
+  // 		event.target.classList.add('added-btn');
+  // 		event.target.classList.remove('add-btn');
+  // 		updateMainShoppingCart();
+  // 	} else {
+  // 		updateMainShoppingCart();
+  // 		event.target.innerHTML = 'add to bag';
+  // 		event.target.classList.add('add-btn');
+  // 		event.target.classList.remove('added-btn');
+  // 	}
 }
 
-//for list views
+// For list views
 export function eventSaveLocallyList(event) {
-  event.target.classList.toggle("shopping-bag_icon-empty");
-  event.target.classList.toggle("shopping-bag_icon-added-product");
+  event.target.classList.toggle('shopping-bag_icon-empty');
+  event.target.classList.toggle('shopping-bag_icon-added-product');
 
-  const id = event.target.dataset.id;
-  const title1 = event.target.dataset.title1;
-  const title2 = event.target.dataset.title2;
-  const img = event.target.dataset.img;
-  const price = event.target.dataset.price;
-  const description = event.target.dataset.description;
-  // const sizes = event.target.dataset.sizes;
+  const { id } = event.target.dataset;
+  const { title1 } = event.target.dataset;
+  const { title2 } = event.target.dataset;
+  const { img } = event.target.dataset;
+  const { price } = event.target.dataset;
+  const { description } = event.target.dataset;
+  // Const sizes = event.target.dataset.sizes;
   const discountedPrice = event.target.dataset.discountedprice;
   const onSale = event.target.dataset.onsale;
-  // const sizeArray = sizes.split(",");
+  // Const sizeArray = sizes.split(",");
 
   const productsCurrentlyInCart = getProductsFromCart();
 
-  const productExists = productsCurrentlyInCart.find(function (item) {
-    return item.id === id;
-  });
+  const productExists = productsCurrentlyInCart.find((item) => item.id === id);
 
   if (!productExists) {
-    const item = { id: id, title1: title1, title2: title2, img: img, price: price, description: description, discountedPrice: discountedPrice, onSale: onSale };
+    const item = {
+      id,
+      title1,
+      title2,
+      img,
+      price,
+      description,
+      discountedPrice,
+      onSale,
+    };
     productsCurrentlyInCart.push(item);
     addToCart(productsCurrentlyInCart);
     updateMainShoppingCart();
-  } else {
-    const updatedProductList = productsCurrentlyInCart.filter((item) => item.id !== id);
+  } else if (productExists) {
+    const updatedProductList = productsCurrentlyInCart.filter(
+      (item) => item.id !== id,
+    );
     addToCart(updatedProductList);
     updateMainShoppingCart();
   }
 }
 
-//UPDATE MAIN SHOPPING CART ICON
+// UPDATE MAIN SHOPPING CART ICON
 export function updateMainShoppingCart() {
   const productsInCart = getProductsFromCart();
-  const shoppingCartTopRight = document.querySelector(".shoppingbag");
+  const shoppingCartTopRight = document.querySelector('.shoppingbag');
 
   if (productsInCart.length > 1 || productsInCart.length === 1) {
-    shoppingCartTopRight.innerHTML = ` <div alt="link to shopping-bag" class="shoppingbag_icon shopping-bag_icon-added-product"></div>`;
+    shoppingCartTopRight.innerHTML =
+      ' <div alt="link to shopping-bag" class="shoppingbag_icon shopping-bag_icon-added-product"></div>';
   } else {
-    shoppingCartTopRight.innerHTML = ` <img src="/images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" />`;
+    shoppingCartTopRight.innerHTML =
+      ' <img src="/images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon" />';
   }
 }
 
-export function removeFromCart() {
+export function removeFromCart(event) {
   const productsCurrentlyInCart = getProductsFromCart();
 
-  const id = event.target.dataset.id;
+  const { id } = event.target.dataset;
   const buttonClicked = event.target;
   const productClicked = buttonClicked.parentElement;
 
-  const productExists = productsCurrentlyInCart.find(function (item) {
-    return item.id === id;
-  });
+  const productExists = productsCurrentlyInCart.find((item) => item.id === id);
 
   if (productExists) {
-    const updatedProductList = productsCurrentlyInCart.filter((item) => item.id !== id);
+    const updatedProductList = productsCurrentlyInCart.filter(
+      (item) => item.id !== id,
+    );
     addToCart(updatedProductList);
     productClicked.remove();
     emptyCartMessage();
   }
 }
 
-//EMPTY CART MESSAGE
+// EMPTY CART MESSAGE
 export function emptyCartMessage() {
-  const shoppingCartTopRight = document.querySelector(".shoppingbag");
-  const checkoutSection = document.querySelector(".checkout-section");
-  var productsInCart = getProductsFromCart();
+  const shoppingCartTopRight = document.querySelector('.shoppingbag');
+  const checkoutSection = document.querySelector('.checkout-section');
+  const productsInCart = getProductsFromCart();
 
   if (productsInCart.length === 0) {
-    checkoutSection.style.display = "block";
-    checkoutSection.innerHTML = `<div class="montserrat bold empty-cart">You don't have any items in your cart.</div>`;
-    shoppingCartTopRight.innerHTML = ` <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon"/>`;
+    checkoutSection.style.display = 'block';
+    checkoutSection.innerHTML =
+      '<div class="montserrat bold empty-cart">You don\'t have any items in your cart.</div>';
+    shoppingCartTopRight.innerHTML =
+      ' <img src="images/icons/shopping-bag.png" alt="link to shopping-bag" class="shoppingbag_icon"/>';
   }
 }
 
-//Update total sum
+// Update total sum
 export function updateCartTotal() {
   const productsCurrentlyInCart = getProductsFromCart();
-  var sum = 0;
-  for (var i = 0; i < productsCurrentlyInCart.length; i++) {
-    sum += parseInt(productsCurrentlyInCart[i].discountedPrice);
+  let sum = 0;
+  if (productsCurrentlyInCart) {
+    for (let i = 0; i < productsCurrentlyInCart.length; i++) {
+      sum += parseInt(productsCurrentlyInCart[i].discountedPrice, 10);
+    }
   }
+
   return sum;
 }

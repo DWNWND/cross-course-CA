@@ -1,105 +1,127 @@
-import { fetchJackets, createTitle1, createTitle2, showLoadingIndicator } from "./global.js";
-import { eventSaveLocallyList, getProductsFromCart, updateMainShoppingCart } from "./cartfunction.js";
-import { renderProducts } from "./renderProducts.js";
+import { fetchJackets, showLoadingIndicator } from './global.js';
+import {
+  eventSaveLocallyList,
+  updateMainShoppingCart,
+} from './cartfunction.js';
+import { renderProducts } from './renderProducts.js';
 
-const listSection = document.querySelector(".list-section");
-const sortingSection = document.querySelector(".sorting");
-const productList = document.querySelector(".product-list");
-const searchInput = document.querySelector("#searchbar");
+const sortingSection = document.querySelector('.sorting');
+const productList = document.querySelector('.product-list');
+const searchInput = document.querySelector('#searchbar');
 
-const categorySelector = document.querySelector(".category");
+const categorySelector = document.querySelector('.category');
 const selectedCategory = categorySelector.innerHTML;
 
-const theTrueCategorySelector = document.querySelector(".true-category");
+const theTrueCategorySelector = document.querySelector('.true-category');
 const theTrueCategoryName = theTrueCategorySelector.innerHTML;
 
-const h1 = document.querySelector(".h1_list");
+const h1 = document.querySelector('.h1_list');
 
-//checking which category we´re on
-console.log("selected category: ", theTrueCategoryName.toLowerCase());
+// Checking which category we´re on
+console.log('selected category: ', theTrueCategoryName.toLowerCase());
 
-// const productsInCart = getProductsFromCart();
+// Const productsInCart = getProductsFromCart();
 
-//Filter from searchbar: update search whenever typing in searchfield
-searchInput.addEventListener("input", () => {
+// Filter from searchbar: update search whenever typing in searchfield
+searchInput.addEventListener('input', () => {
   displaySearchedProducts();
 });
 
 async function displaySearchedProducts() {
-  //Filter from searchbar
-  let query = searchInput.value;
+  // Filter from searchbar
+  const query = searchInput.value;
 
-  //loading indicator
+  // Loading indicator
   showLoadingIndicator(productList);
 
-  //loading the right Main shopping cart icon when loading the page
+  // Loading the right Main shopping cart icon when loading the page
   updateMainShoppingCart();
 
-  //fetching API
+  // Fetching API
   const product = await fetchJackets();
-  console.log(product.categories[0].name.toLowerCase());
+  console.log(product.gender.toLowerCase());
 
-  //Filter categories - using selectedCategory (WORKING)
-  let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
+  // Filter categories - using selectedCategory (WORKING)
+  const productsCategoriesed = product.filter((allItems) => {
+    if (
+      allItems.gender.toLowerCase().includes(theTrueCategoryName.toLowerCase())
+    ) {
       return allItems;
     }
-    if (selectedCategory.toLowerCase().includes("on sale") && allItems.onSale) {
+
+    if (selectedCategory.toLowerCase().includes('on sale') && allItems.onSale) {
       return allItems;
     }
-    if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
+
+    if (
+      selectedCategory.toLowerCase().includes('new in') &&
+      allItems.favorite
+    ) {
       return allItems;
     }
+
+    return allItems;
   });
 
-  //Filter items - from using searchbar (WORKING IN LIST VIEW) - Also takes the categories into consideration
-  let productsFiltered = product.filter((allItems) => {
-    if (query === "") {
+  // Filter items - from using searchbar (WORKING IN LIST VIEW) - Also takes the categories into consideration
+  const productsFiltered = product.filter((allItems) => {
+    if (query === '') {
       h1.innerHTML = theTrueCategoryName;
       return productsCategoriesed;
-    } else if (allItems.title.toLowerCase().includes(query.toLowerCase())) {
-      h1.innerHTML = "Search results";
+    }
+
+    if (allItems.title.toLowerCase().includes(query.toLowerCase())) {
+      h1.innerHTML = 'Search results';
       return allItems;
     }
+
+    return allItems;
   });
 
-  //clearing loading indicator
-  productList.innerHTML = "";
+  // Clearing loading indicator
+  productList.innerHTML = '';
 
-  // looping through results
+  // Looping through results
   renderProducts(productsFiltered);
 
-  //add items to cart
-  const addToCartButton = document.querySelectorAll(".shopping-bag");
+  // Add items to cart
+  const addToCartButton = document.querySelectorAll('.shopping-bag');
   addToCartButton.forEach((cartButtons) => {
-    cartButtons.addEventListener("click", eventSaveLocallyList);
+    cartButtons.addEventListener('click', eventSaveLocallyList);
   });
 }
 
 async function displayCategorizedProducts() {
-  //loading indicator
+  // Loading indicator
   showLoadingIndicator(productList);
 
-  //loading the right Main shopping cart icon when loading the page
+  // Loading the right Main shopping cart icon when loading the page
   updateMainShoppingCart();
 
-  //fetching API
+  // Fetching API
   const product = await fetchJackets();
 
-  //Filter categories - using selectedCategory (WORKING)
-  let productsCategoriesed = product.filter((allItems) => {
-    if (allItems.categories[0].name.toLowerCase() === theTrueCategoryName.toLowerCase()) {
+  // Filter categories - using selectedCategory (WORKING)
+  const productsCategoriesed = product.filter((allItems) => {
+    if (allItems.gender.toLowerCase() === theTrueCategoryName.toLowerCase()) {
       return allItems;
     }
-    if (selectedCategory.toLowerCase().includes("on sale") && allItems.on_sale) {
+
+    if (selectedCategory.toLowerCase().includes('on sale') && allItems.onSale) {
       return allItems;
     }
-    if (selectedCategory.toLowerCase().includes("new in") && allItems.favorite) {
+
+    if (
+      selectedCategory.toLowerCase().includes('new in') &&
+      allItems.favorite
+    ) {
       return allItems;
     }
+
+    return allItems;
   });
 
-  // let productsCategoriesed = product.filter((allItems) => {
+  // Let productsCategoriesed = product.filter((allItems) => {
   //   if (allItems.categories[0].name.toLowerCase().includes(theTrueCategoryName.toLowerCase())) {
   //     return allItems;
   //   }
@@ -110,13 +132,13 @@ async function displayCategorizedProducts() {
   //     return allItems;
   //   }
   // });
-  //clearing loading indicator
-  productList.innerHTML = "";
+  // clearing loading indicator
+  productList.innerHTML = '';
 
-  // looping through the results
+  // Looping through the results
   renderProducts(productsCategoriesed);
 
-  // sorting section
+  // Sorting section
   sortingSection.innerHTML += `
   <div class="sorting-section">
   <h3 class="helvetica brown">Sort products by:</h3>
@@ -150,10 +172,11 @@ async function displayCategorizedProducts() {
   </div>
 </div>`;
 
-  //add items to cart
-  const addToCartButton = document.querySelectorAll(".shopping-bag");
+  // Add items to cart
+  const addToCartButton = document.querySelectorAll('.shopping-bag');
   addToCartButton.forEach((cartButtons) => {
-    cartButtons.addEventListener("click", eventSaveLocallyList);
+    cartButtons.addEventListener('click', eventSaveLocallyList);
   });
 }
+
 displayCategorizedProducts();

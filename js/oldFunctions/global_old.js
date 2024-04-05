@@ -1,12 +1,16 @@
-export const url = 'https://api.noroff.dev/api/v1/rainy-days/';
-const errorMessage = 'An error has occurred...';
+const url = 'https://api.noroff.dev/api/v1/rainy-days/';
+const errorMessage = "Can't seem to reach server...";
+
+// Getting the product ID for API call - product spesific
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get('key');
 
 // //API call ALL products
 export async function fetchJackets() {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    // Console.log(results);
     return results;
   } catch {
     const main = document.querySelector('main');
@@ -14,15 +18,10 @@ export async function fetchJackets() {
   }
 }
 
-// Getting the product ID for API call - product spesific
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get('key');
-
 // API call by ID
 export async function fetchJacketById() {
   try {
-    const response = await fetch(url + '/' + id);
+    const response = await fetch(url + id);
     const results = await response.json();
     return results;
   } catch {

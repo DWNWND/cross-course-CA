@@ -1,0 +1,49 @@
+.contact-form {
+  margin: 5rem 2rem;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+.messagebox {
+  border: 0.07rem solid #72482b;
+  box-shadow:
+    inset 6px 6px 10px 0 rgba(114, 72, 43, 0.25),
+    inset -6px -6px 10px 0 rgba(114, 72, 43, 0.25);
+  width: 100%;
+  height: 10rem;
+  margin: 0.5rem 0;
+  padding: 0.6rem 0.6rem;
+  box-sizing: border-box;
+  font-style: italic;
+}
+.submit-btn {
+  text-align: center;
+  background-color: #e2dad4;
+  border: solid 2px #72482b;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
+  margin-top: 2rem;
+}
+.contact-form p {
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.04rem;
+}
+.email {
+  margin: 1rem 0;
+}
+@media (min-width: 750px) {
+  .contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+}

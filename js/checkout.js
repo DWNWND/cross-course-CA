@@ -1,25 +1,30 @@
-//add loading indicator... and error handling... + add an remove item from list... and try to fix quantity and size selectors
+// Add loading indicator... and error handling... + add an remove item from list... and try to fix quantity and size selectors
 
-import { getProductsFromCart, removeFromCart, emptyCartMessage, updateCartTotal } from "./cartfunction.js";
+import {
+  getProductsFromCart,
+  removeFromCart,
+  emptyCartMessage,
+  updateCartTotal,
+} from './cartfunction.js';
 
-const summarySection = document.querySelector(".summary-section");
-const totalPrice = document.querySelector(".total-price");
-var productsInCart = getProductsFromCart();
+const summarySection = document.querySelector('.summary-section');
+const totalPrice = document.querySelector('.total-price');
+const productsInCart = getProductsFromCart();
 
 emptyCartMessage();
 
-//Searchbar in this does not work (only in list view)
+// Searchbar in this does not work (only in list view)
 
 function generateCart() {
   console.log(productsInCart);
 
-  productsInCart.forEach(function (item) {
-    const summaryProductContainer = document.createElement("div");
-    summaryProductContainer.classList.add("summary-product-container");
+  productsInCart.forEach((item) => {
+    const summaryProductContainer = document.createElement('div');
+    summaryProductContainer.classList.add('summary-product-container');
 
     summarySection.appendChild(summaryProductContainer);
 
-    // const itemOnSaleString = item.on_sale;
+    // Const itemOnSaleString = item.on_sale;
 
     // console.log(itemOnSaleString);
 
@@ -92,25 +97,29 @@ function generateCart() {
     }
   });
 
-  //REMOVE ITEMS FROM CART
-  const removeItemFromCart = document.querySelectorAll(".remove-item-from-cart");
+  // REMOVE ITEMS FROM CART
+  const removeItemFromCart = document.querySelectorAll(
+    '.remove-item-from-cart',
+  );
 
   removeItemFromCart.forEach((xButtons) => {
-    xButtons.addEventListener("click", function (event) {
-      removeFromCart();
+    xButtons.addEventListener('click', (event) => {
+      removeFromCart(event);
       generateSum();
     });
   });
 }
+
 generateCart();
 
-//generate sum
+// Generate sum
 function generateSum() {
   const sum = updateCartTotal();
   totalPrice.innerHTML = `  
   <p>sum total</p>
   <p>$ ${sum}</p>`;
 }
+
 generateSum();
 
-//DIDNT MANAGE TO MAKE THE SIZES CORRESPOND TO API CALL...
+// DIDNT MANAGE TO MAKE THE SIZES CORRESPOND TO API CALL...
