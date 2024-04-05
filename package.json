@@ -5,7 +5,8 @@
   "type": "module",
   "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test-e2e",
+    "test-e2e": "cypress open",
     "lint": "eslint js/*.js",
     "lint-fix": "eslint js/*.js --cache --fix",
     "format": "prettier -w js/*.js",
